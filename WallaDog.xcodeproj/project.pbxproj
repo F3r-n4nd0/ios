@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49E819AC48E0A1381AAD1C72 /* libPods-WallaDog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */; };
+		8F7BF4641BF8F22800111F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4631BF8F22800111F3C /* main.m */; };
+		8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4661BF8F22800111F3C /* AppDelegate.m */; };
+		8F7BF46A1BF8F22800111F3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4691BF8F22800111F3C /* ViewController.m */; };
+		8F7BF46D1BF8F22800111F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46B1BF8F22800111F3C /* Main.storyboard */; };
+		8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46E1BF8F22800111F3C /* Assets.xcassets */; };
+		8F7BF4721BF8F22800111F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */; };
+		8F7BF47D1BF8F22800111F3C /* WallaDogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF47C1BF8F22800111F3C /* WallaDogTests.m */; };
+		8F7BF4881BF8F22800111F3C /* WallaDogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4871BF8F22800111F3C /* WallaDogUITests.m */; };
+		8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4B71BF8FC3C00111F3C /* AWSMobileClient.m */; };
+		8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4BD1BF8FC3C00111F3C /* AWSContentManager.m */; };
+		8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4C11BF8FC3C00111F3C /* AWSIdentityManager.m */; };
+		8F7BF4D01BF8FC3C00111F3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF4C41BF8FC3C00111F3C /* Localizable.strings */; };
+		8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4C81BF8FC3C00111F3C /* AWSUserFileManager.m */; };
+		8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4CB1BF8FC3C00111F3C /* AWSTask+CheckExceptions.m */; };
+		8F7BF4D41BF8FC6400111F3C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4D31BF8FC6400111F3C /* SystemConfiguration.framework */; };
+		8F7BF4D61BF8FC6E00111F3C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4D51BF8FC6E00111F3C /* AddressBook.framework */; };
+		8F7BF4D81BF8FC7B00111F3C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4D71BF8FC7B00111F3C /* CoreLocation.framework */; };
+		8F7BF4DA1BF8FC9500111F3C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4D91BF8FC9500111F3C /* CoreMotion.framework */; };
+		8F7BF4DC1BF8FCA200111F3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4DB1BF8FCA200111F3C /* UIKit.framework */; };
+		8F7BF4DE1BF8FCB600111F3C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4DD1BF8FCB600111F3C /* Security.framework */; };
+		8F7BF4E01BF8FCC300111F3C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4DF1BF8FCC300111F3C /* MediaPlayer.framework */; };
+		8F7BF4E21BF8FCD100111F3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E11BF8FCD100111F3C /* Foundation.framework */; };
+		8F7BF4E41BF8FCE000111F3C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E31BF8FCE000111F3C /* AssetsLibrary.framework */; };
+		8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */; };
+		8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */; };
+		EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F7BF4791BF8F22800111F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F7BF4571BF8F22800111F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F7BF45E1BF8F22800111F3C;
+			remoteInfo = WallaDog;
+		};
+		8F7BF4841BF8F22800111F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F7BF4571BF8F22800111F3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F7BF45E1BF8F22800111F3C;
+			remoteInfo = WallaDog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		659CA3FC7EDF68F558F90F13 /* Pods-WallaDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F7BF45F1BF8F22800111F3C /* WallaDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallaDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7BF4631BF8F22800111F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8F7BF4651BF8F22800111F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8F7BF4661BF8F22800111F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8F7BF4681BF8F22800111F3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8F7BF4691BF8F22800111F3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8F7BF46C1BF8F22800111F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8F7BF46E1BF8F22800111F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F7BF4711BF8F22800111F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F7BF4731BF8F22800111F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F7BF4781BF8F22800111F3C /* WallaDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallaDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7BF47C1BF8F22800111F3C /* WallaDogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WallaDogTests.m; sourceTree = "<group>"; };
+		8F7BF47E1BF8F22800111F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F7BF4831BF8F22800111F3C /* WallaDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallaDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F7BF4871BF8F22800111F3C /* WallaDogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WallaDogUITests.m; sourceTree = "<group>"; };
+		8F7BF4891BF8F22800111F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F7BF4B51BF8FC3C00111F3C /* AWSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSConfiguration.h; sourceTree = "<group>"; };
+		8F7BF4B61BF8FC3C00111F3C /* AWSMobileClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSMobileClient.h; sourceTree = "<group>"; };
+		8F7BF4B71BF8FC3C00111F3C /* AWSMobileClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSMobileClient.m; sourceTree = "<group>"; };
+		8F7BF4BC1BF8FC3C00111F3C /* AWSContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSContentManager.h; sourceTree = "<group>"; };
+		8F7BF4BD1BF8FC3C00111F3C /* AWSContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSContentManager.m; sourceTree = "<group>"; };
+		8F7BF4BE1BF8FC3C00111F3C /* AWSCorePrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSCorePrivateHeader.h; sourceTree = "<group>"; };
+		8F7BF4C01BF8FC3C00111F3C /* AWSIdentityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSIdentityManager.h; sourceTree = "<group>"; };
+		8F7BF4C11BF8FC3C00111F3C /* AWSIdentityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSIdentityManager.m; sourceTree = "<group>"; };
+		8F7BF4C31BF8FC3C00111F3C /* AWSSignInProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSSignInProvider.h; sourceTree = "<group>"; };
+		8F7BF4C51BF8FC3C00111F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8F7BF4C71BF8FC3C00111F3C /* AWSUserFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSUserFileManager.h; sourceTree = "<group>"; };
+		8F7BF4C81BF8FC3C00111F3C /* AWSUserFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWSUserFileManager.m; sourceTree = "<group>"; };
+		8F7BF4CA1BF8FC3C00111F3C /* AWSTask+CheckExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AWSTask+CheckExceptions.h"; sourceTree = "<group>"; };
+		8F7BF4CB1BF8FC3C00111F3C /* AWSTask+CheckExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AWSTask+CheckExceptions.m"; sourceTree = "<group>"; };
+		8F7BF4D31BF8FC6400111F3C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8F7BF4D51BF8FC6E00111F3C /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		8F7BF4D71BF8FC7B00111F3C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8F7BF4D91BF8FC9500111F3C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8F7BF4DB1BF8FCA200111F3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8F7BF4DD1BF8FCB600111F3C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8F7BF4DF1BF8FCC300111F3C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8F7BF4E11BF8FCD100111F3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8F7BF4E31BF8FCE000111F3C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		8F7BF4E91BF9025100111F3C /* libAWSCognito.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCognito.a; path = "Pods/../build/Debug-iphoneos/libAWSCognito.a"; sourceTree = "<group>"; };
+		8F7BF4EA1BF9025100111F3C /* libAWSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSCore.a; path = "Pods/../build/Debug-iphoneos/libAWSCore.a"; sourceTree = "<group>"; };
+		8F7BF4EB1BF9025100111F3C /* libAWSMobileAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSMobileAnalytics.a; path = "Pods/../build/Debug-iphoneos/libAWSMobileAnalytics.a"; sourceTree = "<group>"; };
+		8F7BF4EC1BF9025100111F3C /* libAWSS3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSS3.a; path = "Pods/../build/Debug-iphoneos/libAWSS3.a"; sourceTree = "<group>"; };
+		8F7BF4ED1BF9025100111F3C /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "Pods/../build/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
+		92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.debug.xcconfig"; sourceTree = "<group>"; };
+		C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F7BF45C1BF8F22800111F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */,
+				8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */,
+				8F7BF4E41BF8FCE000111F3C /* AssetsLibrary.framework in Frameworks */,
+				8F7BF4E21BF8FCD100111F3C /* Foundation.framework in Frameworks */,
+				8F7BF4E01BF8FCC300111F3C /* MediaPlayer.framework in Frameworks */,
+				8F7BF4DE1BF8FCB600111F3C /* Security.framework in Frameworks */,
+				8F7BF4DC1BF8FCA200111F3C /* UIKit.framework in Frameworks */,
+				8F7BF4DA1BF8FC9500111F3C /* CoreMotion.framework in Frameworks */,
+				8F7BF4D81BF8FC7B00111F3C /* CoreLocation.framework in Frameworks */,
+				8F7BF4D61BF8FC6E00111F3C /* AddressBook.framework in Frameworks */,
+				8F7BF4D41BF8FC6400111F3C /* SystemConfiguration.framework in Frameworks */,
+				49E819AC48E0A1381AAD1C72 /* libPods-WallaDog.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF4751BF8F22800111F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF4801BF8F22800111F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F7BF4561BF8F22800111F3C = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4611BF8F22800111F3C /* WallaDog */,
+				8F7BF47B1BF8F22800111F3C /* WallaDogTests */,
+				8F7BF4861BF8F22800111F3C /* WallaDogUITests */,
+				8F7BF4601BF8F22800111F3C /* Products */,
+				E6AD5DEA8E944D8218357A69 /* Pods */,
+				D26EAD39E149BD1EADE3C3DE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F7BF4601BF8F22800111F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF45F1BF8F22800111F3C /* WallaDog.app */,
+				8F7BF4781BF8F22800111F3C /* WallaDogTests.xctest */,
+				8F7BF4831BF8F22800111F3C /* WallaDogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F7BF4611BF8F22800111F3C /* WallaDog */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4B41BF8FC3C00111F3C /* Aws */,
+				8F7BF4651BF8F22800111F3C /* AppDelegate.h */,
+				8F7BF4661BF8F22800111F3C /* AppDelegate.m */,
+				8F7BF4681BF8F22800111F3C /* ViewController.h */,
+				8F7BF4691BF8F22800111F3C /* ViewController.m */,
+				8F7BF46B1BF8F22800111F3C /* Main.storyboard */,
+				8F7BF46E1BF8F22800111F3C /* Assets.xcassets */,
+				8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */,
+				8F7BF4731BF8F22800111F3C /* Info.plist */,
+				8F7BF4621BF8F22800111F3C /* Supporting Files */,
+			);
+			path = WallaDog;
+			sourceTree = "<group>";
+		};
+		8F7BF4621BF8F22800111F3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4631BF8F22800111F3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F7BF47B1BF8F22800111F3C /* WallaDogTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF47C1BF8F22800111F3C /* WallaDogTests.m */,
+				8F7BF47E1BF8F22800111F3C /* Info.plist */,
+			);
+			path = WallaDogTests;
+			sourceTree = "<group>";
+		};
+		8F7BF4861BF8F22800111F3C /* WallaDogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4871BF8F22800111F3C /* WallaDogUITests.m */,
+				8F7BF4891BF8F22800111F3C /* Info.plist */,
+			);
+			path = WallaDogUITests;
+			sourceTree = "<group>";
+		};
+		8F7BF4B41BF8FC3C00111F3C /* Aws */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4B51BF8FC3C00111F3C /* AWSConfiguration.h */,
+				8F7BF4B61BF8FC3C00111F3C /* AWSMobileClient.h */,
+				8F7BF4B71BF8FC3C00111F3C /* AWSMobileClient.m */,
+				8F7BF4BB1BF8FC3C00111F3C /* ContentDelivery */,
+				8F7BF4BF1BF8FC3C00111F3C /* Identity */,
+				8F7BF4C21BF8FC3C00111F3C /* SignIn */,
+				8F7BF4C61BF8FC3C00111F3C /* UserFiles */,
+				8F7BF4C91BF8FC3C00111F3C /* Utils */,
+			);
+			path = Aws;
+			sourceTree = "<group>";
+		};
+		8F7BF4BB1BF8FC3C00111F3C /* ContentDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4BC1BF8FC3C00111F3C /* AWSContentManager.h */,
+				8F7BF4BD1BF8FC3C00111F3C /* AWSContentManager.m */,
+				8F7BF4BE1BF8FC3C00111F3C /* AWSCorePrivateHeader.h */,
+			);
+			path = ContentDelivery;
+			sourceTree = "<group>";
+		};
+		8F7BF4BF1BF8FC3C00111F3C /* Identity */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4C01BF8FC3C00111F3C /* AWSIdentityManager.h */,
+				8F7BF4C11BF8FC3C00111F3C /* AWSIdentityManager.m */,
+			);
+			path = Identity;
+			sourceTree = "<group>";
+		};
+		8F7BF4C21BF8FC3C00111F3C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4C31BF8FC3C00111F3C /* AWSSignInProvider.h */,
+				8F7BF4C41BF8FC3C00111F3C /* Localizable.strings */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8F7BF4C61BF8FC3C00111F3C /* UserFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4C71BF8FC3C00111F3C /* AWSUserFileManager.h */,
+				8F7BF4C81BF8FC3C00111F3C /* AWSUserFileManager.m */,
+			);
+			path = UserFiles;
+			sourceTree = "<group>";
+		};
+		8F7BF4C91BF8FC3C00111F3C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4CA1BF8FC3C00111F3C /* AWSTask+CheckExceptions.h */,
+				8F7BF4CB1BF8FC3C00111F3C /* AWSTask+CheckExceptions.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D26EAD39E149BD1EADE3C3DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F7BF4E91BF9025100111F3C /* libAWSCognito.a */,
+				8F7BF4EA1BF9025100111F3C /* libAWSCore.a */,
+				8F7BF4EB1BF9025100111F3C /* libAWSMobileAnalytics.a */,
+				8F7BF4EC1BF9025100111F3C /* libAWSS3.a */,
+				8F7BF4ED1BF9025100111F3C /* libAWSSNS.a */,
+				8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */,
+				8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */,
+				8F7BF4E31BF8FCE000111F3C /* AssetsLibrary.framework */,
+				8F7BF4E11BF8FCD100111F3C /* Foundation.framework */,
+				8F7BF4DF1BF8FCC300111F3C /* MediaPlayer.framework */,
+				8F7BF4DD1BF8FCB600111F3C /* Security.framework */,
+				8F7BF4DB1BF8FCA200111F3C /* UIKit.framework */,
+				8F7BF4D91BF8FC9500111F3C /* CoreMotion.framework */,
+				8F7BF4D71BF8FC7B00111F3C /* CoreLocation.framework */,
+				8F7BF4D51BF8FC6E00111F3C /* AddressBook.framework */,
+				8F7BF4D31BF8FC6400111F3C /* SystemConfiguration.framework */,
+				0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */,
+				52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6AD5DEA8E944D8218357A69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */,
+				659CA3FC7EDF68F558F90F13 /* Pods-WallaDogTests.release.xcconfig */,
+				92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */,
+				F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F7BF45E1BF8F22800111F3C /* WallaDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F7BF48C1BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDog" */;
+			buildPhases = (
+				75B1B1173BE1E21DEFF1C3D5 /* Check Pods Manifest.lock */,
+				8F7BF45B1BF8F22800111F3C /* Sources */,
+				8F7BF45C1BF8F22800111F3C /* Frameworks */,
+				8F7BF45D1BF8F22800111F3C /* Resources */,
+				BCDB7B66388F23ED3C095C64 /* Embed Pods Frameworks */,
+				5A2A1B7E77E00DE03DE3577A /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WallaDog;
+			productName = WallaDog;
+			productReference = 8F7BF45F1BF8F22800111F3C /* WallaDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F7BF4771BF8F22800111F3C /* WallaDogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F7BF48F1BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDogTests" */;
+			buildPhases = (
+				263168DE82C44B0174BDFA58 /* Check Pods Manifest.lock */,
+				8F7BF4741BF8F22800111F3C /* Sources */,
+				8F7BF4751BF8F22800111F3C /* Frameworks */,
+				8F7BF4761BF8F22800111F3C /* Resources */,
+				3DFE08226E4FE4A625DE159C /* Embed Pods Frameworks */,
+				C89B4AC4065BAC769539E19D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F7BF47A1BF8F22800111F3C /* PBXTargetDependency */,
+			);
+			name = WallaDogTests;
+			productName = WallaDogTests;
+			productReference = 8F7BF4781BF8F22800111F3C /* WallaDogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F7BF4821BF8F22800111F3C /* WallaDogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F7BF4921BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDogUITests" */;
+			buildPhases = (
+				8F7BF47F1BF8F22800111F3C /* Sources */,
+				8F7BF4801BF8F22800111F3C /* Frameworks */,
+				8F7BF4811BF8F22800111F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F7BF4851BF8F22800111F3C /* PBXTargetDependency */,
+			);
+			name = WallaDogUITests;
+			productName = WallaDogUITests;
+			productReference = 8F7BF4831BF8F22800111F3C /* WallaDogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F7BF4571BF8F22800111F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Dancing Queen";
+				TargetAttributes = {
+					8F7BF45E1BF8F22800111F3C = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					8F7BF4771BF8F22800111F3C = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 8F7BF45E1BF8F22800111F3C;
+					};
+					8F7BF4821BF8F22800111F3C = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 8F7BF45E1BF8F22800111F3C;
+					};
+				};
+			};
+			buildConfigurationList = 8F7BF45A1BF8F22800111F3C /* Build configuration list for PBXProject "WallaDog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F7BF4561BF8F22800111F3C;
+			productRefGroup = 8F7BF4601BF8F22800111F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F7BF45E1BF8F22800111F3C /* WallaDog */,
+				8F7BF4771BF8F22800111F3C /* WallaDogTests */,
+				8F7BF4821BF8F22800111F3C /* WallaDogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F7BF45D1BF8F22800111F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7BF4721BF8F22800111F3C /* LaunchScreen.storyboard in Resources */,
+				8F7BF4D01BF8FC3C00111F3C /* Localizable.strings in Resources */,
+				8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */,
+				8F7BF46D1BF8F22800111F3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF4761BF8F22800111F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF4811BF8F22800111F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		263168DE82C44B0174BDFA58 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3DFE08226E4FE4A625DE159C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A2A1B7E77E00DE03DE3577A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75B1B1173BE1E21DEFF1C3D5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BCDB7B66388F23ED3C095C64 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89B4AC4065BAC769539E19D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F7BF45B1BF8F22800111F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7BF46A1BF8F22800111F3C /* ViewController.m in Sources */,
+				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
+				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
+				8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */,
+				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
+				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
+				8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */,
+				8F7BF4641BF8F22800111F3C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF4741BF8F22800111F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7BF47D1BF8F22800111F3C /* WallaDogTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F7BF47F1BF8F22800111F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7BF4881BF8F22800111F3C /* WallaDogUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F7BF47A1BF8F22800111F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F7BF45E1BF8F22800111F3C /* WallaDog */;
+			targetProxy = 8F7BF4791BF8F22800111F3C /* PBXContainerItemProxy */;
+		};
+		8F7BF4851BF8F22800111F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F7BF45E1BF8F22800111F3C /* WallaDog */;
+			targetProxy = 8F7BF4841BF8F22800111F3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F7BF46B1BF8F22800111F3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F7BF46C1BF8F22800111F3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F7BF4711BF8F22800111F3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8F7BF4C41BF8FC3C00111F3C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F7BF4C51BF8FC3C00111F3C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F7BF48A1BF8F22800111F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F7BF48B1BF8F22800111F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F7BF48D1BF8F22800111F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WallaDog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F7BF48E1BF8F22800111F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WallaDog/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8F7BF4901BF8F22800111F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WallaDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallaDog.app/WallaDog";
+			};
+			name = Debug;
+		};
+		8F7BF4911BF8F22800111F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 659CA3FC7EDF68F558F90F13 /* Pods-WallaDogTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WallaDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallaDog.app/WallaDog";
+			};
+			name = Release;
+		};
+		8F7BF4931BF8F22800111F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WallaDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WallaDog;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8F7BF4941BF8F22800111F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WallaDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WallaDog;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F7BF45A1BF8F22800111F3C /* Build configuration list for PBXProject "WallaDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F7BF48A1BF8F22800111F3C /* Debug */,
+				8F7BF48B1BF8F22800111F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F7BF48C1BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F7BF48D1BF8F22800111F3C /* Debug */,
+				8F7BF48E1BF8F22800111F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F7BF48F1BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F7BF4901BF8F22800111F3C /* Debug */,
+				8F7BF4911BF8F22800111F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F7BF4921BF8F22800111F3C /* Build configuration list for PBXNativeTarget "WallaDogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F7BF4931BF8F22800111F3C /* Debug */,
+				8F7BF4941BF8F22800111F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F7BF4571BF8F22800111F3C /* Project object */;
+}

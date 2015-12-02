@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		49E819AC48E0A1381AAD1C72 /* libPods-WallaDog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */; };
+		8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */; };
+		8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */; };
+		8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */; };
 		8F7BF4641BF8F22800111F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4631BF8F22800111F3C /* main.m */; };
 		8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4661BF8F22800111F3C /* AppDelegate.m */; };
-		8F7BF46A1BF8F22800111F3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4691BF8F22800111F3C /* ViewController.m */; };
-		8F7BF46D1BF8F22800111F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46B1BF8F22800111F3C /* Main.storyboard */; };
 		8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46E1BF8F22800111F3C /* Assets.xcassets */; };
-		8F7BF4721BF8F22800111F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */; };
 		8F7BF47D1BF8F22800111F3C /* WallaDogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF47C1BF8F22800111F3C /* WallaDogTests.m */; };
 		8F7BF4881BF8F22800111F3C /* WallaDogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4871BF8F22800111F3C /* WallaDogUITests.m */; };
 		8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4B71BF8FC3C00111F3C /* AWSMobileClient.m */; };
@@ -57,15 +57,15 @@
 		0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659CA3FC7EDF68F558F90F13 /* Pods-WallaDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMainViewController.h; sourceTree = "<group>"; };
+		8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainViewController.m; sourceTree = "<group>"; };
+		8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainViewController.xib; sourceTree = "<group>"; };
+		8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8F7BF45F1BF8F22800111F3C /* WallaDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallaDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7BF4631BF8F22800111F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F7BF4651BF8F22800111F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8F7BF4661BF8F22800111F3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8F7BF4681BF8F22800111F3C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8F7BF4691BF8F22800111F3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		8F7BF46C1BF8F22800111F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F7BF46E1BF8F22800111F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8F7BF4711BF8F22800111F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F7BF4731BF8F22800111F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F7BF4781BF8F22800111F3C /* WallaDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallaDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7BF47C1BF8F22800111F3C /* WallaDogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WallaDogTests.m; sourceTree = "<group>"; };
@@ -146,6 +146,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F01D0801C0F8E3A00F67C93 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */,
+				8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */,
+				8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8F3522B71C0F7F4D00DDE67D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8F7BF4561BF8F22800111F3C = {
 			isa = PBXGroup;
 			children = (
@@ -171,14 +189,12 @@
 		8F7BF4611BF8F22800111F3C /* WallaDog */ = {
 			isa = PBXGroup;
 			children = (
+				8F01D0801C0F8E3A00F67C93 /* Controllers */,
+				8F3522B71C0F7F4D00DDE67D /* Views */,
 				8F7BF4B41BF8FC3C00111F3C /* Aws */,
 				8F7BF4651BF8F22800111F3C /* AppDelegate.h */,
 				8F7BF4661BF8F22800111F3C /* AppDelegate.m */,
-				8F7BF4681BF8F22800111F3C /* ViewController.h */,
-				8F7BF4691BF8F22800111F3C /* ViewController.m */,
-				8F7BF46B1BF8F22800111F3C /* Main.storyboard */,
 				8F7BF46E1BF8F22800111F3C /* Assets.xcassets */,
-				8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */,
 				8F7BF4731BF8F22800111F3C /* Info.plist */,
 				8F7BF4621BF8F22800111F3C /* Supporting Files */,
 			);
@@ -376,6 +392,7 @@
 		8F7BF4571BF8F22800111F3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DQ;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Dancing Queen";
 				TargetAttributes = {
@@ -417,10 +434,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7BF4721BF8F22800111F3C /* LaunchScreen.storyboard in Resources */,
 				8F7BF4D01BF8FC3C00111F3C /* Localizable.strings in Resources */,
+				8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */,
+				8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */,
 				8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */,
-				8F7BF46D1BF8F22800111F3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,9 +555,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7BF46A1BF8F22800111F3C /* ViewController.m in Sources */,
 				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
 				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
+				8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */,
 				8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */,
 				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
 				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
@@ -581,22 +598,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8F7BF46B1BF8F22800111F3C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F7BF46C1BF8F22800111F3C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8F7BF4701BF8F22800111F3C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8F7BF4711BF8F22800111F3C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		8F7BF4C41BF8FC3C00111F3C /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -704,6 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -721,6 +723,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

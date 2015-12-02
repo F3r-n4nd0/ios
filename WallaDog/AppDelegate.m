@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "DQMainViewController.h"
 
 @interface AppDelegate ()
+
+@property(nonatomic, strong) DQMainViewController *mainViewController;
 
 @end
 
@@ -16,9 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self initWindow];
+    [self loadFirstViewController];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -40,6 +45,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Start methods
+
+- (void)initWindow {
+    [self setWindow:[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]];
+    [self.window setBackgroundColor:[UIColor whiteColor]];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)loadFirstViewController {
+    self.mainViewController = [[DQMainViewController alloc] init];
+    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    [self.window setRootViewController:navigationViewController];
 }
 
 @end

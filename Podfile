@@ -15,6 +15,12 @@ end
 
 target 'WallaDogTests' do
 
+pod 'AWSCore' , '~> 2.3.0'
+pod 'AWSS3' , '~> 2.3.0'
+pod 'AWSMobileAnalytics' , '~> 2.3.0'
+pod 'AWSCognito' , '~> 2.3.0'
+pod 'AWSSNS' , '~> 2.3.0'
+
 end
 
 target 'WallaDogUITests' do

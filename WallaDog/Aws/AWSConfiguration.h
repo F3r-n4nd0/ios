@@ -25,3 +25,4 @@
 #define AWS_USER_FILE_MANAGER_S3_BUCKET_NAME @"MANAGER_S3_BUCKET_NAME"
 // USER AGENT
 #define AWS_MOBILEHUB_USER_AGENT @"com.dancingqueen.walladog.ios"
+

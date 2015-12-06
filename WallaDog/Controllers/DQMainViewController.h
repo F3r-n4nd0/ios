@@ -5,9 +5,8 @@
 //  Created by Fernando Luna on 12/2/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
+#import <iOS-Slide-Menu/SlideNavigationController.h>
 
-#import <UIKit/UIKit.h>
-
-@interface DQMainViewController : UIViewController
+@interface DQMainViewController : UIViewController <SlideNavigationControllerDelegate>
 
 @end

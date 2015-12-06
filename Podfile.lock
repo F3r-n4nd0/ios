@@ -1,13 +1,15 @@
 PODS:
-  - AWSCognito (2.3.0):
-    - AWSCore (= 2.3.0)
-  - AWSCore (2.3.0)
-  - AWSMobileAnalytics (2.3.0):
-    - AWSCore (= 2.3.0)
-  - AWSS3 (2.3.0):
-    - AWSCore (= 2.3.0)
-  - AWSSNS (2.3.0):
-    - AWSCore (= 2.3.0)
+  - AWSCognito (2.3.1):
+    - AWSCore (= 2.3.1)
+  - AWSCore (2.3.1)
+  - AWSMobileAnalytics (2.3.1):
+    - AWSCore (= 2.3.1)
+  - AWSS3 (2.3.1):
+    - AWSCore (= 2.3.1)
+  - AWSSNS (2.3.1):
+    - AWSCore (= 2.3.1)
+  - FZAccordionTableView (0.1.2)
+  - iOS-Slide-Menu (1.5)
 
 DEPENDENCIES:
   - AWSCognito (~> 2.3.0)
@@ -15,12 +17,16 @@ DEPENDENCIES:
   - AWSMobileAnalytics (~> 2.3.0)
   - AWSS3 (~> 2.3.0)
   - AWSSNS (~> 2.3.0)
+  - FZAccordionTableView
+  - iOS-Slide-Menu (~> 1.5)
 
 SPEC CHECKSUMS:
-  AWSCognito: 71454ddf2b631005292aa2cbbdcc6d079b1b65cb
-  AWSCore: dc200c885c9799f9f5d3ab9ec38a9c4b44d680f9
-  AWSMobileAnalytics: 5e6809e6339a228bd096fadfb8ccc5491b168b11
-  AWSS3: 0185482a8136da9c7542a767567ee18106b38bca
-  AWSSNS: 44257e7fbb51d9dea04994b39ff01dda61822643
+  AWSCognito: 6f153e3f5fa2ca14b883490cfcb3e48455b64a4b
+  AWSCore: 7ad34b4bc285b778a3df699cb6f00aad3d1c446f
+  AWSMobileAnalytics: 82692a5bb718a8b5c9441ae8db62e2f3c5f7fa7c
+  AWSS3: b7f4a0ad4da6dcc172e757dcb2b2423d26b32325
+  AWSSNS: efa66ce4b1d604730b2388848f21c249bcc36f6e
+  FZAccordionTableView: 26b58f5634effce3d8b81e0b2701dbdfd79daf61
+  iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
 
 COCOAPODS: 0.39.0

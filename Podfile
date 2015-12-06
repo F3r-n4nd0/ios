@@ -10,6 +10,8 @@ pod 'AWSS3' , '~> 2.3.0'
 pod 'AWSMobileAnalytics' , '~> 2.3.0'
 pod 'AWSCognito' , '~> 2.3.0'
 pod 'AWSSNS' , '~> 2.3.0'
+pod 'iOS-Slide-Menu', '~> 1.5'
+pod 'FZAccordionTableView'. '~> 0.1.2'
 
 end
 

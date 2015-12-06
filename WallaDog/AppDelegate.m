@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "AWSMobileClient.h"
 #import "DQMainViewController.h"
+#import "DQSlideNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +21,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL result = [[AWSMobileClient sharedInstance] didFinishLaunching:application
+                                                           withOptions:launchOptions];
     [self initWindow];
     [self loadFirstViewController];
-    return YES;
+    return result;
+}
+
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *,id> *)options {
+    return [[AWSMobileClient sharedInstance] withApplication:app
+                                                     withURL:url
+                                       withSourceApplication:[options objectForKey:UIApplicationOpenURLOptionsSourceApplicationKey]
+                                              withAnnotation:[options objectForKey:UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[AWSMobileClient sharedInstance] withApplication:application
+                                                     withURL:url
+                                       withSourceApplication:sourceApplication
+                                              withAnnotation:annotation];
 }
 
 
@@ -41,6 +65,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[AWSMobileClient sharedInstance] applicationDidBecomeActive:application];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -57,7 +82,8 @@
 
 - (void)loadFirstViewController {
     self.mainViewController = [[DQMainViewController alloc] init];
-    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+    DQSlideNavigationController *navigationViewController = [[DQSlideNavigationController alloc] initWithRootViewController:self.mainViewController];
+    
     [self.window setRootViewController:navigationViewController];
 }
 

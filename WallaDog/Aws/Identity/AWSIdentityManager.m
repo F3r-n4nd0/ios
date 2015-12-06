@@ -59,7 +59,6 @@ typedef void (^AWSIdentityManagerCompletionBlock)(id result, NSError *error);
 
 - (AWSTask *)initializeClients:(NSDictionary *)logins {
     NSLog(@"initializing clients...");
-    [AWSLogger defaultLogger].logLevel = AWSLogLevelVerbose;
     [AWSServiceConfiguration addGlobalUserAgentProductToken:AWS_MOBILEHUB_USER_AGENT];
 
     self.credentialsProvider =[[AWSCognitoCredentialsProvider alloc] initWithRegionType:AMAZON_COGNITO_REGION

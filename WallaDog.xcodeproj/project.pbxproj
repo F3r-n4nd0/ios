@@ -10,7 +10,14 @@
 		49E819AC48E0A1381AAD1C72 /* libPods-WallaDog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */; };
 		8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */; };
 		8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */; };
+		8F0CB8E71C14D08100A7DC1E /* DQArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */; };
+		8F301C911C14B6C6005DE048 /* DQStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */; };
+		8F301C921C14B6C6005DE048 /* DQStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */; };
 		8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */; };
+		8F5B77161C1484850097BC37 /* DQAccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */; };
+		8F5B77191C14875D0097BC37 /* DQAccordionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */; };
+		8F5B771D1C148A8D0097BC37 /* DQMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */; };
+		8F5B771E1C148A8D0097BC37 /* DQMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */; };
 		8F7BF4641BF8F22800111F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4631BF8F22800111F3C /* main.m */; };
 		8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4661BF8F22800111F3C /* AppDelegate.m */; };
 		8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46E1BF8F22800111F3C /* Assets.xcassets */; };
@@ -33,6 +40,9 @@
 		8F7BF4E41BF8FCE000111F3C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E31BF8FCE000111F3C /* AssetsLibrary.framework */; };
 		8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */; };
 		8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */; };
+		8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */; };
+		8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */; };
+		8FB3D6021C13F6D300A84145 /* DQMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */; };
 		EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +70,18 @@
 		8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMainViewController.h; sourceTree = "<group>"; };
 		8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainViewController.m; sourceTree = "<group>"; };
 		8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainViewController.xib; sourceTree = "<group>"; };
+		8F0CB8E51C14D08100A7DC1E /* DQArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQArrowView.h; sourceTree = "<group>"; };
+		8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQArrowView.m; sourceTree = "<group>"; };
+		8F301C8E1C14B6C6005DE048 /* DQStartedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQStartedViewController.h; sourceTree = "<group>"; };
+		8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQStartedViewController.m; sourceTree = "<group>"; };
+		8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQStartedViewController.xib; sourceTree = "<group>"; };
 		8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQAccordionHeaderView.xib; sourceTree = "<group>"; };
+		8F5B77171C14875D0097BC37 /* DQAccordionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQAccordionHeaderView.h; sourceTree = "<group>"; };
+		8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQAccordionHeaderView.m; sourceTree = "<group>"; };
+		8F5B771A1C148A8D0097BC37 /* DQMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMenuTableViewCell.h; sourceTree = "<group>"; };
+		8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMenuTableViewCell.m; sourceTree = "<group>"; };
+		8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMenuTableViewCell.xib; sourceTree = "<group>"; };
 		8F7BF45F1BF8F22800111F3C /* WallaDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallaDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7BF4631BF8F22800111F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F7BF4651BF8F22800111F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +124,11 @@
 		8F7BF4EB1BF9025100111F3C /* libAWSMobileAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSMobileAnalytics.a; path = "Pods/../build/Debug-iphoneos/libAWSMobileAnalytics.a"; sourceTree = "<group>"; };
 		8F7BF4EC1BF9025100111F3C /* libAWSS3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSS3.a; path = "Pods/../build/Debug-iphoneos/libAWSS3.a"; sourceTree = "<group>"; };
 		8F7BF4ED1BF9025100111F3C /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "Pods/../build/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
+		8F894EAA1C14095000A81868 /* DQSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSlideNavigationController.h; sourceTree = "<group>"; };
+		8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSlideNavigationController.m; sourceTree = "<group>"; };
+		8FB3D5FE1C13F6D300A84145 /* DQMainMenuLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMainMenuLeftViewController.h; sourceTree = "<group>"; };
+		8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainMenuLeftViewController.m; sourceTree = "<group>"; };
+		8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainMenuLeftViewController.xib; sourceTree = "<group>"; };
 		92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.debug.xcconfig"; sourceTree = "<group>"; };
 		C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +178,14 @@
 				8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */,
 				8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */,
 				8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */,
+				8FB3D5FE1C13F6D300A84145 /* DQMainMenuLeftViewController.h */,
+				8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */,
+				8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */,
+				8F894EAA1C14095000A81868 /* DQSlideNavigationController.h */,
+				8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */,
+				8F301C8E1C14B6C6005DE048 /* DQStartedViewController.h */,
+				8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */,
+				8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +194,14 @@
 			isa = PBXGroup;
 			children = (
 				8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */,
+				8F5B77171C14875D0097BC37 /* DQAccordionHeaderView.h */,
+				8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */,
+				8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */,
+				8F5B771A1C148A8D0097BC37 /* DQMenuTableViewCell.h */,
+				8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */,
+				8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */,
+				8F0CB8E51C14D08100A7DC1E /* DQArrowView.h */,
+				8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,9 +476,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB3D6021C13F6D300A84145 /* DQMainMenuLeftViewController.xib in Resources */,
+				8F301C921C14B6C6005DE048 /* DQStartedViewController.xib in Resources */,
 				8F7BF4D01BF8FC3C00111F3C /* Localizable.strings in Resources */,
 				8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */,
 				8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */,
+				8F5B771E1C148A8D0097BC37 /* DQMenuTableViewCell.xib in Resources */,
+				8F5B77161C1484850097BC37 /* DQAccordionHeaderView.xib in Resources */,
 				8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,10 +603,16 @@
 			files = (
 				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
 				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
+				8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */,
 				8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */,
+				8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */,
 				8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */,
+				8F0CB8E71C14D08100A7DC1E /* DQArrowView.m in Sources */,
+				8F301C911C14B6C6005DE048 /* DQStartedViewController.m in Sources */,
+				8F5B771D1C148A8D0097BC37 /* DQMenuTableViewCell.m in Sources */,
 				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
 				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
+				8F5B77191C14875D0097BC37 /* DQAccordionHeaderView.m in Sources */,
 				8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */,
 				8F7BF4641BF8F22800111F3C /* main.m in Sources */,
 			);

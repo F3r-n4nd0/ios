@@ -27,7 +27,7 @@
     AWSLogDebug(@"init");
     self = [super init];
     _initialized = NO;
-    [AWSLogger defaultLogger].logLevel = AWSLogLevelInfo;
+    [AWSLogger defaultLogger].logLevel = AWSLogLevelError;
     return self;
 }
 

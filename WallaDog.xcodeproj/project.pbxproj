@@ -43,6 +43,22 @@
 		8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */; };
 		8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */; };
 		8FB3D6021C13F6D300A84145 /* DQMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */; };
+		B1120F821C170F4A00E52F67 /* DQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F811C170F4A00E52F67 /* DQCategory.m */; };
+		B1120F831C170F4A00E52F67 /* DQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F811C170F4A00E52F67 /* DQCategory.m */; };
+		B1120F861C17127D00E52F67 /* DQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F851C17127D00E52F67 /* DQImage.m */; };
+		B1120F871C17127D00E52F67 /* DQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F851C17127D00E52F67 /* DQImage.m */; };
+		B1120F8A1C1713FE00E52F67 /* DQState.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F891C1713FE00E52F67 /* DQState.m */; };
+		B1120F8B1C1713FE00E52F67 /* DQState.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F891C1713FE00E52F67 /* DQState.m */; };
+		B1120F8E1C17150500E52F67 /* DQSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F8D1C17150500E52F67 /* DQSavedSearch.m */; };
+		B1120F8F1C17150500E52F67 /* DQSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F8D1C17150500E52F67 /* DQSavedSearch.m */; };
+		B1120F921C1715E800E52F67 /* DQProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F911C1715E800E52F67 /* DQProduct.m */; };
+		B1120F931C1715E800E52F67 /* DQProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F911C1715E800E52F67 /* DQProduct.m */; };
+		B1120F961C17168E00E52F67 /* DQTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F951C17168E00E52F67 /* DQTransaction.m */; };
+		B1120F971C17168E00E52F67 /* DQTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F951C17168E00E52F67 /* DQTransaction.m */; };
+		B1120F9A1C17177600E52F67 /* DQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F991C17177600E52F67 /* DQUser.m */; };
+		B1120F9B1C17177600E52F67 /* DQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F991C17177600E52F67 /* DQUser.m */; };
+		B1120F9E1C1717B700E52F67 /* DQDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F9D1C1717B700E52F67 /* DQDetail.m */; };
+		B1120F9F1C1717B700E52F67 /* DQDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F9D1C1717B700E52F67 /* DQDetail.m */; };
 		EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +146,22 @@
 		8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainMenuLeftViewController.m; sourceTree = "<group>"; };
 		8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainMenuLeftViewController.xib; sourceTree = "<group>"; };
 		92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.debug.xcconfig"; sourceTree = "<group>"; };
+		B1120F801C170F0900E52F67 /* DQCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQCategory.h; sourceTree = "<group>"; };
+		B1120F811C170F4A00E52F67 /* DQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQCategory.m; sourceTree = "<group>"; };
+		B1120F841C17127D00E52F67 /* DQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQImage.h; sourceTree = "<group>"; };
+		B1120F851C17127D00E52F67 /* DQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQImage.m; sourceTree = "<group>"; };
+		B1120F881C1713FE00E52F67 /* DQState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQState.h; sourceTree = "<group>"; };
+		B1120F891C1713FE00E52F67 /* DQState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQState.m; sourceTree = "<group>"; };
+		B1120F8C1C17150500E52F67 /* DQSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSavedSearch.h; sourceTree = "<group>"; };
+		B1120F8D1C17150500E52F67 /* DQSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSavedSearch.m; sourceTree = "<group>"; };
+		B1120F901C1715E800E52F67 /* DQProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQProduct.h; sourceTree = "<group>"; };
+		B1120F911C1715E800E52F67 /* DQProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQProduct.m; sourceTree = "<group>"; };
+		B1120F941C17168E00E52F67 /* DQTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQTransaction.h; sourceTree = "<group>"; };
+		B1120F951C17168E00E52F67 /* DQTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQTransaction.m; sourceTree = "<group>"; };
+		B1120F981C17177600E52F67 /* DQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQUser.h; sourceTree = "<group>"; };
+		B1120F991C17177600E52F67 /* DQUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQUser.m; sourceTree = "<group>"; };
+		B1120F9C1C1717B700E52F67 /* DQDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetail.h; sourceTree = "<group>"; };
+		B1120F9D1C1717B700E52F67 /* DQDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetail.m; sourceTree = "<group>"; };
 		C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +263,7 @@
 		8F7BF4611BF8F22800111F3C /* WallaDog */ = {
 			isa = PBXGroup;
 			children = (
+				B1120F7F1C170DA200E52F67 /* Models */,
 				8F01D0801C0F8E3A00F67C93 /* Controllers */,
 				8F3522B71C0F7F4D00DDE67D /* Views */,
 				8F7BF4B41BF8FC3C00111F3C /* Aws */,
@@ -328,6 +361,29 @@
 				8F7BF4CB1BF8FC3C00111F3C /* AWSTask+CheckExceptions.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B1120F7F1C170DA200E52F67 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1120F801C170F0900E52F67 /* DQCategory.h */,
+				B1120F811C170F4A00E52F67 /* DQCategory.m */,
+				B1120F841C17127D00E52F67 /* DQImage.h */,
+				B1120F851C17127D00E52F67 /* DQImage.m */,
+				B1120F881C1713FE00E52F67 /* DQState.h */,
+				B1120F891C1713FE00E52F67 /* DQState.m */,
+				B1120F8C1C17150500E52F67 /* DQSavedSearch.h */,
+				B1120F8D1C17150500E52F67 /* DQSavedSearch.m */,
+				B1120F901C1715E800E52F67 /* DQProduct.h */,
+				B1120F911C1715E800E52F67 /* DQProduct.m */,
+				B1120F941C17168E00E52F67 /* DQTransaction.h */,
+				B1120F951C17168E00E52F67 /* DQTransaction.m */,
+				B1120F981C17177600E52F67 /* DQUser.h */,
+				B1120F991C17177600E52F67 /* DQUser.m */,
+				B1120F9C1C1717B700E52F67 /* DQDetail.h */,
+				B1120F9D1C1717B700E52F67 /* DQDetail.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D26EAD39E149BD1EADE3C3DE /* Frameworks */ = {
@@ -602,16 +658,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
+				B1120F9A1C17177600E52F67 /* DQUser.m in Sources */,
 				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
+				B1120F921C1715E800E52F67 /* DQProduct.m in Sources */,
 				8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */,
 				8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */,
+				B1120F8A1C1713FE00E52F67 /* DQState.m in Sources */,
 				8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */,
+				B1120F821C170F4A00E52F67 /* DQCategory.m in Sources */,
+				B1120F8E1C17150500E52F67 /* DQSavedSearch.m in Sources */,
+				B1120F961C17168E00E52F67 /* DQTransaction.m in Sources */,
 				8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */,
 				8F0CB8E71C14D08100A7DC1E /* DQArrowView.m in Sources */,
+				B1120F9E1C1717B700E52F67 /* DQDetail.m in Sources */,
 				8F301C911C14B6C6005DE048 /* DQStartedViewController.m in Sources */,
 				8F5B771D1C148A8D0097BC37 /* DQMenuTableViewCell.m in Sources */,
 				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
 				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
+				B1120F861C17127D00E52F67 /* DQImage.m in Sources */,
 				8F5B77191C14875D0097BC37 /* DQAccordionHeaderView.m in Sources */,
 				8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */,
 				8F7BF4641BF8F22800111F3C /* main.m in Sources */,
@@ -622,7 +686,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1120F8F1C17150500E52F67 /* DQSavedSearch.m in Sources */,
+				B1120F871C17127D00E52F67 /* DQImage.m in Sources */,
+				B1120F971C17168E00E52F67 /* DQTransaction.m in Sources */,
+				B1120F9F1C1717B700E52F67 /* DQDetail.m in Sources */,
+				B1120F831C170F4A00E52F67 /* DQCategory.m in Sources */,
+				B1120F8B1C1713FE00E52F67 /* DQState.m in Sources */,
+				B1120F931C1715E800E52F67 /* DQProduct.m in Sources */,
 				8F7BF47D1BF8F22800111F3C /* WallaDogTests.m in Sources */,
+				B1120F9B1C17177600E52F67 /* DQUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

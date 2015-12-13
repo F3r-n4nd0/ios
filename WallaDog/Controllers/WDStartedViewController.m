@@ -1,23 +1,23 @@
 //
-//  DQStartedViewController.m
+//  WDStartedViewController.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQStartedViewController.h"
-#import "DQArrowView.h"
+#import "WDStartedViewController.h"
+#import "WDArrowView.h"
 
-@interface DQStartedViewController ()
+@interface WDStartedViewController ()
 
-@property (weak, nonatomic) IBOutlet DQArrowView *viewArrowDetail;
+@property (weak, nonatomic) IBOutlet WDArrowView *viewArrowDetail;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogIn;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSignUp;
 
 @end
 
-@implementation DQStartedViewController
+@implementation WDStartedViewController
 
 #pragma mark - Life Cycle
 

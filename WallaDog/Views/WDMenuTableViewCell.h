@@ -1,5 +1,5 @@
 //
-//  DQMenuTableViewCell.h
+//  WDMenuTableViewCell.h
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DQMenuTableViewCell : UITableViewCell
+@interface WDMenuTableViewCell : UITableViewCell
 
 + (NSString*)reuseIdentifier;
 

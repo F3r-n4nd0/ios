@@ -1,5 +1,5 @@
 //
-//  DQSlideNavigationController.h
+//  WDSlideNavigationController.h
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
@@ -10,6 +10,6 @@
 
 @import UIKit;
 
-@interface DQSlideNavigationController : SlideNavigationController
+@interface WDSlideNavigationController : SlideNavigationController
 
 @end

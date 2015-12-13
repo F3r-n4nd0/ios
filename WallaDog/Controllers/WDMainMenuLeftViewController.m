@@ -1,5 +1,5 @@
 //
-//  DQMainMenuLeftViewController.m
+//  WDMainMenuLeftViewController.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
@@ -7,12 +7,12 @@
 //
 #import <FZAccordionTableView/FZAccordionTableView.h>
 
-#import "DQMainMenuLeftViewController.h"
-#import "DQAccordionHeaderView.h"
-#import "DQMenuTableViewCell.h"
+#import "WDMainMenuLeftViewController.h"
+#import "WDAccordionHeaderView.h"
+#import "WDMenuTableViewCell.h"
 
 
-@interface DQMainMenuLeftViewController ()
+@interface WDMainMenuLeftViewController ()
 <FZAccordionTableViewDelegate,
 UITableViewDataSource,
 UITableViewDelegate>
@@ -24,7 +24,7 @@ UITableViewDelegate>
 
 @end
 
-@implementation DQMainMenuLeftViewController
+@implementation WDMainMenuLeftViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,10 +46,10 @@ UITableViewDelegate>
 #pragma mark - Table Menu
 
 - (void)loadMenu {
-    UINib *cellNIb = [UINib nibWithNibName:[DQMenuTableViewCell reuseIdentifier] bundle:nil];
-    [self.tableView registerNib:cellNIb forCellReuseIdentifier:[DQMenuTableViewCell reuseIdentifier]];
-    UINib *headerNib = [UINib nibWithNibName:[DQAccordionHeaderView reuseIdentifier] bundle:nil];
-    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:[DQAccordionHeaderView reuseIdentifier]];
+    UINib *cellNIb = [UINib nibWithNibName:[WDMenuTableViewCell reuseIdentifier] bundle:nil];
+    [self.tableView registerNib:cellNIb forCellReuseIdentifier:[WDMenuTableViewCell reuseIdentifier]];
+    UINib *headerNib = [UINib nibWithNibName:[WDAccordionHeaderView reuseIdentifier] bundle:nil];
+    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:[WDAccordionHeaderView reuseIdentifier]];
     self.sectionsMenuText = [self getSectionsMenuText];
     self.sectionsMenuImages = [self getSectionsMenuImages];
 }
@@ -92,12 +92,12 @@ UITableViewDelegate>
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[DQMenuTableViewCell reuseIdentifier] forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[WDMenuTableViewCell reuseIdentifier] forIndexPath:indexPath];
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    DQAccordionHeaderView *headerView = (DQAccordionHeaderView*) [tableView dequeueReusableHeaderFooterViewWithIdentifier:[DQAccordionHeaderView reuseIdentifier]];
+    WDAccordionHeaderView *headerView = (WDAccordionHeaderView*) [tableView dequeueReusableHeaderFooterViewWithIdentifier:[WDAccordionHeaderView reuseIdentifier]];
     [headerView setImage:[self.sectionsMenuImages objectAtIndex:section] text:[self.sectionsMenuText objectAtIndex:section]];
     return headerView;
 }

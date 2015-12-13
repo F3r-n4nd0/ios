@@ -1,18 +1,18 @@
 //
-//  DQSlideNavigationController.m
+//  WDSlideNavigationController.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQSlideNavigationController.h"
+#import "WDSlideNavigationController.h"
 
-@interface DQSlideNavigationController ()
+@interface WDSlideNavigationController ()
 
 @end
 
-@implementation DQSlideNavigationController
+@implementation WDSlideNavigationController
 
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];

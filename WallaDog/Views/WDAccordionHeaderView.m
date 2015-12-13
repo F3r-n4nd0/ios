@@ -1,14 +1,14 @@
 //
-//  DQAccordionHeaderView.m
+//  WDAccordionHeaderView.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQAccordionHeaderView.h"
+#import "WDAccordionHeaderView.h"
 
-@interface DQAccordionHeaderView ()
+@interface WDAccordionHeaderView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewIcon;
 @property (weak, nonatomic) IBOutlet UILabel *labelMenu;
@@ -17,10 +17,10 @@
 @end
 
 
-@implementation DQAccordionHeaderView
+@implementation WDAccordionHeaderView
 
 + (NSString*)reuseIdentifier {
-    return @"DQAccordionHeaderView";
+    return @"WDAccordionHeaderView";
 }
 
 -(void)setImage:(UIImage*)image

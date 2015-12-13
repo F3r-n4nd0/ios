@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DQStartedViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDStartedViewController">
             <connections>
                 <outlet property="buttonLogIn" destination="7qV-g3-HCw" id="5ua-Oy-Mlp"/>
                 <outlet property="buttonSignUp" destination="54a-aF-vUk" id="rs6-Ew-be9"/>
@@ -26,7 +25,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54a-aF-vUk" userLabel="buttonSignUp">
                                 <rect key="frame" x="243" y="25" width="171" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KN1-cd-fon"/>
                                 </constraints>
@@ -40,7 +38,6 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-UW-yfN" userLabel="viewSeparator">
                                 <rect key="frame" x="241" y="25" width="2" height="44"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="bdT-Zb-SVV"/>
@@ -49,7 +46,6 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qV-g3-HCw" userLabel="buttonLogIn">
                                 <rect key="frame" x="70" y="25" width="171" height="44"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="vz6-Sc-Tlm"/>
                                 </constraints>
@@ -61,17 +57,15 @@
                                     <action selector="touchUpInsideLogIn:" destination="-1" eventType="touchUpInside" id="N2H-KX-cpG"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8z-kR-brU" customClass="DQArrowView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8z-kR-brU" customClass="WDArrowView">
                                 <rect key="frame" x="15" y="90" width="384" height="250"/>
-                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="6y1-lf-TNI"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.31799998879432678" green="0.57999998331069946" blue="0.86299997568130493" alpha="0.48931990606936415" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.42669740319252014" green="0.64923852682113647" blue="0.9025605320930481" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7qV-g3-HCw" firstAttribute="top" secondItem="fBl-NG-d63" secondAttribute="top" constant="25" id="2fQ-7R-Y0d"/>
                             <constraint firstItem="54a-aF-vUk" firstAttribute="top" secondItem="fBl-NG-d63" secondAttribute="top" constant="25" id="48O-3V-5fv"/>
@@ -91,12 +85,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <animations/>
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDb-UV-p9h" userLabel="buttonCancel">
                     <rect key="frame" x="25" y="40" width="20" height="20"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="czZ-lJ-ZVV"/>
                         <constraint firstAttribute="height" constant="20" id="d2i-1y-dlF"/>
@@ -107,7 +99,6 @@
                     </connections>
                 </button>
             </subviews>
-            <animations/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="BU5-yN-duF" secondAttribute="trailing" id="G7q-kr-D54"/>
                 <constraint firstItem="BU5-yN-duF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O4I-Vc-Oqk"/>

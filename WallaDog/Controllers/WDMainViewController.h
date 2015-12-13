@@ -1,5 +1,5 @@
 //
-//  DQMainViewController.h
+//  WDMainViewController.h
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/2/15.
@@ -7,6 +7,6 @@
 //
 #import <iOS-Slide-Menu/SlideNavigationController.h>
 
-@interface DQMainViewController : UIViewController <SlideNavigationControllerDelegate>
+@interface WDMainViewController : UIViewController <SlideNavigationControllerDelegate>
 
 @end

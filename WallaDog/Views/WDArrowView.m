@@ -1,25 +1,25 @@
 //
-//  DQArrowView.m
+//  WDArrowView.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQArrowView.h"
+#import "WDArrowView.h"
 
 static const CGFloat HEIGHTOFPOPUPTRIANGLE = 20.0f;
 static const CGFloat WIDTHOFPOPUPTRIANGLE = 40.0f;
 static const CGFloat borderRadius = 10.0f;
 static const CGFloat strokeWidth = 2.0f;
 
-@interface DQArrowView ()
+@interface WDArrowView ()
 
 @property (nonatomic) CGFloat positionArrow;
 
 @end
 
-@implementation DQArrowView
+@implementation WDArrowView
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];

@@ -1,17 +1,17 @@
 //
-//  DQMenuTableViewCell.m
+//  WDMenuTableViewCell.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQMenuTableViewCell.h"
+#import "WDMenuTableViewCell.h"
 
-@implementation DQMenuTableViewCell
+@implementation WDMenuTableViewCell
 
 + (NSString*)reuseIdentifier {
-    return @"DQMenuTableViewCell";
+    return @"WDMenuTableViewCell";
 }
 
 - (void)awakeFromNib {

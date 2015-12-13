@@ -1,5 +1,5 @@
 //
-//  DQAccordionHeaderView.h
+//  WDAccordionHeaderView.h
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
@@ -7,7 +7,7 @@
 //
 #import <FZAccordionTableView/FZAccordionTableView.h>
 
-@interface DQAccordionHeaderView : FZAccordionTableViewHeaderView
+@interface WDAccordionHeaderView : FZAccordionTableViewHeaderView
 
 + (NSString*)reuseIdentifier;
 

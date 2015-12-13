@@ -1,5 +1,5 @@
 //
-//  DQArrowView.h
+//  WDArrowView.h
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/6/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DQArrowView : UIView
+@interface WDArrowView : UIView
 
 - (void)changePositionArrow:(CGFloat)position;
 

@@ -1,24 +1,24 @@
 //
-//  DQMainViewController.m
+//  WDMainViewController.m
 //  WallaDog
 //
 //  Created by Fernando Luna on 12/2/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import "DQMainViewController.h"
-#import "DQMainMenuLeftViewController.h"
-#import "DQStartedViewController.h"
+#import "WDMainViewController.h"
+#import "WDMainMenuLeftViewController.h"
+#import "WDStartedViewController.h"
 
-@interface DQMainViewController () <
+@interface WDMainViewController () <
 UISearchBarDelegate,
-DQMainMenuLeftViewControllerDelegate>
+WDMainMenuLeftViewControllerDelegate>
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 
 @end
 
-@implementation DQMainViewController
+@implementation WDMainViewController
 
 #pragma mark - Life Cycle
 
@@ -32,7 +32,7 @@ DQMainMenuLeftViewControllerDelegate>
 #pragma mark - Slite Menu
 
 - (void) uploadSliteMenu {
-    DQMainMenuLeftViewController *leftMenu = [[DQMainMenuLeftViewController alloc] init];
+    WDMainMenuLeftViewController *leftMenu = [[WDMainMenuLeftViewController alloc] init];
     [SlideNavigationController sharedInstance].portraitSlideOffset = 100;
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     
@@ -102,7 +102,7 @@ DQMainMenuLeftViewControllerDelegate>
 
 #pragma mark - Delegate
 
-#pragma mark DQMainMenuLeftViewControllerDelegate
+#pragma mark WDMainMenuLeftViewControllerDelegate
 
 - (void)selectMenuSection:(NSInteger)section {
     switch (section) {
@@ -117,7 +117,7 @@ DQMainMenuLeftViewControllerDelegate>
 #pragma mark - XXXXXXXX
 
 - (void)showModalLogin {
-    DQStartedViewController *startedViewController = [[DQStartedViewController alloc] init];
+    WDStartedViewController *startedViewController = [[WDStartedViewController alloc] init];
     startedViewController.modalPresentationStyle = UIModalPresentationCustom;
     startedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self.navigationController presentViewController:startedViewController animated:YES completion:nil];

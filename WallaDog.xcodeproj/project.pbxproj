@@ -44,6 +44,14 @@
 		8FB3D6011C13F6D300A84145 /* WDMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */; };
 		8FB3D6021C13F6D300A84145 /* WDMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */; };
 		8FCC1A6C1C2116C300BE5978 /* UIColor+WDColorsDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */; };
+		8FCC1A7E1C2151C000BE5978 /* WDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A6F1C2151C000BE5978 /* WDCategory.m */; };
+		8FCC1A7F1C2151C000BE5978 /* WDDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A711C2151C000BE5978 /* WDDetail.m */; };
+		8FCC1A801C2151C000BE5978 /* WDImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A731C2151C000BE5978 /* WDImage.m */; };
+		8FCC1A811C2151C000BE5978 /* WDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A751C2151C000BE5978 /* WDProduct.m */; };
+		8FCC1A821C2151C000BE5978 /* WDSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */; };
+		8FCC1A831C2151C000BE5978 /* WDState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A791C2151C000BE5978 /* WDState.m */; };
+		8FCC1A841C2151C000BE5978 /* WDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */; };
+		8FCC1A851C2151C000BE5978 /* WDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A7D1C2151C000BE5978 /* WDUser.m */; };
 		EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +140,22 @@
 		8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDMainMenuLeftViewController.xib; sourceTree = "<group>"; };
 		8FCC1A6A1C2116C300BE5978 /* UIColor+WDColorsDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WDColorsDefault.h"; sourceTree = "<group>"; };
 		8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WDColorsDefault.m"; sourceTree = "<group>"; };
+		8FCC1A6E1C2151C000BE5978 /* WDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDCategory.h; sourceTree = "<group>"; };
+		8FCC1A6F1C2151C000BE5978 /* WDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDCategory.m; sourceTree = "<group>"; };
+		8FCC1A701C2151C000BE5978 /* WDDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDDetail.h; sourceTree = "<group>"; };
+		8FCC1A711C2151C000BE5978 /* WDDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDDetail.m; sourceTree = "<group>"; };
+		8FCC1A721C2151C000BE5978 /* WDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDImage.h; sourceTree = "<group>"; };
+		8FCC1A731C2151C000BE5978 /* WDImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDImage.m; sourceTree = "<group>"; };
+		8FCC1A741C2151C000BE5978 /* WDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDProduct.h; sourceTree = "<group>"; };
+		8FCC1A751C2151C000BE5978 /* WDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDProduct.m; sourceTree = "<group>"; };
+		8FCC1A761C2151C000BE5978 /* WDSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSavedSearch.h; sourceTree = "<group>"; };
+		8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSavedSearch.m; sourceTree = "<group>"; };
+		8FCC1A781C2151C000BE5978 /* WDState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDState.h; sourceTree = "<group>"; };
+		8FCC1A791C2151C000BE5978 /* WDState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDState.m; sourceTree = "<group>"; };
+		8FCC1A7A1C2151C000BE5978 /* WDTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransaction.h; sourceTree = "<group>"; };
+		8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransaction.m; sourceTree = "<group>"; };
+		8FCC1A7C1C2151C000BE5978 /* WDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDUser.h; sourceTree = "<group>"; };
+		8FCC1A7D1C2151C000BE5978 /* WDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDUser.m; sourceTree = "<group>"; };
 		92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.debug.xcconfig"; sourceTree = "<group>"; };
 		C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +258,7 @@
 		8F7BF4611BF8F22800111F3C /* WallaDog */ = {
 			isa = PBXGroup;
 			children = (
+				8FCC1A6D1C2151AA00BE5978 /* Models */,
 				8FCC1A661C2115FD00BE5978 /* Category */,
 				8F01D0801C0F8E3A00F67C93 /* Controllers */,
 				8F3522B71C0F7F4D00DDE67D /* Views */,
@@ -341,6 +366,29 @@
 				8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		8FCC1A6D1C2151AA00BE5978 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC1A6E1C2151C000BE5978 /* WDCategory.h */,
+				8FCC1A6F1C2151C000BE5978 /* WDCategory.m */,
+				8FCC1A701C2151C000BE5978 /* WDDetail.h */,
+				8FCC1A711C2151C000BE5978 /* WDDetail.m */,
+				8FCC1A721C2151C000BE5978 /* WDImage.h */,
+				8FCC1A731C2151C000BE5978 /* WDImage.m */,
+				8FCC1A741C2151C000BE5978 /* WDProduct.h */,
+				8FCC1A751C2151C000BE5978 /* WDProduct.m */,
+				8FCC1A761C2151C000BE5978 /* WDSavedSearch.h */,
+				8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */,
+				8FCC1A781C2151C000BE5978 /* WDState.h */,
+				8FCC1A791C2151C000BE5978 /* WDState.m */,
+				8FCC1A7A1C2151C000BE5978 /* WDTransaction.h */,
+				8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */,
+				8FCC1A7C1C2151C000BE5978 /* WDUser.h */,
+				8FCC1A7D1C2151C000BE5978 /* WDUser.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D26EAD39E149BD1EADE3C3DE /* Frameworks */ = {
@@ -614,8 +662,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC1A831C2151C000BE5978 /* WDState.m in Sources */,
 				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
 				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
+				8FCC1A811C2151C000BE5978 /* WDProduct.m in Sources */,
+				8FCC1A7F1C2151C000BE5978 /* WDDetail.m in Sources */,
+				8FCC1A841C2151C000BE5978 /* WDTransaction.m in Sources */,
+				8FCC1A851C2151C000BE5978 /* WDUser.m in Sources */,
 				8FB3D6011C13F6D300A84145 /* WDMainMenuLeftViewController.m in Sources */,
 				8F01D0901C0F94DF00F67C93 /* WDMainViewController.m in Sources */,
 				8F894EAD1C14095000A81868 /* WDSlideNavigationController.m in Sources */,
@@ -624,6 +677,9 @@
 				8F301C911C14B6C6005DE048 /* WDStartedViewController.m in Sources */,
 				8F5B771D1C148A8D0097BC37 /* WDMenuTableViewCell.m in Sources */,
 				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
+				8FCC1A821C2151C000BE5978 /* WDSavedSearch.m in Sources */,
+				8FCC1A7E1C2151C000BE5978 /* WDCategory.m in Sources */,
+				8FCC1A801C2151C000BE5978 /* WDImage.m in Sources */,
 				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
 				8F5B77191C14875D0097BC37 /* WDAccordionHeaderView.m in Sources */,
 				8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */,

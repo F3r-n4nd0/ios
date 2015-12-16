@@ -8,13 +8,14 @@
 
 #import "WDArrowView.h"
 
-static const CGFloat HEIGHTOFPOPUPTRIANGLE = 20.0f;
-static const CGFloat WIDTHOFPOPUPTRIANGLE = 40.0f;
-static const CGFloat borderRadius = 10.0f;
-static const CGFloat strokeWidth = 2.0f;
+static const CGFloat HEIGHTOFPOPUPTRIANGLE = 15.0f;
+static const CGFloat WIDTHOFPOPUPTRIANGLE = 35.0f;
+static const CGFloat borderRadius = 15.0f;
+static const CGFloat strokeWidth = 1.0f;
 
 @interface WDArrowView ()
 
+@property (nonatomic, strong) UIView *viewArrow;
 @property (nonatomic) CGFloat positionArrow;
 
 @end
@@ -27,6 +28,10 @@ static const CGFloat strokeWidth = 2.0f;
         _positionArrow = self.frame.size.width / 2.0f;
     }
     return self;
+}
+
+-(void)layoutSubviews {
+    [super layoutSubviews];
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -59,12 +64,17 @@ static const CGFloat strokeWidth = 2.0f;
     CGContextClosePath(context);
     CGContextDrawPath(context, kCGPathFillStroke);
 
-
 }
 
-- (void)changePositionArrow:(CGFloat)position {
-    self.positionArrow = position;
-    [self setNeedsDisplay];
+- (void)setArrowPositionFromView:(UIView*)view {
+    self.viewArrow = view;
+    [self calculateCenterViewContainer];
+}
+
+- (void)calculateCenterViewContainer {
+    CGFloat centerViewInContainer =  self.viewArrow.frame.origin.x + (self.viewArrow.frame.size.width/2);
+    self.positionArrow = centerViewInContainer;
+     [self setNeedsDisplay];
 }
 
 @end

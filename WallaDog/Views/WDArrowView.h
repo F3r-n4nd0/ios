@@ -10,6 +10,6 @@
 
 @interface WDArrowView : UIView
 
-- (void)changePositionArrow:(CGFloat)position;
+- (void)setArrowPositionFromView:(UIView*)view;
 
 @end

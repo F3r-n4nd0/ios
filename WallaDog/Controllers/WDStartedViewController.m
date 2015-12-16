@@ -11,9 +11,19 @@
 
 @interface WDStartedViewController ()
 
-@property (weak, nonatomic) IBOutlet WDArrowView *viewArrowDetail;
-@property (weak, nonatomic) IBOutlet UIButton *buttonLogIn;
-@property (weak, nonatomic) IBOutlet UIButton *buttonSignUp;
+@property (weak, nonatomic) IBOutlet UIButton *buttonLogInMenu;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSignUpMenu;
+@property (weak, nonatomic) IBOutlet UIButton *buttonForgotYourPassword;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEnterLogIn;
+@property (weak, nonatomic) IBOutlet UIButton *buttonEnterSignUp;
+@property (weak, nonatomic) IBOutlet UIView *viewSignUp;
+@property (weak, nonatomic) IBOutlet UIView *viewLogIn;
+@property (weak, nonatomic) IBOutlet WDArrowView *viewWithArrow;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewLogInTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewSignUpTop;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewWithArrow;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLogInEmail;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpFullName;
 
 @end
 
@@ -23,8 +33,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-  
+    [self loadDefaultUIView];
+    [self loadDefaultConfiguration];
+}
+
+-(void)loadDefaultConfiguration {
+    [self changeToViewLogIn];
+}
+
+#pragma mark - Configure UI
+
+-(void)loadDefaultUIView {
+    [self.constraintViewSignUpTop setConstant:self.constraintViewLogInTop.constant];
+    [self.buttonEnterSignUp.layer setCornerRadius:15];
+    [self.buttonEnterLogIn.layer setCornerRadius:15];
+}
+
+-(void)changeToViewLogIn {
+    [self.viewLogIn setHidden:NO];
+    [self.viewSignUp setHidden:YES];
+    [self.viewWithArrow setArrowPositionFromView:self.buttonLogInMenu];
+    [self.constraintViewWithArrow setConstant:self.viewLogIn.frame.size.height + self.constraintViewLogInTop.constant];
+}
+
+-(void)changeToViewSignUp {
+    [self.viewSignUp setHidden:NO];
+    [self.viewLogIn setHidden:YES];
+    [self.viewWithArrow setArrowPositionFromView:self.buttonSignUpMenu];
+    [self.constraintViewWithArrow setConstant:self.viewSignUp.frame.size.height + self.constraintViewLogInTop.constant];
 }
 
 #pragma mark - Actions
@@ -33,15 +69,33 @@
     [self dismissViewControllerAnimated:YES completion:nil];    
 }
 
-- (IBAction)touchUpInsideLogIn:(id)sender {
-    CGFloat tmp =  self.buttonLogIn.frame.origin.x + (self.buttonLogIn.frame.size.width/2) - self.viewArrowDetail.frame.origin.x;
-    [self.viewArrowDetail changePositionArrow:tmp];
+- (IBAction)touchUpInsideLogInMenu:(id)sender {
+    if(!self.viewLogIn.hidden) {
+        return;
+    }
+    [self changeToViewLogIn];
 }
 
-- (IBAction)touchUpInsideSignUp:(id)sender {
-    CGFloat tmp =  self.buttonSignUp.frame.origin.x + (self.buttonSignUp.frame.size.width/2) - self.viewArrowDetail.frame.origin.x;
-    [self.viewArrowDetail changePositionArrow:tmp];
+- (IBAction)touchUpInsideSignUpMenu:(id)sender {
+    if(!self.viewSignUp.hidden) {
+        return;
+    }
+    [self changeToViewSignUp];
 }
+
+- (IBAction)touchUpInsideEnterLogIn:(id)sender {
+    
+}
+
+- (IBAction)touchUpInsideEnterSignUp:(id)sender {
+    
+}
+
+- (IBAction)touchUpInsideForgotPassword:(id)sender {
+    
+}
+
+
 
 
 @end

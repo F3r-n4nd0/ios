@@ -7,6 +7,7 @@
 //
 
 #import "WDSlideNavigationController.h"
+#import "UIColor+WDColorsDefault.h"
 
 @interface WDSlideNavigationController ()
 
@@ -17,7 +18,8 @@
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];
     if(self) {
-        [self.navigationBar setBarTintColor:[UIColor colorWithRed:0.383 green:0.652 blue:0.89 alpha:1]];
+        [self.navigationBar setTranslucent:NO];
+        [self.navigationBar setBarTintColor:[UIColor colorPrimary]];
         [self.navigationBar setTintColor:[UIColor whiteColor]];
     }
     return self;

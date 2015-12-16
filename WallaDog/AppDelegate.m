@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 #import "AWSMobileClient.h"
-#import "DQMainViewController.h"
-#import "DQSlideNavigationController.h"
+#import "WDMainViewController.h"
+#import "WDSlideNavigationController.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic, strong) DQMainViewController *mainViewController;
+@property(nonatomic, strong) WDMainViewController *mainViewController;
 
 @end
 
@@ -81,8 +81,8 @@
 }
 
 - (void)loadFirstViewController {
-    self.mainViewController = [[DQMainViewController alloc] init];
-    DQSlideNavigationController *navigationViewController = [[DQSlideNavigationController alloc] initWithRootViewController:self.mainViewController];
+    self.mainViewController = [[WDMainViewController alloc] init];
+    WDSlideNavigationController *navigationViewController = [[WDSlideNavigationController alloc] initWithRootViewController:self.mainViewController];
     
     [self.window setRootViewController:navigationViewController];
 }

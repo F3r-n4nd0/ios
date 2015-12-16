@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		49E819AC48E0A1381AAD1C72 /* libPods-WallaDog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */; };
-		8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */; };
-		8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */; };
-		8F0CB8E71C14D08100A7DC1E /* DQArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */; };
-		8F301C911C14B6C6005DE048 /* DQStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */; };
-		8F301C921C14B6C6005DE048 /* DQStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */; };
-		8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */; };
-		8F5B77161C1484850097BC37 /* DQAccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */; };
-		8F5B77191C14875D0097BC37 /* DQAccordionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */; };
-		8F5B771D1C148A8D0097BC37 /* DQMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */; };
-		8F5B771E1C148A8D0097BC37 /* DQMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */; };
+		8F01D0901C0F94DF00F67C93 /* WDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F01D08E1C0F94DF00F67C93 /* WDMainViewController.m */; };
+		8F01D0911C0F94DF00F67C93 /* WDMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F01D08F1C0F94DF00F67C93 /* WDMainViewController.xib */; };
+		8F0CB8E71C14D08100A7DC1E /* WDArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0CB8E61C14D08100A7DC1E /* WDArrowView.m */; };
+		8F301C911C14B6C6005DE048 /* WDStartedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F301C8F1C14B6C6005DE048 /* WDStartedViewController.m */; };
+		8F301C921C14B6C6005DE048 /* WDStartedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F301C901C14B6C6005DE048 /* WDStartedViewController.xib */; };
+		8F3522B91C0F7F7B00DDE67D /* WDLaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F3522B81C0F7F7B00DDE67D /* WDLaunchScreen.xib */; };
+		8F5B77161C1484850097BC37 /* WDAccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B77151C1484850097BC37 /* WDAccordionHeaderView.xib */; };
+		8F5B77191C14875D0097BC37 /* WDAccordionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B77181C14875D0097BC37 /* WDAccordionHeaderView.m */; };
+		8F5B771D1C148A8D0097BC37 /* WDMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B771B1C148A8D0097BC37 /* WDMenuTableViewCell.m */; };
+		8F5B771E1C148A8D0097BC37 /* WDMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B771C1C148A8D0097BC37 /* WDMenuTableViewCell.xib */; };
 		8F7BF4641BF8F22800111F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4631BF8F22800111F3C /* main.m */; };
 		8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7BF4661BF8F22800111F3C /* AppDelegate.m */; };
 		8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7BF46E1BF8F22800111F3C /* Assets.xcassets */; };
@@ -40,25 +40,18 @@
 		8F7BF4E41BF8FCE000111F3C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E31BF8FCE000111F3C /* AssetsLibrary.framework */; };
 		8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */; };
 		8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */; };
-		8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */; };
-		8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */; };
-		8FB3D6021C13F6D300A84145 /* DQMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */; };
-		B1120F821C170F4A00E52F67 /* DQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F811C170F4A00E52F67 /* DQCategory.m */; };
-		B1120F831C170F4A00E52F67 /* DQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F811C170F4A00E52F67 /* DQCategory.m */; };
-		B1120F861C17127D00E52F67 /* DQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F851C17127D00E52F67 /* DQImage.m */; };
-		B1120F871C17127D00E52F67 /* DQImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F851C17127D00E52F67 /* DQImage.m */; };
-		B1120F8A1C1713FE00E52F67 /* DQState.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F891C1713FE00E52F67 /* DQState.m */; };
-		B1120F8B1C1713FE00E52F67 /* DQState.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F891C1713FE00E52F67 /* DQState.m */; };
-		B1120F8E1C17150500E52F67 /* DQSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F8D1C17150500E52F67 /* DQSavedSearch.m */; };
-		B1120F8F1C17150500E52F67 /* DQSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F8D1C17150500E52F67 /* DQSavedSearch.m */; };
-		B1120F921C1715E800E52F67 /* DQProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F911C1715E800E52F67 /* DQProduct.m */; };
-		B1120F931C1715E800E52F67 /* DQProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F911C1715E800E52F67 /* DQProduct.m */; };
-		B1120F961C17168E00E52F67 /* DQTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F951C17168E00E52F67 /* DQTransaction.m */; };
-		B1120F971C17168E00E52F67 /* DQTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F951C17168E00E52F67 /* DQTransaction.m */; };
-		B1120F9A1C17177600E52F67 /* DQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F991C17177600E52F67 /* DQUser.m */; };
-		B1120F9B1C17177600E52F67 /* DQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F991C17177600E52F67 /* DQUser.m */; };
-		B1120F9E1C1717B700E52F67 /* DQDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F9D1C1717B700E52F67 /* DQDetail.m */; };
-		B1120F9F1C1717B700E52F67 /* DQDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = B1120F9D1C1717B700E52F67 /* DQDetail.m */; };
+		8F894EAD1C14095000A81868 /* WDSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F894EAB1C14095000A81868 /* WDSlideNavigationController.m */; };
+		8FB3D6011C13F6D300A84145 /* WDMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */; };
+		8FB3D6021C13F6D300A84145 /* WDMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */; };
+		8FCC1A6C1C2116C300BE5978 /* UIColor+WDColorsDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */; };
+		8FCC1A7E1C2151C000BE5978 /* WDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A6F1C2151C000BE5978 /* WDCategory.m */; };
+		8FCC1A7F1C2151C000BE5978 /* WDDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A711C2151C000BE5978 /* WDDetail.m */; };
+		8FCC1A801C2151C000BE5978 /* WDImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A731C2151C000BE5978 /* WDImage.m */; };
+		8FCC1A811C2151C000BE5978 /* WDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A751C2151C000BE5978 /* WDProduct.m */; };
+		8FCC1A821C2151C000BE5978 /* WDSavedSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */; };
+		8FCC1A831C2151C000BE5978 /* WDState.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A791C2151C000BE5978 /* WDState.m */; };
+		8FCC1A841C2151C000BE5978 /* WDTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */; };
+		8FCC1A851C2151C000BE5978 /* WDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCC1A7D1C2151C000BE5978 /* WDUser.m */; };
 		EB645EC113388D36F2210447 /* libPods-WallaDogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */; };
 /* End PBXBuildFile section */
 
@@ -83,21 +76,21 @@
 		0FEB3DF043E541EAD2CFF8CE /* libPods-WallaDogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52089A690425ABC0CDA3F393 /* libPods-WallaDog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WallaDog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		659CA3FC7EDF68F558F90F13 /* Pods-WallaDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.release.xcconfig"; sourceTree = "<group>"; };
-		8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMainViewController.h; sourceTree = "<group>"; };
-		8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainViewController.m; sourceTree = "<group>"; };
-		8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainViewController.xib; sourceTree = "<group>"; };
-		8F0CB8E51C14D08100A7DC1E /* DQArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQArrowView.h; sourceTree = "<group>"; };
-		8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQArrowView.m; sourceTree = "<group>"; };
-		8F301C8E1C14B6C6005DE048 /* DQStartedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQStartedViewController.h; sourceTree = "<group>"; };
-		8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQStartedViewController.m; sourceTree = "<group>"; };
-		8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQStartedViewController.xib; sourceTree = "<group>"; };
-		8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQAccordionHeaderView.xib; sourceTree = "<group>"; };
-		8F5B77171C14875D0097BC37 /* DQAccordionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQAccordionHeaderView.h; sourceTree = "<group>"; };
-		8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQAccordionHeaderView.m; sourceTree = "<group>"; };
-		8F5B771A1C148A8D0097BC37 /* DQMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMenuTableViewCell.h; sourceTree = "<group>"; };
-		8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMenuTableViewCell.m; sourceTree = "<group>"; };
-		8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMenuTableViewCell.xib; sourceTree = "<group>"; };
+		8F01D08D1C0F94DF00F67C93 /* WDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDMainViewController.h; sourceTree = "<group>"; };
+		8F01D08E1C0F94DF00F67C93 /* WDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDMainViewController.m; sourceTree = "<group>"; };
+		8F01D08F1C0F94DF00F67C93 /* WDMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDMainViewController.xib; sourceTree = "<group>"; };
+		8F0CB8E51C14D08100A7DC1E /* WDArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDArrowView.h; sourceTree = "<group>"; };
+		8F0CB8E61C14D08100A7DC1E /* WDArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDArrowView.m; sourceTree = "<group>"; };
+		8F301C8E1C14B6C6005DE048 /* WDStartedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDStartedViewController.h; sourceTree = "<group>"; };
+		8F301C8F1C14B6C6005DE048 /* WDStartedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDStartedViewController.m; sourceTree = "<group>"; };
+		8F301C901C14B6C6005DE048 /* WDStartedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDStartedViewController.xib; sourceTree = "<group>"; };
+		8F3522B81C0F7F7B00DDE67D /* WDLaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDLaunchScreen.xib; sourceTree = "<group>"; };
+		8F5B77151C1484850097BC37 /* WDAccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDAccordionHeaderView.xib; sourceTree = "<group>"; };
+		8F5B77171C14875D0097BC37 /* WDAccordionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAccordionHeaderView.h; sourceTree = "<group>"; };
+		8F5B77181C14875D0097BC37 /* WDAccordionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAccordionHeaderView.m; sourceTree = "<group>"; };
+		8F5B771A1C148A8D0097BC37 /* WDMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDMenuTableViewCell.h; sourceTree = "<group>"; };
+		8F5B771B1C148A8D0097BC37 /* WDMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDMenuTableViewCell.m; sourceTree = "<group>"; };
+		8F5B771C1C148A8D0097BC37 /* WDMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDMenuTableViewCell.xib; sourceTree = "<group>"; };
 		8F7BF45F1BF8F22800111F3C /* WallaDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallaDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7BF4631BF8F22800111F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F7BF4651BF8F22800111F3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,28 +133,30 @@
 		8F7BF4EB1BF9025100111F3C /* libAWSMobileAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSMobileAnalytics.a; path = "Pods/../build/Debug-iphoneos/libAWSMobileAnalytics.a"; sourceTree = "<group>"; };
 		8F7BF4EC1BF9025100111F3C /* libAWSS3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSS3.a; path = "Pods/../build/Debug-iphoneos/libAWSS3.a"; sourceTree = "<group>"; };
 		8F7BF4ED1BF9025100111F3C /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "Pods/../build/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
-		8F894EAA1C14095000A81868 /* DQSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSlideNavigationController.h; sourceTree = "<group>"; };
-		8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSlideNavigationController.m; sourceTree = "<group>"; };
-		8FB3D5FE1C13F6D300A84145 /* DQMainMenuLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQMainMenuLeftViewController.h; sourceTree = "<group>"; };
-		8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMainMenuLeftViewController.m; sourceTree = "<group>"; };
-		8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DQMainMenuLeftViewController.xib; sourceTree = "<group>"; };
+		8F894EAA1C14095000A81868 /* WDSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSlideNavigationController.h; sourceTree = "<group>"; };
+		8F894EAB1C14095000A81868 /* WDSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSlideNavigationController.m; sourceTree = "<group>"; };
+		8FB3D5FE1C13F6D300A84145 /* WDMainMenuLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDMainMenuLeftViewController.h; sourceTree = "<group>"; };
+		8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDMainMenuLeftViewController.m; sourceTree = "<group>"; };
+		8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDMainMenuLeftViewController.xib; sourceTree = "<group>"; };
+		8FCC1A6A1C2116C300BE5978 /* UIColor+WDColorsDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WDColorsDefault.h"; sourceTree = "<group>"; };
+		8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WDColorsDefault.m"; sourceTree = "<group>"; };
+		8FCC1A6E1C2151C000BE5978 /* WDCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDCategory.h; sourceTree = "<group>"; };
+		8FCC1A6F1C2151C000BE5978 /* WDCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDCategory.m; sourceTree = "<group>"; };
+		8FCC1A701C2151C000BE5978 /* WDDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDDetail.h; sourceTree = "<group>"; };
+		8FCC1A711C2151C000BE5978 /* WDDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDDetail.m; sourceTree = "<group>"; };
+		8FCC1A721C2151C000BE5978 /* WDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDImage.h; sourceTree = "<group>"; };
+		8FCC1A731C2151C000BE5978 /* WDImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDImage.m; sourceTree = "<group>"; };
+		8FCC1A741C2151C000BE5978 /* WDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDProduct.h; sourceTree = "<group>"; };
+		8FCC1A751C2151C000BE5978 /* WDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDProduct.m; sourceTree = "<group>"; };
+		8FCC1A761C2151C000BE5978 /* WDSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSavedSearch.h; sourceTree = "<group>"; };
+		8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSavedSearch.m; sourceTree = "<group>"; };
+		8FCC1A781C2151C000BE5978 /* WDState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDState.h; sourceTree = "<group>"; };
+		8FCC1A791C2151C000BE5978 /* WDState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDState.m; sourceTree = "<group>"; };
+		8FCC1A7A1C2151C000BE5978 /* WDTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDTransaction.h; sourceTree = "<group>"; };
+		8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDTransaction.m; sourceTree = "<group>"; };
+		8FCC1A7C1C2151C000BE5978 /* WDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDUser.h; sourceTree = "<group>"; };
+		8FCC1A7D1C2151C000BE5978 /* WDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDUser.m; sourceTree = "<group>"; };
 		92A7BD2D2E8D675C7487B433 /* Pods-WallaDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.debug.xcconfig"; sourceTree = "<group>"; };
-		B1120F801C170F0900E52F67 /* DQCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQCategory.h; sourceTree = "<group>"; };
-		B1120F811C170F4A00E52F67 /* DQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQCategory.m; sourceTree = "<group>"; };
-		B1120F841C17127D00E52F67 /* DQImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQImage.h; sourceTree = "<group>"; };
-		B1120F851C17127D00E52F67 /* DQImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQImage.m; sourceTree = "<group>"; };
-		B1120F881C1713FE00E52F67 /* DQState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQState.h; sourceTree = "<group>"; };
-		B1120F891C1713FE00E52F67 /* DQState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQState.m; sourceTree = "<group>"; };
-		B1120F8C1C17150500E52F67 /* DQSavedSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQSavedSearch.h; sourceTree = "<group>"; };
-		B1120F8D1C17150500E52F67 /* DQSavedSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQSavedSearch.m; sourceTree = "<group>"; };
-		B1120F901C1715E800E52F67 /* DQProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQProduct.h; sourceTree = "<group>"; };
-		B1120F911C1715E800E52F67 /* DQProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQProduct.m; sourceTree = "<group>"; };
-		B1120F941C17168E00E52F67 /* DQTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQTransaction.h; sourceTree = "<group>"; };
-		B1120F951C17168E00E52F67 /* DQTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQTransaction.m; sourceTree = "<group>"; };
-		B1120F981C17177600E52F67 /* DQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQUser.h; sourceTree = "<group>"; };
-		B1120F991C17177600E52F67 /* DQUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQUser.m; sourceTree = "<group>"; };
-		B1120F9C1C1717B700E52F67 /* DQDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDetail.h; sourceTree = "<group>"; };
-		B1120F9D1C1717B700E52F67 /* DQDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDetail.m; sourceTree = "<group>"; };
 		C38DF8E16A545E320ACF9C99 /* Pods-WallaDogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDogTests/Pods-WallaDogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F74BA70D4060D390E988428D /* Pods-WallaDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallaDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-WallaDog/Pods-WallaDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,17 +202,17 @@
 		8F01D0801C0F8E3A00F67C93 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8F01D08D1C0F94DF00F67C93 /* DQMainViewController.h */,
-				8F01D08E1C0F94DF00F67C93 /* DQMainViewController.m */,
-				8F01D08F1C0F94DF00F67C93 /* DQMainViewController.xib */,
-				8FB3D5FE1C13F6D300A84145 /* DQMainMenuLeftViewController.h */,
-				8FB3D5FF1C13F6D300A84145 /* DQMainMenuLeftViewController.m */,
-				8FB3D6001C13F6D300A84145 /* DQMainMenuLeftViewController.xib */,
-				8F894EAA1C14095000A81868 /* DQSlideNavigationController.h */,
-				8F894EAB1C14095000A81868 /* DQSlideNavigationController.m */,
-				8F301C8E1C14B6C6005DE048 /* DQStartedViewController.h */,
-				8F301C8F1C14B6C6005DE048 /* DQStartedViewController.m */,
-				8F301C901C14B6C6005DE048 /* DQStartedViewController.xib */,
+				8F01D08D1C0F94DF00F67C93 /* WDMainViewController.h */,
+				8F01D08E1C0F94DF00F67C93 /* WDMainViewController.m */,
+				8F01D08F1C0F94DF00F67C93 /* WDMainViewController.xib */,
+				8FB3D5FE1C13F6D300A84145 /* WDMainMenuLeftViewController.h */,
+				8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */,
+				8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */,
+				8F894EAA1C14095000A81868 /* WDSlideNavigationController.h */,
+				8F894EAB1C14095000A81868 /* WDSlideNavigationController.m */,
+				8F301C8E1C14B6C6005DE048 /* WDStartedViewController.h */,
+				8F301C8F1C14B6C6005DE048 /* WDStartedViewController.m */,
+				8F301C901C14B6C6005DE048 /* WDStartedViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,15 +220,15 @@
 		8F3522B71C0F7F4D00DDE67D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8F3522B81C0F7F7B00DDE67D /* LaunchScreen.xib */,
-				8F5B77171C14875D0097BC37 /* DQAccordionHeaderView.h */,
-				8F5B77181C14875D0097BC37 /* DQAccordionHeaderView.m */,
-				8F5B77151C1484850097BC37 /* DQAccordionHeaderView.xib */,
-				8F5B771A1C148A8D0097BC37 /* DQMenuTableViewCell.h */,
-				8F5B771B1C148A8D0097BC37 /* DQMenuTableViewCell.m */,
-				8F5B771C1C148A8D0097BC37 /* DQMenuTableViewCell.xib */,
-				8F0CB8E51C14D08100A7DC1E /* DQArrowView.h */,
-				8F0CB8E61C14D08100A7DC1E /* DQArrowView.m */,
+				8F3522B81C0F7F7B00DDE67D /* WDLaunchScreen.xib */,
+				8F5B77171C14875D0097BC37 /* WDAccordionHeaderView.h */,
+				8F5B77181C14875D0097BC37 /* WDAccordionHeaderView.m */,
+				8F5B77151C1484850097BC37 /* WDAccordionHeaderView.xib */,
+				8F5B771A1C148A8D0097BC37 /* WDMenuTableViewCell.h */,
+				8F5B771B1C148A8D0097BC37 /* WDMenuTableViewCell.m */,
+				8F5B771C1C148A8D0097BC37 /* WDMenuTableViewCell.xib */,
+				8F0CB8E51C14D08100A7DC1E /* WDArrowView.h */,
+				8F0CB8E61C14D08100A7DC1E /* WDArrowView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,7 +258,8 @@
 		8F7BF4611BF8F22800111F3C /* WallaDog */ = {
 			isa = PBXGroup;
 			children = (
-				B1120F7F1C170DA200E52F67 /* Models */,
+				8FCC1A6D1C2151AA00BE5978 /* Models */,
+				8FCC1A661C2115FD00BE5978 /* Category */,
 				8F01D0801C0F8E3A00F67C93 /* Controllers */,
 				8F3522B71C0F7F4D00DDE67D /* Views */,
 				8F7BF4B41BF8FC3C00111F3C /* Aws */,
@@ -363,27 +359,36 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		B1120F7F1C170DA200E52F67 /* Models */ = {
+		8FCC1A661C2115FD00BE5978 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				B1120F801C170F0900E52F67 /* DQCategory.h */,
-				B1120F811C170F4A00E52F67 /* DQCategory.m */,
-				B1120F841C17127D00E52F67 /* DQImage.h */,
-				B1120F851C17127D00E52F67 /* DQImage.m */,
-				B1120F881C1713FE00E52F67 /* DQState.h */,
-				B1120F891C1713FE00E52F67 /* DQState.m */,
-				B1120F8C1C17150500E52F67 /* DQSavedSearch.h */,
-				B1120F8D1C17150500E52F67 /* DQSavedSearch.m */,
-				B1120F901C1715E800E52F67 /* DQProduct.h */,
-				B1120F911C1715E800E52F67 /* DQProduct.m */,
-				B1120F941C17168E00E52F67 /* DQTransaction.h */,
-				B1120F951C17168E00E52F67 /* DQTransaction.m */,
-				B1120F981C17177600E52F67 /* DQUser.h */,
-				B1120F991C17177600E52F67 /* DQUser.m */,
-				B1120F9C1C1717B700E52F67 /* DQDetail.h */,
-				B1120F9D1C1717B700E52F67 /* DQDetail.m */,
+				8FCC1A6A1C2116C300BE5978 /* UIColor+WDColorsDefault.h */,
+				8FCC1A6B1C2116C300BE5978 /* UIColor+WDColorsDefault.m */,
 			);
-			name = Models;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8FCC1A6D1C2151AA00BE5978 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FCC1A6E1C2151C000BE5978 /* WDCategory.h */,
+				8FCC1A6F1C2151C000BE5978 /* WDCategory.m */,
+				8FCC1A701C2151C000BE5978 /* WDDetail.h */,
+				8FCC1A711C2151C000BE5978 /* WDDetail.m */,
+				8FCC1A721C2151C000BE5978 /* WDImage.h */,
+				8FCC1A731C2151C000BE5978 /* WDImage.m */,
+				8FCC1A741C2151C000BE5978 /* WDProduct.h */,
+				8FCC1A751C2151C000BE5978 /* WDProduct.m */,
+				8FCC1A761C2151C000BE5978 /* WDSavedSearch.h */,
+				8FCC1A771C2151C000BE5978 /* WDSavedSearch.m */,
+				8FCC1A781C2151C000BE5978 /* WDState.h */,
+				8FCC1A791C2151C000BE5978 /* WDState.m */,
+				8FCC1A7A1C2151C000BE5978 /* WDTransaction.h */,
+				8FCC1A7B1C2151C000BE5978 /* WDTransaction.m */,
+				8FCC1A7C1C2151C000BE5978 /* WDUser.h */,
+				8FCC1A7D1C2151C000BE5978 /* WDUser.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D26EAD39E149BD1EADE3C3DE /* Frameworks */ = {
@@ -490,7 +495,7 @@
 		8F7BF4571BF8F22800111F3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DQ;
+				CLASSPREFIX = WD;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Dancing Queen";
 				TargetAttributes = {
@@ -532,13 +537,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FB3D6021C13F6D300A84145 /* DQMainMenuLeftViewController.xib in Resources */,
-				8F301C921C14B6C6005DE048 /* DQStartedViewController.xib in Resources */,
+				8FB3D6021C13F6D300A84145 /* WDMainMenuLeftViewController.xib in Resources */,
+				8F301C921C14B6C6005DE048 /* WDStartedViewController.xib in Resources */,
 				8F7BF4D01BF8FC3C00111F3C /* Localizable.strings in Resources */,
-				8F3522B91C0F7F7B00DDE67D /* LaunchScreen.xib in Resources */,
-				8F01D0911C0F94DF00F67C93 /* DQMainViewController.xib in Resources */,
-				8F5B771E1C148A8D0097BC37 /* DQMenuTableViewCell.xib in Resources */,
-				8F5B77161C1484850097BC37 /* DQAccordionHeaderView.xib in Resources */,
+				8F3522B91C0F7F7B00DDE67D /* WDLaunchScreen.xib in Resources */,
+				8F01D0911C0F94DF00F67C93 /* WDMainViewController.xib in Resources */,
+				8F5B771E1C148A8D0097BC37 /* WDMenuTableViewCell.xib in Resources */,
+				8F5B77161C1484850097BC37 /* WDAccordionHeaderView.xib in Resources */,
 				8F7BF46F1BF8F22800111F3C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,28 +662,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCC1A831C2151C000BE5978 /* WDState.m in Sources */,
 				8F7BF4671BF8F22800111F3C /* AppDelegate.m in Sources */,
-				B1120F9A1C17177600E52F67 /* DQUser.m in Sources */,
 				8F7BF4CE1BF8FC3C00111F3C /* AWSContentManager.m in Sources */,
-				B1120F921C1715E800E52F67 /* DQProduct.m in Sources */,
-				8FB3D6011C13F6D300A84145 /* DQMainMenuLeftViewController.m in Sources */,
-				8F01D0901C0F94DF00F67C93 /* DQMainViewController.m in Sources */,
-				B1120F8A1C1713FE00E52F67 /* DQState.m in Sources */,
-				8F894EAD1C14095000A81868 /* DQSlideNavigationController.m in Sources */,
-				B1120F821C170F4A00E52F67 /* DQCategory.m in Sources */,
-				B1120F8E1C17150500E52F67 /* DQSavedSearch.m in Sources */,
-				B1120F961C17168E00E52F67 /* DQTransaction.m in Sources */,
+				8FCC1A811C2151C000BE5978 /* WDProduct.m in Sources */,
+				8FCC1A7F1C2151C000BE5978 /* WDDetail.m in Sources */,
+				8FCC1A841C2151C000BE5978 /* WDTransaction.m in Sources */,
+				8FCC1A851C2151C000BE5978 /* WDUser.m in Sources */,
+				8FB3D6011C13F6D300A84145 /* WDMainMenuLeftViewController.m in Sources */,
+				8F01D0901C0F94DF00F67C93 /* WDMainViewController.m in Sources */,
+				8F894EAD1C14095000A81868 /* WDSlideNavigationController.m in Sources */,
 				8F7BF4D21BF8FC3C00111F3C /* AWSTask+CheckExceptions.m in Sources */,
-				8F0CB8E71C14D08100A7DC1E /* DQArrowView.m in Sources */,
-				B1120F9E1C1717B700E52F67 /* DQDetail.m in Sources */,
-				8F301C911C14B6C6005DE048 /* DQStartedViewController.m in Sources */,
-				8F5B771D1C148A8D0097BC37 /* DQMenuTableViewCell.m in Sources */,
+				8F0CB8E71C14D08100A7DC1E /* WDArrowView.m in Sources */,
+				8F301C911C14B6C6005DE048 /* WDStartedViewController.m in Sources */,
+				8F5B771D1C148A8D0097BC37 /* WDMenuTableViewCell.m in Sources */,
 				8F7BF4D11BF8FC3C00111F3C /* AWSUserFileManager.m in Sources */,
+				8FCC1A821C2151C000BE5978 /* WDSavedSearch.m in Sources */,
+				8FCC1A7E1C2151C000BE5978 /* WDCategory.m in Sources */,
+				8FCC1A801C2151C000BE5978 /* WDImage.m in Sources */,
 				8F7BF4CF1BF8FC3C00111F3C /* AWSIdentityManager.m in Sources */,
-				B1120F861C17127D00E52F67 /* DQImage.m in Sources */,
-				8F5B77191C14875D0097BC37 /* DQAccordionHeaderView.m in Sources */,
+				8F5B77191C14875D0097BC37 /* WDAccordionHeaderView.m in Sources */,
 				8F7BF4CC1BF8FC3C00111F3C /* AWSMobileClient.m in Sources */,
 				8F7BF4641BF8F22800111F3C /* main.m in Sources */,
+				8FCC1A6C1C2116C300BE5978 /* UIColor+WDColorsDefault.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,15 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1120F8F1C17150500E52F67 /* DQSavedSearch.m in Sources */,
-				B1120F871C17127D00E52F67 /* DQImage.m in Sources */,
-				B1120F971C17168E00E52F67 /* DQTransaction.m in Sources */,
-				B1120F9F1C1717B700E52F67 /* DQDetail.m in Sources */,
-				B1120F831C170F4A00E52F67 /* DQCategory.m in Sources */,
-				B1120F8B1C1713FE00E52F67 /* DQState.m in Sources */,
-				B1120F931C1715E800E52F67 /* DQProduct.m in Sources */,
 				8F7BF47D1BF8F22800111F3C /* WallaDogTests.m in Sources */,
-				B1120F9B1C17177600E52F67 /* DQUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -807,7 +805,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -823,11 +821,8 @@
 				INFOPLIST_FILE = WallaDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -841,11 +836,8 @@
 				INFOPLIST_FILE = WallaDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDog;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -858,7 +850,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WallaDogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallaDog.app/WallaDog";
 			};
@@ -871,7 +863,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WallaDogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallaDog.app/WallaDog";
 			};
@@ -882,7 +874,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = WallaDogUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = WallaDog;
 				USES_XCTRUNNER = YES;
@@ -894,7 +886,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = WallaDogUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dancingqueen.WallaDogUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.walladog.WallaDogUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = WallaDog;
 				USES_XCTRUNNER = YES;

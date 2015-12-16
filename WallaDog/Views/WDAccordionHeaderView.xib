@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WDAccordionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="530" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXh-WA-eyb">
+                    <rect key="frame" x="0.0" y="0.0" width="530" height="74"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqG-P8-kNz">
+                            <rect key="frame" x="70" y="28" width="40" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu-button.png" translatesAutoresizingMaskIntoConstraints="NO" id="vni-rw-HAU">
+                            <rect key="frame" x="25" y="27" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="JxX-V6-iZZ"/>
+                                <constraint firstAttribute="height" constant="20" id="aT3-CV-p9h"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.3803921639919281" green="0.3803921639919281" blue="0.3803921639919281" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="XqG-P8-kNz" firstAttribute="leading" secondItem="vni-rw-HAU" secondAttribute="trailing" constant="25" id="2Qg-DW-z6L"/>
+                        <constraint firstItem="vni-rw-HAU" firstAttribute="leading" secondItem="cXh-WA-eyb" secondAttribute="leading" constant="25" id="4RO-To-n6A"/>
+                        <constraint firstItem="XqG-P8-kNz" firstAttribute="centerY" secondItem="cXh-WA-eyb" secondAttribute="centerY" id="IiQ-fE-ySL"/>
+                        <constraint firstItem="vni-rw-HAU" firstAttribute="centerY" secondItem="cXh-WA-eyb" secondAttribute="centerY" id="fRY-Zi-ru9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cXh-WA-eyb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R0C-b2-vzr"/>
+                <constraint firstAttribute="trailing" secondItem="cXh-WA-eyb" secondAttribute="trailing" id="hCx-TJ-fla"/>
+                <constraint firstAttribute="bottom" secondItem="cXh-WA-eyb" secondAttribute="bottom" constant="1" id="mYK-Hz-mdN"/>
+                <constraint firstItem="cXh-WA-eyb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xGu-JS-qTF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageViewIcon" destination="vni-rw-HAU" id="fMH-u7-PJD"/>
+                <outlet property="labelMenu" destination="XqG-P8-kNz" id="Y15-i1-Lgh"/>
+            </connections>
+            <point key="canvasLocation" x="551" y="501.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu-button.png" width="22" height="17"/>
+    </resources>
+</document>

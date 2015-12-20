@@ -21,13 +21,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    BOOL result = [[AWSMobileClient sharedInstance] didFinishLaunching:application
-                                                           withOptions:launchOptions];
     [self initWindow];
     [self loadFirstViewController];
-    return result;
+    return [[AWSMobileClient sharedInstance] didFinishLaunching:application
+                                                    withOptions:launchOptions];
 }
-
 
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url

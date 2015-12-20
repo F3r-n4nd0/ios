@@ -10,8 +10,8 @@
 #import "WDMainMenuLeftViewController.h"
 #import "WDStartedViewController.h"
 
-@interface WDMainViewController () <
-UISearchBarDelegate,
+@interface WDMainViewController ()
+<UISearchBarDelegate,
 WDMainMenuLeftViewControllerDelegate>
 
 @property (nonatomic, strong) UISearchBar *searchBar;

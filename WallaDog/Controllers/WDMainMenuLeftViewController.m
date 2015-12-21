@@ -105,7 +105,9 @@ UITableViewDelegate>
 #pragma mark Delegate FZAccordionTableViewDelegate
 
 - (void)tableView:(FZAccordionTableView *)tableView willOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {
-    
+    if([self.delegate respondsToSelector:@selector(selectMenuSection:)]) {
+        [self.delegate selectMenuSection:section];
+    }
 }
 
 - (void)tableView:(FZAccordionTableView *)tableView didOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {

@@ -5,16 +5,29 @@
 //  Created by Fernando Luna on 12/2/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
+@import CHTCollectionViewWaterfallLayout;
+@import SDWebImage;
 
 #import "WDMainViewController.h"
 #import "WDMainMenuLeftViewController.h"
 #import "WDStartedViewController.h"
+#import "WDMainCollectionViewCell.h"
+#import "WDAddItemViewController.h"
 
 @interface WDMainViewController ()
 <UISearchBarDelegate,
-WDMainMenuLeftViewControllerDelegate>
+WDMainMenuLeftViewControllerDelegate,
+UICollectionViewDataSource,
+UICollectionViewDelegate,
+CHTCollectionViewDelegateWaterfallLayout>
 
 @property (nonatomic, strong) UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *arrayImages;
+@property (weak, nonatomic) IBOutlet UIButton *buttonCamera;
+@property (weak, nonatomic) IBOutlet UIView *viewLocation;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewLocationTop;
+
 
 @end
 
@@ -24,14 +37,58 @@ WDMainMenuLeftViewControllerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self uploadSliteMenu];
+    [self loadAndConfigureUI];
+}
+
+#pragma mark - Configure / Load UI
+
+- (void) loadAndConfigureUI {
+    [self loadSliteMenu];
+    [self configureCollectionView];
     [self configureSearchBar];
+    [self configureCameraButton];
+    [self configureLocationView];
+}
+
+- (void)configureCameraButton {
+    [self.buttonCamera.layer setCornerRadius:self.buttonCamera.frame.size.height/2];
+    [self.buttonCamera.layer setBorderWidth:5.0];
+    [self.buttonCamera.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.buttonCamera.layer setMasksToBounds:NO];
+    [self.buttonCamera.layer setShadowOffset:CGSizeMake(2, 2)];
+    [self.buttonCamera.layer setShadowRadius:2.0];
+    [self.buttonCamera.layer setShadowOpacity:0.7];
+}
+
+- (void)configureLocationView {
+    [self.viewLocation.layer setCornerRadius:12.0];
+    [self.viewLocation.layer setMasksToBounds:NO];
+    [self.viewLocation.layer setShadowOffset:CGSizeMake(2, 2)];
+    [self.viewLocation.layer setShadowRadius:2.0];
+    [self.viewLocation.layer setShadowOpacity:0.7];
+}
+
+
+#pragma mark - CollectionView
+
+
+- (void) configureCollectionView {
+    
+    UINib *nibMainCell = [UINib nibWithNibName:[WDMainCollectionViewCell reuseIdentifier] bundle:nil];
+    [self.collectionView registerNib:nibMainCell forCellWithReuseIdentifier:[WDMainCollectionViewCell reuseIdentifier]];
+    
+    CHTCollectionViewWaterfallLayout *layoutCollectionView = (CHTCollectionViewWaterfallLayout*) self.collectionView.collectionViewLayout;
+    [layoutCollectionView setSectionInset:UIEdgeInsetsMake(20.0, 15.0, 20.0, 15.0)];
+    [layoutCollectionView setColumnCount:2];
+    [layoutCollectionView setMinimumColumnSpacing:15.0];
+    [layoutCollectionView setMinimumInteritemSpacing:15.0];
+
 }
 
 
 #pragma mark - Slite Menu
 
-- (void) uploadSliteMenu {
+- (void) loadSliteMenu {
     WDMainMenuLeftViewController *leftMenu = [[WDMainMenuLeftViewController alloc] init];
     [SlideNavigationController sharedInstance].portraitSlideOffset = 100;
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
@@ -39,16 +96,18 @@ WDMainMenuLeftViewControllerDelegate>
     leftMenu.delegate = self;
     
     UIButton *buttonLeft  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [buttonLeft setImage:[UIImage imageNamed:@"menu-button"] forState:UIControlStateNormal];
+    [buttonLeft setImage:[UIImage imageNamed:@"ImageMenuIcon"] forState:UIControlStateNormal];
     [buttonLeft addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonLeft];
     [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
-        
+    
     UIButton *buttonRight  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [buttonRight setImage:[UIImage imageNamed:@"menu-button"] forState:UIControlStateNormal];
+    [buttonRight setImage:[UIImage imageNamed:@"ImageMenuIcon"] forState:UIControlStateNormal];
     [buttonRight addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonRight];
     [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
+    
+    [self.navigationController setHidesBarsOnSwipe:YES];
 }
 
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu
@@ -61,7 +120,7 @@ WDMainMenuLeftViewControllerDelegate>
     return YES;
 }
 
-#pragma mark - Search 
+#pragma mark - Search
 
 - (void)configureSearchBar {
     self.searchBar = [[UISearchBar alloc] init];
@@ -88,7 +147,7 @@ WDMainMenuLeftViewControllerDelegate>
 }
 
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
-     [[SlideNavigationController sharedInstance] setEnableSwipeGesture:YES];
+    [[SlideNavigationController sharedInstance] setEnableSwipeGesture:YES];
     self.navigationItem.rightBarButtonItem = [SlideNavigationController sharedInstance].rightBarButtonItem;
     self.navigationItem.leftBarButtonItem = [SlideNavigationController sharedInstance].leftBarButtonItem;
     self.searchBar.showsCancelButton = NO;
@@ -109,15 +168,66 @@ WDMainMenuLeftViewControllerDelegate>
         case -1:
             [self showModalLogin];
             break;
+        case 0:
+            [self showSellItem];
+            break;
         default:
             break;
     }
 }
 
-#pragma mark - XXXXXXXX
+
+#pragma mark UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.arrayImages.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    WDMainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[WDMainCollectionViewCell reuseIdentifier] forIndexPath:indexPath];
+    [cell.imageView sd_setImageWithURL:[self.arrayImages objectAtIndex:indexPath.row] placeholderImage:[UIImage imageNamed:@"AppImage"]];
+    return cell;
+}
+
+#pragma mark CollectionViewWaterfallLayoutDelegate
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)layout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSURL *urlImage = [self.arrayImages objectAtIndex:indexPath.row];
+   UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:urlImage.absoluteString];
+    return image == nil?CGSizeMake(200, 200):image.size;
+}
+
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView.contentOffset.y <= 0) {
+        [self.viewLocation setHidden:YES];
+    } else {
+        if(self.navigationController.navigationBarHidden) {
+            self.constraintViewLocationTop.constant = 50.0;
+        } else {
+            self.constraintViewLocationTop.constant = 85.0;
+        }
+        [self.viewLocation setHidden:NO];
+    }
+    if (scrollView.contentOffset.y > 300) {
+        [self.buttonCamera setHidden:YES];
+    } else {
+        [self.buttonCamera setHidden:NO];
+    }
+}
+
+#pragma mark - Menu Options
 
 - (void)showModalLogin {
     WDStartedViewController *startedViewController = [[WDStartedViewController alloc] init];
+    startedViewController.modalPresentationStyle = UIModalPresentationCustom;
+    startedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self.navigationController presentViewController:startedViewController animated:YES completion:nil];
+}
+
+- (void)showSellItem {
+    WDAddItemViewController *startedViewController = [[WDAddItemViewController alloc] init];
     startedViewController.modalPresentationStyle = UIModalPresentationCustom;
     startedViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [self.navigationController presentViewController:startedViewController animated:YES completion:nil];

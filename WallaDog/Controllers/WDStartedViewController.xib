@@ -79,6 +79,20 @@
                                     <action selector="touchUpInsideSignUpMenu:" destination="-1" eventType="touchUpInside" id="BOm-qg-PnY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d73-vO-cRV">
+                                <rect key="frame" x="142" y="687" width="131" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Terms and conditions">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kQ-dp-I6u">
+                                <rect key="frame" x="165" y="720" width="84" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72O-SS-yrE" customClass="WDArrowView">
                                 <rect key="frame" x="10" y="77" width="394" height="600"/>
                                 <subviews>
@@ -338,20 +352,6 @@
                                     <constraint firstItem="K8z-kR-brU" firstAttribute="leading" secondItem="72O-SS-yrE" secondAttribute="leading" id="xf7-5s-5A7"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d73-vO-cRV">
-                                <rect key="frame" x="142" y="687" width="131" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Terms and conditions">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kQ-dp-I6u">
-                                <rect key="frame" x="165" y="720" width="84" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Privacy Policy">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.31799998879432678" green="0.57999998331069946" blue="0.86299997568130493" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -384,7 +384,7 @@
                 <constraint firstAttribute="trailing" secondItem="9T4-L3-5kg" secondAttribute="trailing" id="jTq-e5-U8H"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-            <point key="canvasLocation" x="-5" y="274"/>
+            <point key="canvasLocation" x="-3" y="266"/>
         </view>
     </objects>
     <resources>

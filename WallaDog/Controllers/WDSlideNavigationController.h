@@ -6,7 +6,7 @@
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import <iOS-Slide-Menu/SlideNavigationController.h>
+@import iOS_Slide_Menu;
 
 @import UIKit;
 

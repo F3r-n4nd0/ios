@@ -18,7 +18,6 @@
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];
     if(self) {
-        [self.navigationBar setTranslucent:NO];
         [self.navigationBar setBarTintColor:[UIColor colorPrimary]];
         [self.navigationBar setTintColor:[UIColor whiteColor]];
     }
@@ -33,6 +32,11 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+     return UIStatusBarStyleLightContent;
 }
 
 @end

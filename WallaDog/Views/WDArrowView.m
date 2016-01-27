@@ -72,7 +72,7 @@ static const CGFloat strokeWidth = 1.0f;
 }
 
 - (void)calculateCenterViewContainer {
-    CGFloat centerViewInContainer =  self.viewArrow.frame.origin.x + (self.viewArrow.frame.size.width/2);
+    CGFloat centerViewInContainer =  self.viewArrow.frame.origin.x + (self.viewArrow.frame.size.width/2) - self.frame.origin.x;
     self.positionArrow = centerViewInContainer;
      [self setNeedsDisplay];
 }

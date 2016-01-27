@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WDMainCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="424" height="414"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="414"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L92-HU-oRq" userLabel="viewItem">
+                        <rect key="frame" x="0.0" y="0.0" width="424" height="414"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppImage" translatesAutoresizingMaskIntoConstraints="NO" id="4Wf-hM-kdo">
+                                <rect key="frame" x="0.0" y="0.0" width="424" height="390"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MON 0,00" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnD-KA-8gz">
+                                <rect key="frame" x="358" y="394" width="61" height="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.31799998879432678" green="0.57999998331069946" blue="0.86299997568130493" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Item Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekI-qK-mWI">
+                                <rect key="frame" x="5" y="394" width="121" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lMT-0r-DU9">
+                                <rect key="frame" x="10" y="194" width="404" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4Wf-hM-kdo" secondAttribute="trailing" id="04r-TA-ZUO"/>
+                            <constraint firstItem="gnD-KA-8gz" firstAttribute="top" secondItem="4Wf-hM-kdo" secondAttribute="bottom" constant="5" id="3In-Zd-LUd"/>
+                            <constraint firstAttribute="bottom" secondItem="gnD-KA-8gz" secondAttribute="bottom" constant="5" id="BaZ-dt-Gb9"/>
+                            <constraint firstItem="gnD-KA-8gz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ekI-qK-mWI" secondAttribute="trailing" constant="5" id="CaO-mf-0h1"/>
+                            <constraint firstItem="lMT-0r-DU9" firstAttribute="centerY" secondItem="4Wf-hM-kdo" secondAttribute="centerY" id="D0X-jb-Noo"/>
+                            <constraint firstAttribute="trailing" secondItem="lMT-0r-DU9" secondAttribute="trailing" constant="10" id="QN8-th-2mB"/>
+                            <constraint firstItem="ekI-qK-mWI" firstAttribute="leading" secondItem="L92-HU-oRq" secondAttribute="leading" constant="5" id="S49-Yu-6n4"/>
+                            <constraint firstItem="gnD-KA-8gz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ekI-qK-mWI" secondAttribute="trailing" constant="2" id="SVF-Yj-rYC"/>
+                            <constraint firstItem="lMT-0r-DU9" firstAttribute="leading" secondItem="L92-HU-oRq" secondAttribute="leading" constant="10" id="XIa-PQ-cny"/>
+                            <constraint firstItem="lMT-0r-DU9" firstAttribute="centerX" secondItem="4Wf-hM-kdo" secondAttribute="centerX" id="blf-PA-8Lr"/>
+                            <constraint firstItem="4Wf-hM-kdo" firstAttribute="leading" secondItem="L92-HU-oRq" secondAttribute="leading" id="dhy-rm-oPf"/>
+                            <constraint firstAttribute="trailing" secondItem="gnD-KA-8gz" secondAttribute="trailing" constant="5" id="fAi-FS-C8N"/>
+                            <constraint firstAttribute="bottom" secondItem="ekI-qK-mWI" secondAttribute="bottom" constant="5" id="iMc-wb-a4b"/>
+                            <constraint firstAttribute="bottom" secondItem="4Wf-hM-kdo" secondAttribute="bottom" constant="30" id="mig-mq-eBM"/>
+                            <constraint firstItem="ekI-qK-mWI" firstAttribute="top" secondItem="4Wf-hM-kdo" secondAttribute="bottom" constant="5" id="pba-Js-HP0"/>
+                            <constraint firstItem="4Wf-hM-kdo" firstAttribute="top" secondItem="L92-HU-oRq" secondAttribute="top" id="tih-pm-yFh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mig-mq-eBM"/>
+                                <exclude reference="CaO-mf-0h1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="L92-HU-oRq" secondAttribute="trailing" id="YnA-hV-0mb"/>
+                <constraint firstAttribute="bottom" secondItem="L92-HU-oRq" secondAttribute="bottom" id="ZRf-tl-SBZ"/>
+                <constraint firstItem="L92-HU-oRq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kFc-XX-oh4"/>
+                <constraint firstItem="L92-HU-oRq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vgo-14-29B"/>
+            </constraints>
+            <size key="customSize" width="424" height="414"/>
+            <connections>
+                <outlet property="imageView" destination="4Wf-hM-kdo" id="hBW-8c-EhD"/>
+                <outlet property="labelDescription" destination="ekI-qK-mWI" id="Ngn-mE-DWi"/>
+                <outlet property="labelPrice" destination="gnD-KA-8gz" id="z7b-c4-RUT"/>
+                <outlet property="progressView" destination="lMT-0r-DU9" id="VY5-hh-RXW"/>
+                <outlet property="viewItem" destination="L92-HU-oRq" id="86e-12-7WD"/>
+            </connections>
+            <point key="canvasLocation" x="254" y="506"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="AppImage" width="1024" height="1024"/>
+    </resources>
+</document>

@@ -10,6 +10,8 @@
 
 @interface WDMenuTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *labelDescription;
+
 + (NSString*)reuseIdentifier;
 
 @end

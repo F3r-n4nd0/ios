@@ -1,117 +1,107 @@
 //
-//  WDImage.m
-//  WallaDog
+//	Image.m
 //
-//  Created by Pepe Padilla on 15/08/12.
-//  Copyright © 2015 Dancing Queen. All rights reserved.
-//
+//	Create by Fernando on 24/1/2016
+//	Copyright © 2016. All rights reserved.
+//	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+
+
 
 #import "WDImage.h"
 
-
-NSString *const kDQImageId = @"id";
-NSString *const kDQImagePhotoUrl = @"photoUrl";
-NSString *const kDQImageName = @"name";
-NSString *const kDQImageProductId = @"productId";
-
-
 @interface WDImage ()
-
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
-
 @end
-
 @implementation WDImage
 
-@synthesize internalBaseClassIdentifier = _internalBaseClassIdentifier;
-@synthesize photoUrl = _photoUrl;
-@synthesize name = _name;
-@synthesize productId = _productId;
 
 
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
+
+/**
+ * Instantiate the instance using the passed dictionary values to set the properties values
+ */
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    return [[self alloc] initWithDictionary:dict];
-}
+	self = [super init];
+	if(![dictionary[@"id"] isKindOfClass:[NSNull class]]){
+		self.idField = [dictionary[@"id"] integerValue];
+	}
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict
-{
-    self = [super init];
-    
-    // This check serves to make sure that a non-NSDictionary object
-    // passed into the model class doesn't break the parsing.
-    if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.internalBaseClassIdentifier = [[self objectOrNilForKey:kDQImageId fromDictionary:dict] doubleValue];
-        self.photoUrl = [self objectOrNilForKey:kDQImagePhotoUrl fromDictionary:dict];
-        self.name = [self objectOrNilForKey:kDQImageName fromDictionary:dict];
-        self.productId = [[self objectOrNilForKey:kDQImageProductId fromDictionary:dict] doubleValue];
-        
-    }
-    
-    return self;
-    
-}
-
-- (NSDictionary *)dictionaryRepresentation
-{
-    NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.internalBaseClassIdentifier] forKey:kDQImageId];
-    [mutableDict setValue:self.photoUrl forKey:kDQImagePhotoUrl];
-    [mutableDict setValue:self.name forKey:kDQImageName];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.productId] forKey:kDQImageProductId];
-    
-    return [NSDictionary dictionaryWithDictionary:mutableDict];
-}
-
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"%@", [self dictionaryRepresentation]];
-}
-
-#pragma mark - Helper Method
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict
-{
-    id object = [dict objectForKey:aKey];
-    return [object isEqual:[NSNull null]] ? nil : object;
+	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
+		self.name = dictionary[@"name"];
+	}	
+	if(![dictionary[@"photo_thumbnail_url"] isKindOfClass:[NSNull class]]){
+		self.photoThumbnailUrl = dictionary[@"photo_thumbnail_url"];
+	}	
+	if(![dictionary[@"photo_url"] isKindOfClass:[NSNull class]]){
+		self.photoUrl = dictionary[@"photo_url"];
+	}	
+	return self;
 }
 
 
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder
+/**
+ * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
+ */
+-(NSDictionary *)toDictionary
 {
-    self = [super init];
-    
-    self.internalBaseClassIdentifier = [aDecoder decodeDoubleForKey:kDQImageId];
-    self.photoUrl = [aDecoder decodeObjectForKey:kDQImagePhotoUrl];
-    self.name = [aDecoder decodeObjectForKey:kDQImageName];
-    self.productId = [aDecoder decodeDoubleForKey:kDQImageProductId];
-    return self;
+	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
+	dictionary[@"id"] = @(self.idField);
+	if(self.name != nil){
+		dictionary[@"name"] = self.name;
+	}
+	if(self.photoThumbnailUrl != nil){
+		dictionary[@"photo_thumbnail_url"] = self.photoThumbnailUrl;
+	}
+	if(self.photoUrl != nil){
+		dictionary[@"photo_url"] = self.photoUrl;
+	}
+	return dictionary;
+
 }
 
+/**
+ * Implementation of NSCoding encoding method
+ */
+/**
+ * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
+ */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    
-    [aCoder encodeDouble:_internalBaseClassIdentifier forKey:kDQImageId];
-    [aCoder encodeObject:_photoUrl forKey:kDQImagePhotoUrl];
-    [aCoder encodeObject:_name forKey:kDQImageName];
-    [aCoder encodeDouble:_productId forKey:kDQImageProductId];
+	[aCoder encodeObject:@(self.idField) forKey:@"id"];	if(self.name != nil){
+		[aCoder encodeObject:self.name forKey:@"name"];
+	}
+	if(self.photoThumbnailUrl != nil){
+		[aCoder encodeObject:self.photoThumbnailUrl forKey:@"photo_thumbnail_url"];
+	}
+	if(self.photoUrl != nil){
+		[aCoder encodeObject:self.photoUrl forKey:@"photo_url"];
+	}
+
 }
 
-- (id)copyWithZone:(NSZone *)zone
+/**
+ * Implementation of NSCoding initWithCoder: method
+ */
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    WDImage *copy = [[WDImage alloc] init];
-    
-    if (copy) {
-        
-        copy.internalBaseClassIdentifier = self.internalBaseClassIdentifier;
-        copy.photoUrl = [self.photoUrl copyWithZone:zone];
-        copy.name = [self.name copyWithZone:zone];
-        copy.productId = self.productId;
-    }
-    
-    return copy;
+	self = [super init];
+	self.idField = [[aDecoder decodeObjectForKey:@"id"] integerValue];
+	self.name = [aDecoder decodeObjectForKey:@"name"];
+	self.photoThumbnailUrl = [aDecoder decodeObjectForKey:@"photo_thumbnail_url"];
+	self.photoUrl = [aDecoder decodeObjectForKey:@"photo_url"];
+	return self;
+
 }
 
+#pragma mark - custom
+
+- (NSURL*)urlPhotoUrl {
+    return [NSURL URLWithString:self.photoUrl];
+}
+
+- (NSURL*)urlPhotoThumbnailUrl {
+    return [NSURL URLWithString:self.photoThumbnailUrl];    
+}
 
 @end

@@ -270,5 +270,16 @@
     return [NSString stringWithFormat:@"$ %.02f",  self.price];
 }
 
+- (NSURL*)urlSellerAvatarThumbnail {
+    if(!self.seller)
+        return nil;
+    return self.seller.urlAvatarThumbnail;
+}
+
+- (NSString*)textSellerDescription {
+    if(!self.seller)
+        return nil;
+    return self.seller.descriptionName;
+}
 
 @end

@@ -17,6 +17,7 @@
 		8F4292761C584832006E65F8 /* WDProductViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4292751C584832006E65F8 /* WDProductViewModel.m */; };
 		8F4292781C585A9D006E65F8 /* WDImageProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F4292771C585A9D006E65F8 /* WDImageProductView.xib */; };
 		8F42927B1C585BE6006E65F8 /* WDImageProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F42927A1C585BE6006E65F8 /* WDImageProductView.m */; };
+		8F42927D1C587C1B006E65F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F42927C1C587C1B006E65F8 /* MapKit.framework */; };
 		8F5B77161C1484850097BC37 /* WDAccordionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B77151C1484850097BC37 /* WDAccordionHeaderView.xib */; };
 		8F5B77191C14875D0097BC37 /* WDAccordionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B77181C14875D0097BC37 /* WDAccordionHeaderView.m */; };
 		8F5B771D1C148A8D0097BC37 /* WDMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B771B1C148A8D0097BC37 /* WDMenuTableViewCell.m */; };
@@ -97,6 +98,7 @@
 		8F4292771C585A9D006E65F8 /* WDImageProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDImageProductView.xib; sourceTree = "<group>"; };
 		8F4292791C585BE6006E65F8 /* WDImageProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDImageProductView.h; sourceTree = "<group>"; };
 		8F42927A1C585BE6006E65F8 /* WDImageProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDImageProductView.m; sourceTree = "<group>"; };
+		8F42927C1C587C1B006E65F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F5B77151C1484850097BC37 /* WDAccordionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDAccordionHeaderView.xib; sourceTree = "<group>"; };
 		8F5B77171C14875D0097BC37 /* WDAccordionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDAccordionHeaderView.h; sourceTree = "<group>"; };
 		8F5B77181C14875D0097BC37 /* WDAccordionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDAccordionHeaderView.m; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F42927D1C587C1B006E65F8 /* MapKit.framework in Frameworks */,
 				8F7BF4D81BF8FC7B00111F3C /* CoreLocation.framework in Frameworks */,
 				8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */,
 				8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */,
@@ -390,6 +393,7 @@
 		D26EAD39E149BD1EADE3C3DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8F42927C1C587C1B006E65F8 /* MapKit.framework */,
 				8F7BF4E91BF9025100111F3C /* libAWSCognito.a */,
 				8F7BF4EA1BF9025100111F3C /* libAWSCore.a */,
 				8F7BF4EB1BF9025100111F3C /* libAWSMobileAnalytics.a */,

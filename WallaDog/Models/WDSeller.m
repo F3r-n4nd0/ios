@@ -119,4 +119,17 @@
 	return self;
 
 }
+
+#pragma mark - custom
+
+- (NSURL*)urlAvatarThumbnail {
+    return [NSURL URLWithString:self.avatarThumbnailUrl];
+}
+
+- (NSString*)descriptionName {
+    if (!self.firstName && !self.lastName)
+        return self.username;
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
+
 @end

@@ -22,4 +22,8 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 -(NSDictionary *)toDictionary;
+
+- (NSURL*)urlAvatarThumbnail;
+- (NSString*)descriptionName;
+
 @end

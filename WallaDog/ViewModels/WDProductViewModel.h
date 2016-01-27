@@ -15,5 +15,13 @@
 
 - (NSInteger)countImages;
 - (NSURL*)urlimageFromIndex:(NSInteger)index;
+- (NSString*)textTitle;
+- (NSString*)textDetail;
+- (NSString*)textPrice;
+- (NSURL*)urlAvatarSellerThumbnail;
+- (NSString*)textSellerDescripcion;
+- (double)doubleLatitude;
+- (double)doubleLongitude;
+
 
 @end

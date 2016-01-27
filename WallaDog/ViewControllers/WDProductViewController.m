@@ -12,11 +12,22 @@
 #import "WDProductViewModel.h"
 #import "WDImageProductView.h"
 
-@interface WDProductViewController () <iCarouselDataSource,iCarouselDelegate>
+@interface WDProductViewController ()
+<iCarouselDataSource,
+iCarouselDelegate,
+MKMapViewDelegate
+>
 
 @property (weak, nonatomic) IBOutlet UIView *viewContent;
-@property (nonatomic , strong) WDProductViewModel *productViewModel;
 @property (weak, nonatomic) IBOutlet iCarousel *viewCarousel;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
+@property (weak, nonatomic) IBOutlet UITextView *textViewDetail;
+@property (weak, nonatomic) IBOutlet MKMapView *mapKit;
+@property (weak, nonatomic) IBOutlet UILabel *labelPrice;
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewUser;
+@property (weak, nonatomic) IBOutlet UILabel *labelUserDescription;
+
+@property (nonatomic , strong) WDProductViewModel *productViewModel;
 
 @end
 
@@ -41,13 +52,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark - Configure / Load UI
 
 - (void)configureViewcontrollerUI {
     [self.navigationController setNavigationBarHidden:YES];
     [self configureContenView];
     [self configureCarousel];
+    [self configureImageViewUser];
+    [self loadCurrentProduct];
 }
 
 - (void)configureContenView {
@@ -58,9 +70,39 @@
 
 - (void)configureCarousel {
     [self.viewCarousel setType:iCarouselTypeRotary];
+    if(self.productViewModel.countImages == 1) {
+        [self.viewCarousel setScrollEnabled:NO];
+    }
+}
+
+- (void)configureImageViewUser {
+    [self.imageViewUser.layer setCornerRadius:self.imageViewUser.frame.size.width/2];
+    [self.imageViewUser.layer setBorderWidth:2.0];
+    [self.imageViewUser.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.imageViewUser.layer setShadowOffset:CGSizeMake(1, 1)];
+    [self.imageViewUser.layer setShadowRadius:1.0];
+    [self.imageViewUser.layer setShadowOpacity:0.7];
+}
+
+-(void)loadCurrentProduct {
+    [self.labelTitle setText:[self.productViewModel textTitle]];
+    [self.textViewDetail setText:[self.productViewModel textDetail]];
+    [self.labelPrice setText:[self.productViewModel textPrice]];
+    [self.imageViewUser sd_setImageWithURL:[self.productViewModel urlAvatarSellerThumbnail] placeholderImage:[UIImage imageNamed:@"ImageUserDefault"]];
+    [self.labelUserDescription setText:[self.productViewModel textSellerDescripcion]];
+    MKCoordinateRegion mapRegion;
+    mapRegion.center.latitude = [self.productViewModel doubleLatitude];
+    mapRegion.center.longitude = [self.productViewModel doubleLongitude];
+    mapRegion.span.latitudeDelta = 0.005;
+    mapRegion.span.longitudeDelta = 0.005;
+    self.mapKit.region = mapRegion;
+    MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] init];
+    [pointAnnotation setCoordinate:CLLocationCoordinate2DMake([self.productViewModel doubleLatitude], [self.productViewModel doubleLongitude])];
+    [self.mapKit addAnnotation:pointAnnotation];
 }
 
 #pragma mark - Actions
+
 - (IBAction)touchUpInsideCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -81,7 +123,7 @@
                                                           owner:self
                                                         options:nil];
         WDImageProductView *viewImage = [nibViews firstObject];
-        [viewImage setFrame:self.viewCarousel.frame];
+        [viewImage setFrame: CGRectMake(0, 0, self.viewCarousel.frame.size.width, self.viewCarousel.frame.size.height) ];
         viewImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [viewImage.imageView sd_setImageWithURL:urlImage
                 placeholderImage:[UIImage imageNamed:@"pawprints"] options:0

@@ -35,10 +35,59 @@
     return self.product.images.count;
 }
 
+- (NSURL*)urlimageSeller {
+    if(!self.product)
+        return nil;
+    return [self.product urlImageFromIndex:index];
+}
+
 - (NSURL*)urlimageFromIndex:(NSInteger)index {
     if(!self.product)
         return nil;
     return [self.product urlImageFromIndex:index];
 }
+
+- (NSString*)textTitle {
+    if(!self.product)
+        return @"";
+    return self.product.name;
+}
+
+- (NSString*)textDetail {
+    if(!self.product)
+        return @"";
+    return self.product.descriptionField;
+}
+
+- (NSString*)textPrice {
+    if(!self.product)
+        return @"";
+    return self.product.pricePresentation;
+}
+
+- (NSURL*)urlAvatarSellerThumbnail {
+    if(!self.product)
+        return nil;
+    return self.product.urlSellerAvatarThumbnail;
+}
+
+- (NSString*)textSellerDescripcion {
+    if(!self.product)
+        return nil;
+    return self.product.textSellerDescription;
+}
+
+- (double)doubleLatitude{
+    if(!self.product)
+        return 0;
+    return [self.product.latitude doubleValue];
+}
+
+- (double)doubleLongitude{
+    if(!self.product)
+        return 0;
+    return [self.product.longitude doubleValue];
+}
+
 
 @end

@@ -40,5 +40,7 @@
 - (NSURL*)urlImageThumbnailPresentation;
 - (NSString*)pricePresentation;
 - (NSURL*)urlImageFromIndex:(NSInteger) index;
+- (NSURL*)urlSellerAvatarThumbnail;
+- (NSString*)textSellerDescription;
 
 @end

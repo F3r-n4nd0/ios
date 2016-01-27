@@ -1,25 +1,26 @@
 //
-//  WDImage.h
-//  WallaDog
+//	Image.h
 //
-//  Created by Pepe Padilla on 15/08/12.
-//  Copyright © 2015 Dancing Queen. All rights reserved.
+//	Create by Fernando on 24/1/2016
+//	Copyright © 2016. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
+#import <UIKit/UIKit.h>
 
+@interface WDImage : NSObject
 
-@interface WDImage : NSObject <NSCoding, NSCopying>
+@property (nonatomic, assign) NSInteger idField;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * photoThumbnailUrl;
+@property (nonatomic, strong) NSString * photoUrl;
 
-@property (nonatomic, assign) double internalBaseClassIdentifier;
-@property (nonatomic, strong) NSString *photoUrl;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, assign) double productId;
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-- (NSDictionary *)dictionaryRepresentation;
+-(NSDictionary *)toDictionary;
+
+- (NSURL*)urlPhotoUrl;
+- (NSURL*)urlPhotoThumbnailUrl;
 
 @end
-

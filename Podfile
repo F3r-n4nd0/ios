@@ -5,26 +5,20 @@ use_frameworks!
 
 target 'WallaDog' do
 
-pod 'AWSCore', '~> 2.3.0'
-pod 'AWSS3', '~> 2.3.0'
-pod 'AWSMobileAnalytics' , '~> 2.3.0'
-pod 'AWSCognito' , '~> 2.3.0'
-pod 'AWSSNS', '~> 2.3.0'
-pod 'iOS-Slide-Menu', '~> 1.5'
-pod 'FZAccordionTableView', '~> 0.1.2'
-pod 'AFNetworking', '~> 3.0'
-pod 'CHTCollectionViewWaterfallLayout', '~> 0.9.2'
-pod 'SDWebImage', '~> 3.7.3'
+pod 'iOS-Slide-Menu'
+pod 'FZAccordionTableView'
+pod 'AFNetworking'
+pod 'CHTCollectionViewWaterfallLayout'
+pod 'SDWebImage'
+pod 'SCLAlertView-Objective-C'
+pod 'SVProgressHUD'
+pod 'AFOAuth2Manager', :git => 'https://github.com/AFNetworking/AFOAuth2Manager.git', :branch => '3_0_0_branch'
+pod 'iCarousel'
 
 end
 
 target 'WallaDogTests' do
 
-pod 'AWSCore', '~> 2.3.0'
-pod 'AWSS3', '~> 2.3.0'
-pod 'AWSMobileAnalytics', '~> 2.3.0'
-pod 'AWSCognito', '~> 2.3.0'
-pod 'AWSSNS', '~> 2.3.0'
 
 end
 

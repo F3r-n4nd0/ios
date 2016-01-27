@@ -9,9 +9,9 @@
 
 
 #import "AppDelegate.h"
-#import "AWSMobileClient.h"
 #import "WDMainViewController.h"
 #import "WDSlideNavigationController.h"
+#import "WDMainViewModel.h"
 
 @interface AppDelegate ()
 
@@ -25,29 +25,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initWindow];
     [self loadFirstViewController];
-    return [[AWSMobileClient sharedInstance] didFinishLaunching:application
-                                                    withOptions:launchOptions];
+    return TRUE;
 }
-
-- (BOOL)application:(UIApplication *)app
-            openURL:(NSURL *)url
-            options:(NSDictionary<NSString *,id> *)options {
-    return [[AWSMobileClient sharedInstance] withApplication:app
-                                                     withURL:url
-                                       withSourceApplication:[options objectForKey:UIApplicationOpenURLOptionsSourceApplicationKey]
-                                              withAnnotation:[options objectForKey:UIApplicationOpenURLOptionsAnnotationKey]];
-}
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation {
-    return [[AWSMobileClient sharedInstance] withApplication:application
-                                                     withURL:url
-                                       withSourceApplication:sourceApplication
-                                              withAnnotation:annotation];
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -65,7 +44,6 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    [[AWSMobileClient sharedInstance] applicationDidBecomeActive:application];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

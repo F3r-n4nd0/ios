@@ -49,6 +49,7 @@
 		8F7BF4E61BF8FFFA00111F3C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E51BF8FFFA00111F3C /* libsqlite3.tbd */; };
 		8F7BF4E81BF9000B00111F3C /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F7BF4E71BF9000B00111F3C /* libz.1.2.5.tbd */; };
 		8F894EAD1C14095000A81868 /* WDSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F894EAB1C14095000A81868 /* WDSlideNavigationController.m */; };
+		8FAACA7D1C5E41DD0067A7C1 /* WDUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAACA7C1C5E41DD0067A7C1 /* WDUIHelper.m */; };
 		8FB3D6011C13F6D300A84145 /* WDMainMenuLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */; };
 		8FB3D6021C13F6D300A84145 /* WDMainMenuLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */; };
 		8FB62C161C273E840059C819 /* WDMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB62C141C273E840059C819 /* WDMainCollectionViewCell.m */; };
@@ -153,6 +154,8 @@
 		8F7BF4ED1BF9025100111F3C /* libAWSSNS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAWSSNS.a; path = "Pods/../build/Debug-iphoneos/libAWSSNS.a"; sourceTree = "<group>"; };
 		8F894EAA1C14095000A81868 /* WDSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDSlideNavigationController.h; sourceTree = "<group>"; };
 		8F894EAB1C14095000A81868 /* WDSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDSlideNavigationController.m; sourceTree = "<group>"; };
+		8FAACA7B1C5E41DD0067A7C1 /* WDUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDUIHelper.h; sourceTree = "<group>"; };
+		8FAACA7C1C5E41DD0067A7C1 /* WDUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDUIHelper.m; sourceTree = "<group>"; };
 		8FB3D5FE1C13F6D300A84145 /* WDMainMenuLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDMainMenuLeftViewController.h; sourceTree = "<group>"; };
 		8FB3D5FF1C13F6D300A84145 /* WDMainMenuLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDMainMenuLeftViewController.m; sourceTree = "<group>"; };
 		8FB3D6001C13F6D300A84145 /* WDMainMenuLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WDMainMenuLeftViewController.xib; sourceTree = "<group>"; };
@@ -278,7 +281,8 @@
 				8F4292741C584832006E65F8 /* WDProductViewModel.h */,
 				8F4292751C584832006E65F8 /* WDProductViewModel.m */,
 			);
-			path = ViewModels;
+			name = ViewModels;
+			path = ../ViewModels;
 			sourceTree = "<group>";
 		};
 		8F66BF751C290250000928D2 /* Helpers */ = {
@@ -286,6 +290,9 @@
 			children = (
 				8F66BF761C29032D000928D2 /* WDHTTPClient.h */,
 				8F66BF771C29032D000928D2 /* WDHTTPClient.m */,
+				8FAACA7B1C5E41DD0067A7C1 /* WDUIHelper.h */,
+				8FAACA7C1C5E41DD0067A7C1 /* WDUIHelper.m */,
+				8F66BF711C28FA65000928D2 /* ViewModels */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -316,7 +323,6 @@
 			isa = PBXGroup;
 			children = (
 				8F66BF751C290250000928D2 /* Helpers */,
-				8F66BF711C28FA65000928D2 /* ViewModels */,
 				8FCC1A6D1C2151AA00BE5978 /* Models */,
 				8FCC1A661C2115FD00BE5978 /* Category */,
 				8F01D0801C0F8E3A00F67C93 /* ViewControllers */,
@@ -693,6 +699,7 @@
 				8F7BF4641BF8F22800111F3C /* main.m in Sources */,
 				8FCC1A6C1C2116C300BE5978 /* UIColor+WDColorsDefault.m in Sources */,
 				8F7A519B1C5509FB00088D4A /* WDSeller.m in Sources */,
+				8FAACA7D1C5E41DD0067A7C1 /* WDUIHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

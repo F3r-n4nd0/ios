@@ -38,7 +38,7 @@
 - (NSURL*)urlimageSeller {
     if(!self.product)
         return nil;
-    return [self.product urlImageFromIndex:index];
+    return [self.product urlSellerAvatarThumbnail];
 }
 
 - (NSURL*)urlimageFromIndex:(NSInteger)index {

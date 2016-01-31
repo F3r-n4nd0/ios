@@ -10,12 +10,14 @@
 #import "WDCategory.h"
 #import "WDHTTPClient.h"
 #import "WDMainViewModel.h"
+#import "WDUser.h"
 
 @interface WDMainMenuLeftViewModel()
 
 @property (nonatomic, strong) NSArray<NSString *> *arrayMenu;
 @property (nonatomic, strong) NSArray<UIImage *> *arrayMenuImage;
 @property (nonatomic, strong) NSArray<WDCategory *> *arrayCategory;
+@property (nonatomic, strong) WDUser *currentUser;
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
 
@@ -35,7 +37,8 @@
         _mainViewModel = mainViewModel;
         _delegate = delegate;
         [self loadMenuArray];
-        [self updateCAtegoryeList];
+        [self updateCurrentUser];
+        [self updateCategoryeList];
     }
     return self;
 }
@@ -44,7 +47,7 @@
 
 #pragma mark update data
 
-- (void)updateCAtegoryeList {
+- (void)updateCategoryeList {
     
     [[WDHTTPClient sharedWDHTTPClient] getCategoriesSuccess:^(id responseObject)
      {
@@ -60,6 +63,37 @@
      } failure:^(NSString *errorDescripcion) {
          
      }];
+}
+
+- (void)updateCurrentUser {
+    
+    [[WDHTTPClient sharedWDHTTPClient] getCurrentUserSuccess:^(id responseObject) {
+        self.currentUser = [[WDUser alloc] initWithDictionary:responseObject];
+        if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
+            [self.delegate updateCurrentUser];
+    } failure:^(NSString *errorDescripcion) {
+     
+    }];
+}
+
+
+#pragma mark user data
+
+- (NSURL*)urlAvatarThumbnailUser {
+    if(self.currentUser)
+        return self.currentUser.urlAvatarThumbnail;
+    return nil;
+}
+
+- (NSString*)titleAccount {
+    if(self.currentUser)
+        return self.currentUser.fullName;
+    return @"";
+}
+- (NSString*)SubTitleAccount {
+    if(self.currentUser)
+        return self.currentUser.sellingProducts;
+    return @"";
 }
 
 #pragma mark collection menu
@@ -93,16 +127,25 @@
 
 #pragma mark selectSubMenu 
 
+- (void)selectMenu:(NSInteger)section {
+    
+}
+
 - (void)selectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"]) {
-        [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
-    }
+    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
+        if(self.mainViewModel)
+            [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
 }
 
 - (void)deselectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"]) {
-         [self.mainViewModel changeFilterCategory:0];
-    }
+    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
+        if(self.mainViewModel)
+            [self.mainViewModel changeFilterCategory:0];
+}
+
+- (void)selectAccountUser {
+    if(self.mainViewModel)
+       [self.mainViewModel showAccountUserOrCreateAccount];
 }
 
 #pragma mark - menu data

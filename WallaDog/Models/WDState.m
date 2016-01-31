@@ -8,8 +8,6 @@
 
 #import "WDState.h"
 
-#import "WDState.h"
-
 
 NSString *const kDQStateId = @"id";
 NSString *const kDQStateName = @"name";

@@ -17,8 +17,8 @@
                 <outlet property="constraintViewWithArrow" destination="aaT-XL-W5j" id="ldo-6R-Jyw"/>
                 <outlet property="textFieldLogInEmail" destination="iUp-x2-9qS" id="ccM-V4-Vrb"/>
                 <outlet property="textFieldSignUpEmail" destination="Z3E-P4-Bgq" id="iC5-Lb-6LQ"/>
-                <outlet property="textFieldSignUpFullName" destination="ZTE-Jf-dn4" id="oEn-7f-Dd6"/>
                 <outlet property="textFieldSignUpPassword" destination="LlE-4n-2cb" id="NGE-dV-R4j"/>
+                <outlet property="textFieldSignUpUserName" destination="ZTE-Jf-dn4" id="8U8-A6-YKx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewLogIn" destination="K8z-kR-brU" id="L99-Fh-hPO"/>
                 <outlet property="viewSignUp" destination="uA9-zY-nE0" id="Idb-Az-aQZ"/>
@@ -201,7 +201,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uA9-zY-nE0" userLabel="viewSingUp">
                                         <rect key="frame" x="0.0" y="299" width="394" height="283"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTE-Jf-dn4" userLabel="textFieldSignUpFullName">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTE-Jf-dn4" userLabel="textFieldSignUpUserName">
                                                 <rect key="frame" x="70" y="30" width="299" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yyu-Mm-MZs"/>

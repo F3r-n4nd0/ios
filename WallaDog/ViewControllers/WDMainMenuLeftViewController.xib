@@ -7,7 +7,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDMainMenuLeftViewController">
             <connections>
+                <outlet property="LabelSubTitleAccount" destination="Xz2-XH-FDS" id="gFU-st-U2h"/>
                 <outlet property="imageViewUser" destination="yo2-kX-YZi" id="rH6-D4-A39"/>
+                <outlet property="labelTitleAccount" destination="LFt-Lc-TMy" id="i8U-h0-uba"/>
                 <outlet property="tableView" destination="AZX-TU-nvj" id="g6V-xp-PM3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

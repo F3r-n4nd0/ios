@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="600ba821-a05d-41ef-af75-beb45dc5a665" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WallaDog/Helpers/WDUIHelper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WallaDog/Helpers/WDUIHelper.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/WallaDog.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/AppDelegate.m" afterPath="$PROJECT_DIR$/WallaDog/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/AppImage.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/AppImage.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageArrowUp.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageArrowUp.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageEmailIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageEmailIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageUserDefault.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageUserDefault.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageXIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/Default/ImageXIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageArrowDownIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageArrowDownIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageCamera.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageCamera.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageEyeIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageEyeIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageLocationPinIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageLocationPinIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageMenuIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageMenuIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImagePadlock.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImagePadlock.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageUserIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/ImageUserIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageCameraIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageCameraIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageHelpIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageHelpIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageMessageIcon.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/MenuIcons/ImageMessageIcon.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/crop.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/crop.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Assets.xcassets/pawprints.imageset/Contents.json" afterPath="$PROJECT_DIR$/WallaDog/Assets.xcassets/pawprints.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Helpers/WDHTTPClient.h" afterPath="$PROJECT_DIR$/WallaDog/Helpers/WDHTTPClient.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Helpers/WDHTTPClient.m" afterPath="$PROJECT_DIR$/WallaDog/Helpers/WDHTTPClient.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Info.plist" afterPath="$PROJECT_DIR$/WallaDog/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Models/WDState.m" afterPath="$PROJECT_DIR$/WallaDog/Models/WDState.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Models/WDUser.h" afterPath="$PROJECT_DIR$/WallaDog/Models/WDUser.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/Models/WDUser.m" afterPath="$PROJECT_DIR$/WallaDog/Models/WDUser.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainMenuLeftViewController.h" afterPath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainMenuLeftViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainMenuLeftViewController.m" afterPath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainMenuLeftViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainViewController.m" afterPath="$PROJECT_DIR$/WallaDog/ViewControllers/WDMainViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewControllers/WDStartedViewController.m" afterPath="$PROJECT_DIR$/WallaDog/ViewControllers/WDStartedViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewControllers/WDStartedViewController.xib" afterPath="$PROJECT_DIR$/WallaDog/ViewControllers/WDStartedViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainMenuLeftViewModel.h" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainMenuLeftViewModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainMenuLeftViewModel.m" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainMenuLeftViewModel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainViewModel.h" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainViewModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainViewModel.m" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDMainViewModel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDProductViewModel.m" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDProductViewModel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDStartedViewModels.h" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDStartedViewModels.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDog/ViewModels/WDStartedViewModels.m" afterPath="$PROJECT_DIR$/WallaDog/ViewModels/WDStartedViewModels.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDogTests/Info.plist" afterPath="$PROJECT_DIR$/WallaDogTests/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallaDogUITests/Info.plist" afterPath="$PROJECT_DIR$/WallaDogUITests/Info.plist" />
+    </list>
+    <ignored path="WallaDogIOS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_3a2bded772de18de91597747c07b65289431079f" />
+  <component name="FavoritesManager">
+    <favorites_list name="WallaDog" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Cidr.FilesView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WallaDog" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="RunManager" selected="Application.WallaDog">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="WallaDog" TARGET_NAME="WallaDog" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="WallaDog" RUN_TARGET_NAME="WallaDog" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="WallaDog" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="WallaDog" TARGET_NAME="WallaDog" CONFIG_NAME="Debug" SCHEME_NAME="WallaDog" RUN_TARGET_PROJECT_NAME="WallaDog" RUN_TARGET_NAME="WallaDog" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="AFNetworking" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="AFNetworking" CONFIG_NAME="Debug" SCHEME_NAME="AFNetworking" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="AFOAuth2Manager" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="AFOAuth2Manager" CONFIG_NAME="Debug" SCHEME_NAME="AFOAuth2Manager" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="CHTCollectionViewWaterfallLayout" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="CHTCollectionViewWaterfallLayout" CONFIG_NAME="Debug" SCHEME_NAME="CHTCollectionViewWaterfallLayout" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="FZAccordionTableView" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="FZAccordionTableView" CONFIG_NAME="Debug" SCHEME_NAME="FZAccordionTableView" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="iCarousel" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="iCarousel" CONFIG_NAME="Debug" SCHEME_NAME="iCarousel" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="iOS-Slide-Menu" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="iOS-Slide-Menu" CONFIG_NAME="Debug" SCHEME_NAME="iOS-Slide-Menu" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Pods-WallaDog" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-WallaDog" CONFIG_NAME="Debug" SCHEME_NAME="Pods-WallaDog" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SCLAlertView-Objective-C" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="SCLAlertView-Objective-C" CONFIG_NAME="Debug" SCHEME_NAME="SCLAlertView-Objective-C" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SDWebImage" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="SDWebImage" CONFIG_NAME="Debug" SCHEME_NAME="SDWebImage" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SVProgressHUD" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="SVProgressHUD" CONFIG_NAME="Debug" SCHEME_NAME="SVProgressHUD" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="11">
+      <item index="0" class="java.lang.String" itemvalue="Application.WallaDog" />
+      <item index="1" class="java.lang.String" itemvalue="Application.AFNetworking" />
+      <item index="2" class="java.lang.String" itemvalue="Application.AFOAuth2Manager" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CHTCollectionViewWaterfallLayout" />
+      <item index="4" class="java.lang.String" itemvalue="Application.FZAccordionTableView" />
+      <item index="5" class="java.lang.String" itemvalue="Application.iCarousel" />
+      <item index="6" class="java.lang.String" itemvalue="Application.iOS-Slide-Menu" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Pods-WallaDog" />
+      <item index="8" class="java.lang.String" itemvalue="Application.SCLAlertView-Objective-C" />
+      <item index="9" class="java.lang.String" itemvalue="Application.SDWebImage" />
+      <item index="10" class="java.lang.String" itemvalue="Application.SVProgressHUD" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="600ba821-a05d-41ef-af75-beb45dc5a665" name="Default" comment="" />
+      <created>1454255286231</created>
+      <option name="number" value="Default" />
+      <updated>1454255286231</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

@@ -10,20 +10,17 @@
 @import UIKit;
 
 @class WDProductViewModel;
+@class WDStartedViewModels;
 
 @protocol WDMainViewModelDelegate <NSObject>
 
 @required
 - (void)updateListProducts;
-
-@required
-- (void)startUploadProducts;
-
-@required
+- (void)startUploadProducts:(NSString*)action;
 - (void)stopUploadProducts;
-
-@required
--(void)showProductviewModel:(WDProductViewModel*) productViewModel;
+- (void)showProductviewModel:(WDProductViewModel*) productViewModel;
+- (void)showStartAccount:(WDStartedViewModels*) startedViewModel;
+- (void)showMainViewHideMenus;
 
 @end
 
@@ -35,18 +32,13 @@
 - (instancetype) initWithDelgate:(id<WDMainViewModelDelegate>) delegate;
 
 - (void)updateProductsList;
-
 - (NSInteger)countProductsList;
-
 - (NSURL*)urlImagePresentationFromIndexPath:(NSIndexPath*)indexPath;
-
 - (NSURL*)urlImagePresentationThumbnailFromIndexPath:(NSIndexPath*)indexPath;
-
 - (NSString*)textDescriptionPresentationFromIndexPath:(NSIndexPath*)indexPath;
-
 - (NSString*)textPricePresentationFromIndexPath:(NSIndexPath*)indexPath;
-
 - (void)changeFilterCategory:(NSInteger) categoryId;
-
 - (void)selectProduct:(NSIndexPath*)indexPath;
+- (void)showAccountUserOrCreateAccount;
+- (void)showMainView;
 @end

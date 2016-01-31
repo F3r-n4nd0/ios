@@ -7,13 +7,13 @@
 //
 @import CoreLocation;
 @import SDWebImage;
-@import CoreLocation;
 @import MapKit;
 
 #import "WDMainViewModel.h"
 #import "WDHTTPClient.h"
 #import "WDProduct.h"
 #import "WDProductViewModel.h"
+#import "WDStartedViewModels.h"
 
 @interface WDMainViewModel() <CLLocationManagerDelegate>
 
@@ -52,8 +52,8 @@
 
 - (void)updateProductsList {
     
-    if([self.delegate respondsToSelector:@selector(startUploadProducts)])
-        [self.delegate startUploadProducts];
+    if([self.delegate respondsToSelector:@selector(startUploadProducts:)])
+        [self.delegate startUploadProducts:@"Load Products"];
     
     NSInteger filterRaceId = 0;
     NSInteger filterStateId = 0;
@@ -88,10 +88,11 @@
 
 -(void)changeFilterCategory:(NSInteger) categoryId {
     self.filterCategoryId = categoryId;
+    [self showMainView];
     [self updateProductsList];
 }
 
-#pragma mark collection products
+#pragma mark products
 
 - (NSInteger)countProductsList {
     return self.arrayProducts.count;
@@ -113,8 +114,6 @@
     return [self.arrayProducts objectAtIndex:indexPath.row].pricePresentation;
 }
 
-#pragma select product
-
 -(void)selectProduct:(NSIndexPath*)indexPath {
     
     WDProduct *product = [self.arrayProducts objectAtIndex:indexPath.row];
@@ -123,6 +122,27 @@
         [self.delegate showProductviewModel:productViewModel];
     
 }
+
+#pragma mark account
+
+- (void)showAccountUserOrCreateAccount {
+    if([WDHTTPClient sharedWDHTTPClient].isAutentification) {
+        
+    } else {
+        WDStartedViewModels *startedViewModel  = [[WDStartedViewModels alloc] initWithMainViewModel:self];
+        if([self.delegate respondsToSelector:@selector(showStartAccount:)])
+            [self.delegate showStartAccount:startedViewModel];
+    }
+}
+
+#pragma mark change View
+
+- (void)showMainView {
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+}
+
+
 
 
 #pragma mark - Delegate

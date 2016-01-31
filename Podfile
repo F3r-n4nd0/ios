@@ -5,15 +5,16 @@ use_frameworks!
 
 target 'WallaDog' do
 
-pod 'iOS-Slide-Menu'
-pod 'FZAccordionTableView'
-pod 'AFNetworking'
-pod 'CHTCollectionViewWaterfallLayout'
-pod 'SDWebImage'
-pod 'SCLAlertView-Objective-C'
-pod 'SVProgressHUD'
-pod 'AFOAuth2Manager', :git => 'https://github.com/AFNetworking/AFOAuth2Manager.git', :branch => '3_0_0_branch'
-pod 'iCarousel'
+  pod 'iOS-Slide-Menu'
+  pod 'FZAccordionTableView'
+  pod 'AFNetworking'
+  pod 'CHTCollectionViewWaterfallLayout'
+  pod 'SDWebImage'
+  pod 'SCLAlertView-Objective-C'
+  pod 'SVProgressHUD'
+  pod 'AFOAuth2Manager', :git => 'https://github.com/AFNetworking/AFOAuth2Manager.git', :branch => '3_0_0_branch'
+  pod 'iCarousel'
+  pod 'SCLAlertView-Objective-C'
 
 end
 

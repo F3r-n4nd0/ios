@@ -36,6 +36,9 @@ WDMainViewModelDelegate>
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
 
+
+@property (nonatomic, strong) WDMainMenuLeftViewController *leftMenu;
+
 @end
 
 @implementation WDMainViewController
@@ -114,9 +117,9 @@ WDMainViewModelDelegate>
 
 - (void) loadSliteMenu {
     
-    WDMainMenuLeftViewController *leftMenu = [[WDMainMenuLeftViewController alloc] initWithMainViewModel:self.mainViewModel];
+    self.leftMenu = [[WDMainMenuLeftViewController alloc] initWithMainViewModel:self.mainViewModel];
     [SlideNavigationController sharedInstance].portraitSlideOffset = 100;
-    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+    [SlideNavigationController sharedInstance].leftMenu = self.leftMenu;
     
     UIButton *buttonLeft  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [buttonLeft setImage:[UIImage imageNamed:@"ImageMenuIcon"] forState:UIControlStateNormal];
@@ -279,6 +282,9 @@ WDMainViewModelDelegate>
     [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
 }
 
+- (void)updateCurrentUser {
+    [self.leftMenu updateCurrentUser];
+}
 #pragma mark - Menu Options
 
 - (void)showSellItem {

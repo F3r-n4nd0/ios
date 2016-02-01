@@ -19,5 +19,8 @@
                      email:(NSString*)email
                   password:(NSString*)password
            completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock;
+- (void)logInWithUserName:(NSString*)userName
+                  password:(NSString*)password
+           completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock;
 
 @end

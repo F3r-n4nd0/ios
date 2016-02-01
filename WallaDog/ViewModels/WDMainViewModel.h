@@ -11,6 +11,7 @@
 
 @class WDProductViewModel;
 @class WDStartedViewModels;
+@class WDUser;
 
 @protocol WDMainViewModelDelegate <NSObject>
 
@@ -21,10 +22,13 @@
 - (void)showProductviewModel:(WDProductViewModel*) productViewModel;
 - (void)showStartAccount:(WDStartedViewModels*) startedViewModel;
 - (void)showMainViewHideMenus;
+- (void)updateCurrentUser;
 
 @end
 
 @interface WDMainViewModel : NSObject
+
+@property (readonly) WDUser *currentUser;
 
 @property (nonatomic, weak) id<WDMainViewModelDelegate> delegate;
 
@@ -41,4 +45,7 @@
 - (void)selectProduct:(NSIndexPath*)indexPath;
 - (void)showAccountUserOrCreateAccount;
 - (void)showMainView;
+- (void)updateUserAccountNew;
+- (void)removeUserAccount;
+
 @end

@@ -38,4 +38,5 @@
                                      complitionError:(void(^)(NSString* error))complitionError;
 - (void)getCurrentUserSuccess:(void (^)(id responseObject))success
                       failure:(void (^)(NSString *errorDescripcion))failure;
+- (void)removeAuthorization;
 @end

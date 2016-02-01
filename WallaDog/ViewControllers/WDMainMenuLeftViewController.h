@@ -15,5 +15,6 @@
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithMainViewModel:(WDMainViewModel*) mainViewModel;
 
+- (void)updateCurrentUser;
 
 @end

@@ -14,6 +14,7 @@
 #import "WDProduct.h"
 #import "WDProductViewModel.h"
 #import "WDStartedViewModels.h"
+#import "WDUser.h"
 
 @interface WDMainViewModel() <CLLocationManagerDelegate>
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) NSArray<WDProduct *> *arrayProducts;
 @property (nonatomic) NSInteger filterCategoryId;
 @property (nonatomic, strong) NSURLSessionDataTask *currentLoadProductTask;
+
+@property (nonatomic, strong) WDUser *currentUser;
 
 @end
 
@@ -34,6 +37,7 @@
         _arrayProducts = [NSArray array];
         _delegate = delegate;
         [self loadLocationManager];
+        [self loadCurrentUser];
     }
     return self;
 }
@@ -44,6 +48,11 @@
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
     [self.locationManager startMonitoringSignificantLocationChanges];
+}
+
+- (void)loadCurrentUser {
+    if([WDHTTPClient sharedWDHTTPClient].isAutentification)
+        [self updateUserAccountNew];
 }
 
 #pragma mark - public methods
@@ -142,8 +151,27 @@
         [self.delegate showMainViewHideMenus];
 }
 
+- (void)updateUserAccountNew {
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+    [[WDHTTPClient sharedWDHTTPClient] getCurrentUserSuccess:^(id responseObject) {
+        WDUser *user = [[WDUser alloc] initWithDictionary:responseObject];
+        self.currentUser = user;
+        if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
+            [self.delegate updateCurrentUser];
+    } failure:^(NSString *errorDescripcion) {
+        
+    }];
+}
 
-
+- (void)removeUserAccount {
+    [[WDHTTPClient sharedWDHTTPClient] removeAuthorization];
+    self.currentUser = nil;
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+    if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
+        [self.delegate updateCurrentUser];
+}
 
 #pragma mark - Delegate
 

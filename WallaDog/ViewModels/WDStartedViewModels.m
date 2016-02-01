@@ -57,6 +57,19 @@
      }];
 }
 
+- (void)logInWithUserName:(NSString*)userName
+                 password:(NSString*)password
+          completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock {
+    NSString *alert = [self veryfyDataToLogInWithUserName:userName password:password];
+    if(![alert isEqualToString:@""]) {
+        completionBlock(nil,alert,NO);
+        return;
+    }
+    [self loginAndGetAuthorizationTokenWithUserName:userName
+                                           password:password
+                                    completionBlock:completionBlock];
+}
+
 - (void)loginAndGetAuthorizationTokenWithUserName:(NSString*)userName
                                          password:(NSString*)password
                                   completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock {
@@ -65,10 +78,10 @@
                                                                            password:password
                                                                     complitionBLock:
      ^{
-         [self.mainViewModel showMainView];
+         [self.mainViewModel updateUserAccountNew];
          completionBlock(nil,nil,YES);
      } complitionError:^(NSString *error) {
-          completionBlock(error.description,nil,NO);
+         completionBlock(error.description,nil,NO);
      }];
 }
 
@@ -85,7 +98,22 @@
     if(email.length == 0) {
         result = [result stringByAppendingString:@"\nEmail requiered"];
     }
-    if(email.length == 0) {
+    if(password.length == 0) {
+        result = [result stringByAppendingString:@"\nPassword requiered"];
+    }
+    return result;
+}
+
+- (NSString*)veryfyDataToLogInWithUserName:(NSString*)userName
+                                  password:(NSString*)password {
+    NSString *result = @"";
+    if(userName.length == 0) {
+        result = [result stringByAppendingString:@"User name requiered"];
+    }
+    if(userName.length <= 3) {
+        result = [result stringByAppendingString:@"\nUser name need more than 3 characters"];
+    }
+    if(password.length == 0) {
         result = [result stringByAppendingString:@"\nPassword requiered"];
     }
     return result;

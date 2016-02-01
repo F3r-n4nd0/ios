@@ -177,6 +177,8 @@
                                                success:^(AFOAuthCredential *credential) {
                                                    [AFOAuthCredential storeCredential:credential
                                                                        withIdentifier:KEY_SAVE_TOKEN];
+                                                   [self.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
+                                                   self.isAutentification = YES;
                                                    complitionBLock();
                                                }
                                                failure:^(NSError *error) {
@@ -186,66 +188,9 @@
 }
 
 
-//- (void)updateWeatherAtLocation:(CLLocation *)location forNumberOfDays:(NSUInteger)number
-//{
-//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-//
-//    parameters[@"num_of_days"] = @(number);
-//    parameters[@"q"] = [NSString stringWithFormat:@"%f,%f",location.coordinate.latitude,location.coordinate.longitude];
-//    parameters[@"format"] = @"json";
-//    parameters[@"key"] = @"WorldWeatherOnlineAPIKey";
-//
-//    [self GET:@"weather.ashx" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-//
-//    } success:^(NSURLSessionDataTask *task, id responseObject) {
-//        if ([self.delegate respondsToSelector:@selector(weatherHTTPClient:didUpdateWithWeather:)]) {
-//            [self.delegate weatherHTTPClient:self didUpdateWithWeather:responseObject];
-//        }
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        if ([self.delegate respondsToSelector:@selector(weatherHTTPClient:didFailWithError:)]) {
-//            [self.delegate weatherHTTPClient:self didFailWithError:error];
-//        }
-//    }];
-//}
-
-
-
-//- (void)test {
-//    NSDictionary *parameters = @{
-//        @"name": @"name test",
-//        @"latitude" : @(-63.179393),
-//        @"longitude" : @(-17.782488),
-//        @"race": @(1),
-//        @"state": @(1),
-//        @"category": @(1)
-//    };
-//    [self POST:@"/api/1.0/products/" parameters:parameters  constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        UIImage *image = [UIImage imageNamed:@"ImageUserIcon"];
-//        [formData appendPartWithFileData:UIImagePNGRepresentation(image) name:@"upload_image" fileName:@"XXXXXXXXX.jpg" mimeType:@"image/jpeg"];
-//        [formData appendPartWithFileData:UIImagePNGRepresentation(image) name:@"upload_image" fileName:@"YYYYYYYYY.jpg" mimeType:@"image/jpeg"];
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
-//        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-//        NSLog(@"ERROR SERVER : %@", myStringError);
-//    }];
-//}
-//
-//-(NSString*) bv_jsonStringWithPrettyPrint:(BOOL) prettyPrint {
-//    NSError *error;
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self
-//                                                       options:(NSJSONWritingOptions) (prettyPrint ? NSJSONWritingPrettyPrinted : 0)
-//                                                         error:&error];
-//
-//    if (! jsonData) {
-//        NSLog(@"bv_jsonStringWithPrettyPrint: error: %@", error.localizedDescription);
-//        return @"[]";
-//    } else {
-//        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    }
-//}
+- (void)removeAuthorization {
+    self.isAutentification = NO;
+    [AFOAuthCredential deleteCredentialWithIdentifier:KEY_SAVE_TOKEN];
+}
 
 @end

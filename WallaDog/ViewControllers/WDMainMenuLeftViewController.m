@@ -44,8 +44,11 @@ WDMainMenuLeftViewModelDelegate>
     [super viewDidLoad];
     [self configureUserUIView];
     [self loadMenu];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self updateCurrentUser];
-    
 }
 
 - (void)didReceiveMemoryWarning {

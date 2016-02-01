@@ -17,7 +17,7 @@
 @property (nonatomic, strong) NSArray<NSString *> *arrayMenu;
 @property (nonatomic, strong) NSArray<UIImage *> *arrayMenuImage;
 @property (nonatomic, strong) NSArray<WDCategory *> *arrayCategory;
-@property (nonatomic, strong) WDUser *currentUser;
+
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
 
@@ -37,7 +37,6 @@
         _mainViewModel = mainViewModel;
         _delegate = delegate;
         [self loadMenuArray];
-        [self updateCurrentUser];
         [self updateCategoryeList];
     }
     return self;
@@ -65,19 +64,11 @@
      }];
 }
 
-- (void)updateCurrentUser {
-    
-    [[WDHTTPClient sharedWDHTTPClient] getCurrentUserSuccess:^(id responseObject) {
-        self.currentUser = [[WDUser alloc] initWithDictionary:responseObject];
-        if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
-            [self.delegate updateCurrentUser];
-    } failure:^(NSString *errorDescripcion) {
-     
-    }];
-}
-
 
 #pragma mark user data
+- (WDUser*)currentUser {
+    return self.mainViewModel.currentUser;
+}
 
 - (NSURL*)urlAvatarThumbnailUser {
     if(self.currentUser)
@@ -88,12 +79,13 @@
 - (NSString*)titleAccount {
     if(self.currentUser)
         return self.currentUser.fullName;
-    return @"";
+    return @"Sign up";
 }
+
 - (NSString*)SubTitleAccount {
     if(self.currentUser)
         return self.currentUser.sellingProducts;
-    return @"";
+    return @"or sign in";
 }
 
 #pragma mark collection menu
@@ -128,19 +120,21 @@
 #pragma mark selectSubMenu 
 
 - (void)selectMenu:(NSInteger)section {
-    
+    if([[self.arrayMenu objectAtIndex:section] isEqualToString:@"Close Session"]) {
+        if(!self.currentUser)
+            return;
+        [self.mainViewModel removeUserAccount];
+    }
 }
 
 - (void)selectSubMenu:(NSIndexPath*)indexPath {
     if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
-        if(self.mainViewModel)
-            [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
+        [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
 }
 
 - (void)deselectSubMenu:(NSIndexPath*)indexPath {
     if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
-        if(self.mainViewModel)
-            [self.mainViewModel changeFilterCategory:0];
+        [self.mainViewModel changeFilterCategory:0];
 }
 
 - (void)selectAccountUser {
@@ -159,14 +153,16 @@
     return @[@"List Item",
              @"Messages",
              @"Categories",
-             @"Help"];
+             @"Help",
+             @"Close Session"];
 }
 
 - (NSArray*)getSectionsMenuImages {
     return @[[UIImage imageNamed:@"ImageCameraIcon"],
              [UIImage imageNamed:@"ImageMessageIcon"],
              [UIImage imageNamed:@"ImageMessageIcon"],
-             [UIImage imageNamed:@"ImageHelpIcon"]];
+             [UIImage imageNamed:@"ImageHelpIcon"],
+             [UIImage imageNamed:@"ImageXIcon"]];
 }
 
 @end

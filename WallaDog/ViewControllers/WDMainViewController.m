@@ -7,6 +7,8 @@
 //
 @import CHTCollectionViewWaterfallLayout;
 @import SDWebImage;
+@import iOS_Slide_Menu;
+@import SVProgressHUD;
 
 #import "WDMainViewController.h"
 #import "WDMainMenuLeftViewController.h"
@@ -17,9 +19,10 @@
 #import "WDMainViewModel.h"
 #import "WDProductViewController.h"
 
+
 @interface WDMainViewController ()
-<UISearchBarDelegate,
-WDMainMenuLeftViewControllerDelegate,
+<SlideNavigationControllerDelegate,
+UISearchBarDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegate,
 CHTCollectionViewDelegateWaterfallLayout,
@@ -30,10 +33,11 @@ WDMainViewModelDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *buttonCamera;
 @property (weak, nonatomic) IBOutlet UIView *viewLocation;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewLocationTop;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
+
+
+@property (nonatomic, strong) WDMainMenuLeftViewController *leftMenu;
 
 @end
 
@@ -113,11 +117,9 @@ WDMainViewModelDelegate>
 
 - (void) loadSliteMenu {
     
-    WDMainMenuLeftViewController *leftMenu = [[WDMainMenuLeftViewController alloc] initWithMainViewModel:self.mainViewModel];
+    self.leftMenu = [[WDMainMenuLeftViewController alloc] initWithMainViewModel:self.mainViewModel];
     [SlideNavigationController sharedInstance].portraitSlideOffset = 100;
-    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
-    
-    leftMenu.delegate = self;
+    [SlideNavigationController sharedInstance].leftMenu = self.leftMenu;
     
     UIButton *buttonLeft  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [buttonLeft setImage:[UIImage imageNamed:@"ImageMenuIcon"] forState:UIControlStateNormal];
@@ -184,21 +186,6 @@ WDMainViewModelDelegate>
 }
 
 #pragma mark - Delegate
-
-#pragma mark WDMainMenuLeftViewControllerDelegate
-
-- (void)selectMenuSection:(NSInteger)section {
-    switch (section) {
-        case -1:
-            [self showModalLogin];
-            break;
-        case 0:
-            [self showSellItem];
-            break;
-        default:
-            break;
-    }
-}
 
 #pragma mark UICollectionViewDataSource
 
@@ -269,12 +256,12 @@ WDMainViewModelDelegate>
     [self.collectionView reloadData];
 }
 
-- (void)startUploadProducts {
-    [self.activityIndicator startAnimating];
+- (void)startUploadProducts:(NSString*)action {
+   [SVProgressHUD showWithStatus:action maskType:SVProgressHUDMaskTypeClear];
 }
 
 - (void)stopUploadProducts {
-    [self.activityIndicator stopAnimating];
+    [SVProgressHUD dismiss];
 }
 
 - (void)showProductviewModel:(WDProductViewModel *)productViewModel {
@@ -284,15 +271,21 @@ WDMainViewModelDelegate>
     [self.navigationController presentViewController:productViewController animated:YES completion:nil];
 }
 
-#pragma mark - Menu Options
-
-- (void)showModalLogin {
-    WDStartedViewModels *startedViewModels = [[WDStartedViewModels alloc] init];
-    WDStartedViewController *startedViewController = [[WDStartedViewController alloc] initWithStartedViewModels:startedViewModels];
+- (void)showStartAccount:(WDStartedViewModels*) startedViewModel {
+    WDStartedViewController *startedViewController = [[WDStartedViewController alloc] initWithStartedViewModels:startedViewModel];
     [startedViewController setModalPresentationStyle:UIModalPresentationCustom];
     [startedViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
     [self.navigationController presentViewController:startedViewController animated:YES completion:nil];
 }
+
+- (void)showMainViewHideMenus {
+    [[SlideNavigationController sharedInstance] closeMenuWithCompletion:nil];
+}
+
+- (void)updateCurrentUser {
+    [self.leftMenu updateCurrentUser];
+}
+#pragma mark - Menu Options
 
 - (void)showSellItem {
     WDAddItemViewController *startedViewController = [[WDAddItemViewController alloc] init];

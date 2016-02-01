@@ -10,12 +10,14 @@
 #import "WDCategory.h"
 #import "WDHTTPClient.h"
 #import "WDMainViewModel.h"
+#import "WDUser.h"
 
 @interface WDMainMenuLeftViewModel()
 
 @property (nonatomic, strong) NSArray<NSString *> *arrayMenu;
 @property (nonatomic, strong) NSArray<UIImage *> *arrayMenuImage;
 @property (nonatomic, strong) NSArray<WDCategory *> *arrayCategory;
+
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
 
@@ -35,7 +37,7 @@
         _mainViewModel = mainViewModel;
         _delegate = delegate;
         [self loadMenuArray];
-        [self updateCAtegoryeList];
+        [self updateCategoryeList];
     }
     return self;
 }
@@ -44,7 +46,7 @@
 
 #pragma mark update data
 
-- (void)updateCAtegoryeList {
+- (void)updateCategoryeList {
     
     [[WDHTTPClient sharedWDHTTPClient] getCategoriesSuccess:^(id responseObject)
      {
@@ -60,6 +62,30 @@
      } failure:^(NSString *errorDescripcion) {
          
      }];
+}
+
+
+#pragma mark user data
+- (WDUser*)currentUser {
+    return self.mainViewModel.currentUser;
+}
+
+- (NSURL*)urlAvatarThumbnailUser {
+    if(self.currentUser)
+        return self.currentUser.urlAvatarThumbnail;
+    return nil;
+}
+
+- (NSString*)titleAccount {
+    if(self.currentUser)
+        return self.currentUser.fullName;
+    return @"Sign up";
+}
+
+- (NSString*)SubTitleAccount {
+    if(self.currentUser)
+        return self.currentUser.sellingProducts;
+    return @"or sign in";
 }
 
 #pragma mark collection menu
@@ -93,16 +119,27 @@
 
 #pragma mark selectSubMenu 
 
-- (void)selectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"]) {
-        [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
+- (void)selectMenu:(NSInteger)section {
+    if([[self.arrayMenu objectAtIndex:section] isEqualToString:@"Close Session"]) {
+        if(!self.currentUser)
+            return;
+        [self.mainViewModel removeUserAccount];
     }
 }
 
+- (void)selectSubMenu:(NSIndexPath*)indexPath {
+    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
+        [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
+}
+
 - (void)deselectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"]) {
-         [self.mainViewModel changeFilterCategory:0];
-    }
+    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
+        [self.mainViewModel changeFilterCategory:0];
+}
+
+- (void)selectAccountUser {
+    if(self.mainViewModel)
+       [self.mainViewModel showAccountUserOrCreateAccount];
 }
 
 #pragma mark - menu data
@@ -116,14 +153,16 @@
     return @[@"List Item",
              @"Messages",
              @"Categories",
-             @"Help"];
+             @"Help",
+             @"Close Session"];
 }
 
 - (NSArray*)getSectionsMenuImages {
     return @[[UIImage imageNamed:@"ImageCameraIcon"],
              [UIImage imageNamed:@"ImageMessageIcon"],
              [UIImage imageNamed:@"ImageMessageIcon"],
-             [UIImage imageNamed:@"ImageHelpIcon"]];
+             [UIImage imageNamed:@"ImageHelpIcon"],
+             [UIImage imageNamed:@"ImageXIcon"]];
 }
 
 @end

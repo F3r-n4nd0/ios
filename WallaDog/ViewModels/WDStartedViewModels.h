@@ -6,13 +6,21 @@
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+@class WDMainViewModel;
 
 @interface WDStartedViewModels : NSObject
 
-- (void)signUpWithFullName:(NSString*)fullName
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithMainViewModel:(WDMainViewModel*)mainViewModel;
+
+- (void)signUpWithUserName:(NSString*)userName
                      email:(NSString*)email
                   password:(NSString*)password
-           completionBlock:(void (^)(NSError *error, NSString *alert, BOOL finished))completionBlock;
+           completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock;
+- (void)logInWithUserName:(NSString*)userName
+                  password:(NSString*)password
+           completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock;
 
 @end

@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDMainViewController">
             <connections>
-                <outlet property="activityIndicator" destination="gjU-qF-1oG" id="Zcs-8m-mN7"/>
                 <outlet property="buttonCamera" destination="CIw-YY-Yaa" id="K2N-2B-No3"/>
                 <outlet property="collectionView" destination="UPb-M9-PfC" id="lbI-ha-Ero"/>
                 <outlet property="constraintViewLocationTop" destination="D9c-cF-AK6" id="7c0-Zh-xDL"/>
@@ -90,10 +89,6 @@
                     <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
                     <state key="normal" image="ImageCamera"/>
                 </button>
-                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-qF-1oG" userLabel="acitvityIndicator">
-                    <rect key="frame" x="169" y="315" width="37" height="37"/>
-                    <color key="color" red="0.31799998879432678" green="0.57999998331069946" blue="0.86299997568130493" alpha="1" colorSpace="calibratedRGB"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.90663689374923706" green="0.90676730871200562" blue="0.90660834312438965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <gestureRecognizers/>
@@ -102,12 +97,10 @@
                 <constraint firstItem="slo-aj-5YH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="D9c-cF-AK6"/>
                 <constraint firstItem="UPb-M9-PfC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PwE-yJ-VeH"/>
                 <constraint firstItem="CIw-YY-Yaa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VLo-5U-4WK"/>
-                <constraint firstItem="gjU-qF-1oG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XMj-rW-kas"/>
                 <constraint firstItem="bfv-ar-1kg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bof-de-Dic"/>
                 <constraint firstAttribute="bottom" secondItem="CIw-YY-Yaa" secondAttribute="bottom" constant="25" id="ki4-jC-UaU"/>
                 <constraint firstAttribute="trailing" secondItem="bfv-ar-1kg" secondAttribute="trailing" id="lSo-XH-Jg0"/>
                 <constraint firstItem="slo-aj-5YH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mC2-9x-GRq"/>
-                <constraint firstItem="gjU-qF-1oG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nrh-6h-Hb4"/>
                 <constraint firstItem="bfv-ar-1kg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rVK-jR-xyt"/>
                 <constraint firstAttribute="trailing" secondItem="UPb-M9-PfC" secondAttribute="trailing" id="xkk-1g-1KP"/>
                 <constraint firstAttribute="bottom" secondItem="UPb-M9-PfC" secondAttribute="bottom" id="yuR-sh-S6W"/>

@@ -13,7 +13,8 @@
 @protocol WDMainMenuLeftViewModelDelegate <NSObject>
 
 @required
--(void)updateMenuSection:(NSInteger) section;
+- (void)updateMenuSection:(NSInteger) section;
+- (void)updateCurrentUser;
 
 @end
 
@@ -30,7 +31,13 @@
 - (NSString*)textMenuDescription:(NSInteger)section;
 - (UIImage*)imageMenu:(NSInteger)section;
 - (NSString*)textSubMenuDescriptionFromIndexPath:(NSIndexPath*)indexPath;
-//- (BOOL)isSubMenuSelectFromIndexPath:(NSIndexPath*)indexPath ;
+- (void)selectAccountUser;
+- (void)selectMenu:(NSInteger)section;
 - (void)selectSubMenu:(NSIndexPath*)indexPath;
 - (void)deselectSubMenu:(NSIndexPath*)indexPath;
+- (NSURL*)urlAvatarThumbnailUser;
+- (NSString*)titleAccount;
+- (NSString*)SubTitleAccount;
+
+
 @end

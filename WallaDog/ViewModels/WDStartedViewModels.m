@@ -7,17 +7,117 @@
 //
 
 #import "WDStartedViewModels.h"
+#import "WDHTTPClient.h"
+#import "WDUser.h"
+#import "WDMainViewModel.h"
+
+@interface WDStartedViewModels ()
+
+@property(nonatomic, strong)WDMainViewModel *mainViewModel;
+
+@end
+
+
 
 @implementation WDStartedViewModels
 
-- (void)signUpWithFullName:(NSString*)fullName
-                     email:(NSString*)email
-                  password:(NSString*)password
-           completionBlock:(void (^)(NSError *error, NSString *alert, BOOL finished))completionBlock {
-    [NSThread sleepForTimeInterval:20];
-    completionBlock(nil, @"Error Email", YES);
+- (instancetype)initWithMainViewModel:(WDMainViewModel*)mainViewModel {
+    if(self = [super init]){
+        _mainViewModel = mainViewModel;
+    }
+    return self;
 }
 
+
+- (void)signUpWithUserName:(NSString*)userName
+                     email:(NSString*)email
+                  password:(NSString*)password
+           completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock {
+    
+    NSString *alert = [self veryfyDataToSignUpWithUserName:userName email:email password:password];
+    if(![alert isEqualToString:@""]) {
+        completionBlock(nil,alert,NO);
+        return;
+    }
+    [[WDHTTPClient sharedWDHTTPClient] signUpWithUserName:userName
+                                                    email:email
+                                                 password:password
+                                                  success:^(id responseObject)
+     {
+         WDUser *user = [[WDUser alloc] initWithDictionary:responseObject];
+         if(user) {
+             [self loginAndGetAuthorizationTokenWithUserName:userName
+                                                    password:password
+                                             completionBlock:completionBlock];
+             return;
+         }
+         completionBlock(@"Error sign up",nil,NO);
+     } failure:^(NSString *errorDescripcion) {
+         completionBlock(errorDescripcion,nil,NO);
+     }];
+}
+
+- (void)logInWithUserName:(NSString*)userName
+                 password:(NSString*)password
+          completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock {
+    NSString *alert = [self veryfyDataToLogInWithUserName:userName password:password];
+    if(![alert isEqualToString:@""]) {
+        completionBlock(nil,alert,NO);
+        return;
+    }
+    [self loginAndGetAuthorizationTokenWithUserName:userName
+                                           password:password
+                                    completionBlock:completionBlock];
+}
+
+- (void)loginAndGetAuthorizationTokenWithUserName:(NSString*)userName
+                                         password:(NSString*)password
+                                  completionBlock:(void (^)(NSString *error, NSString *alert, BOOL success))completionBlock {
+    
+    [[WDHTTPClient sharedWDHTTPClient] loginAndobtainAuthorizationTokenWithUserName:userName
+                                                                           password:password
+                                                                    complitionBLock:
+     ^{
+         [self.mainViewModel updateUserAccountNew];
+         completionBlock(nil,nil,YES);
+     } complitionError:^(NSString *error) {
+         completionBlock(error.description,nil,NO);
+     }];
+}
+
+- (NSString*)veryfyDataToSignUpWithUserName:(NSString*)userName
+                                      email:(NSString*)email
+                                   password:(NSString*)password {
+    NSString *result = @"";
+    if(userName.length == 0) {
+        result = [result stringByAppendingString:@"User name requiered"];
+    }
+    if(userName.length <= 3) {
+        result = [result stringByAppendingString:@"\nUser name need more than 3 characters"];
+    }
+    if(email.length == 0) {
+        result = [result stringByAppendingString:@"\nEmail requiered"];
+    }
+    if(password.length == 0) {
+        result = [result stringByAppendingString:@"\nPassword requiered"];
+    }
+    return result;
+}
+
+- (NSString*)veryfyDataToLogInWithUserName:(NSString*)userName
+                                  password:(NSString*)password {
+    NSString *result = @"";
+    if(userName.length == 0) {
+        result = [result stringByAppendingString:@"User name requiered"];
+    }
+    if(userName.length <= 3) {
+        result = [result stringByAppendingString:@"\nUser name need more than 3 characters"];
+    }
+    if(password.length == 0) {
+        result = [result stringByAppendingString:@"\nPassword requiered"];
+    }
+    return result;
+}
 
 
 @end

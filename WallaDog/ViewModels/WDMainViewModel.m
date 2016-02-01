@@ -7,13 +7,14 @@
 //
 @import CoreLocation;
 @import SDWebImage;
-@import CoreLocation;
 @import MapKit;
 
 #import "WDMainViewModel.h"
 #import "WDHTTPClient.h"
 #import "WDProduct.h"
 #import "WDProductViewModel.h"
+#import "WDStartedViewModels.h"
+#import "WDUser.h"
 
 @interface WDMainViewModel() <CLLocationManagerDelegate>
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) NSArray<WDProduct *> *arrayProducts;
 @property (nonatomic) NSInteger filterCategoryId;
 @property (nonatomic, strong) NSURLSessionDataTask *currentLoadProductTask;
+
+@property (nonatomic, strong) WDUser *currentUser;
 
 @end
 
@@ -34,6 +37,7 @@
         _arrayProducts = [NSArray array];
         _delegate = delegate;
         [self loadLocationManager];
+        [self loadCurrentUser];
     }
     return self;
 }
@@ -46,14 +50,19 @@
     [self.locationManager startMonitoringSignificantLocationChanges];
 }
 
+- (void)loadCurrentUser {
+    if([WDHTTPClient sharedWDHTTPClient].isAutentification)
+        [self updateUserAccountNew];
+}
+
 #pragma mark - public methods
 
 #pragma mark update data
 
 - (void)updateProductsList {
     
-    if([self.delegate respondsToSelector:@selector(startUploadProducts)])
-        [self.delegate startUploadProducts];
+    if([self.delegate respondsToSelector:@selector(startUploadProducts:)])
+        [self.delegate startUploadProducts:@"Load Products"];
     
     NSInteger filterRaceId = 0;
     NSInteger filterStateId = 0;
@@ -88,10 +97,11 @@
 
 -(void)changeFilterCategory:(NSInteger) categoryId {
     self.filterCategoryId = categoryId;
+    [self showMainView];
     [self updateProductsList];
 }
 
-#pragma mark collection products
+#pragma mark products
 
 - (NSInteger)countProductsList {
     return self.arrayProducts.count;
@@ -113,8 +123,6 @@
     return [self.arrayProducts objectAtIndex:indexPath.row].pricePresentation;
 }
 
-#pragma select product
-
 -(void)selectProduct:(NSIndexPath*)indexPath {
     
     WDProduct *product = [self.arrayProducts objectAtIndex:indexPath.row];
@@ -124,6 +132,46 @@
     
 }
 
+#pragma mark account
+
+- (void)showAccountUserOrCreateAccount {
+    if([WDHTTPClient sharedWDHTTPClient].isAutentification) {
+        
+    } else {
+        WDStartedViewModels *startedViewModel  = [[WDStartedViewModels alloc] initWithMainViewModel:self];
+        if([self.delegate respondsToSelector:@selector(showStartAccount:)])
+            [self.delegate showStartAccount:startedViewModel];
+    }
+}
+
+#pragma mark change View
+
+- (void)showMainView {
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+}
+
+- (void)updateUserAccountNew {
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+    [[WDHTTPClient sharedWDHTTPClient] getCurrentUserSuccess:^(id responseObject) {
+        WDUser *user = [[WDUser alloc] initWithDictionary:responseObject];
+        self.currentUser = user;
+        if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
+            [self.delegate updateCurrentUser];
+    } failure:^(NSString *errorDescripcion) {
+        
+    }];
+}
+
+- (void)removeUserAccount {
+    [[WDHTTPClient sharedWDHTTPClient] removeAuthorization];
+    self.currentUser = nil;
+    if([self.delegate respondsToSelector:@selector(showMainViewHideMenus)])
+        [self.delegate showMainViewHideMenus];
+    if([self.delegate respondsToSelector:@selector(updateCurrentUser)])
+        [self.delegate updateCurrentUser];
+}
 
 #pragma mark - Delegate
 

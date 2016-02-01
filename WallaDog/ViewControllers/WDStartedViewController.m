@@ -11,6 +11,7 @@
 #import "WDStartedViewController.h"
 #import "WDArrowView.h"
 #import "WDStartedViewModels.h"
+#import "WDUIHelper.h"
 
 @interface WDStartedViewController ()
 
@@ -25,12 +26,11 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewLogInTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewSignUpTop;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintViewWithArrow;
-
-@property (weak, nonatomic) IBOutlet UITextField *textFieldLogInEmail;
-
-@property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpFullName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLogInUserName;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpUserName;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpEmail;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldSignUpPassword;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldLogInPassword;
 
 @property(nonatomic, strong) WDStartedViewModels *startedViewModels;
 
@@ -100,28 +100,46 @@
 }
 
 - (IBAction)touchUpInsideEnterLogIn:(id)sender {
-
-    NSString *fullName = self.textFieldSignUpFullName.text;
-    NSString *email = self.textFieldSignUpEmail.text;
-    NSString *password = self.textFieldSignUpPassword.text;
+    NSString *userName = self.textFieldLogInUserName.text;
+    NSString *password = self.textFieldLogInPassword.text;
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-    [self.startedViewModels signUpWithFullName:fullName email:email password:password completionBlock:^(NSError *error, NSString *alert, BOOL finished) {
-         [SVProgressHUD dismiss];
+    [self.startedViewModels logInWithUserName:userName password:password completionBlock:^(NSString *error, NSString *alert, BOOL finished) {
+        [SVProgressHUD dismiss];
         if(finished) {
-            
+            [WDUIHelper showSuccessAlertWithTitle:@"Hello" subTitle:@"Success log in"];
+            [self dismissViewControllerAnimated:YES completion:nil];
             return;
         }
         if(error) {
+            [WDUIHelper showErrorAlertWithSubTitle:error];
             return;
         }
         if(alert) {
-            
+            [WDUIHelper showWarningAlertWithTitle:@"Sign up" subTitle:alert];
         }
     }];
 }
 
 - (IBAction)touchUpInsideEnterSignUp:(id)sender {
-    
+    NSString *userName = self.textFieldSignUpUserName.text;
+    NSString *email = self.textFieldSignUpEmail.text;
+    NSString *password = self.textFieldSignUpPassword.text;
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [self.startedViewModels signUpWithUserName:userName email:email password:password completionBlock:^(NSString *error, NSString *alert, BOOL finished) {
+        [SVProgressHUD dismiss];
+        if(finished) {
+            [WDUIHelper showSuccessAlertWithTitle:@"Hello" subTitle:@"Success sign up"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+            return;
+        }
+        if(error) {
+            [WDUIHelper showErrorAlertWithSubTitle:error];
+            return;
+        }
+        if(alert) {
+            [WDUIHelper showWarningAlertWithTitle:@"Sign up" subTitle:alert];
+        }
+    }];
 }
 
 - (IBAction)touchUpInsideForgotPassword:(id)sender {

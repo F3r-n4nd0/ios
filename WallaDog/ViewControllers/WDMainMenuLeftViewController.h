@@ -10,17 +10,11 @@
 
 @class WDMainViewModel;
 
-@protocol WDMainMenuLeftViewControllerDelegate <NSObject>
-
-- (void)selectMenuSection:(NSInteger)section;
-
-@end
-
 @interface WDMainMenuLeftViewController : UIViewController
 
-@property (weak, nonatomic) id<WDMainMenuLeftViewControllerDelegate> delegate;
-
 - (instancetype)init NS_UNAVAILABLE;
-   - (instancetype)initWithMainViewModel:(WDMainViewModel*) mainViewModel;
+- (instancetype)initWithMainViewModel:(WDMainViewModel*) mainViewModel;
+
+- (void)updateCurrentUser;
 
 @end

@@ -11,7 +11,6 @@
 #import "AppDelegate.h"
 #import "WDMainViewController.h"
 #import "WDSlideNavigationController.h"
-#import "WDMainViewModel.h"
 
 @interface AppDelegate ()
 

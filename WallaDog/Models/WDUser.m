@@ -1,138 +1,154 @@
 //
-//  WDUser.m
-//  WallaDog
+//	WDUser.m
 //
-//  Created by Pepe Padilla on 15/08/12.
-//  Copyright © 2015 Dancing Queen. All rights reserved.
-//
+//	Create by Fernando on 31/1/2016
+//	Copyright © 2016. All rights reserved.
+//	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+
 
 
 #import "WDUser.h"
-#import "WDDetail.h"
-
-NSString *const kDQUserDetail = @"detail";
-NSString *const kDQUserPassword = @"password";
-NSString *const kDQUserId = @"id";
-NSString *const kDQUserLastname = @"lastname";
-NSString *const kDQUserCompany = @"company";
-NSString *const kDQUserFirstname = @"firstname";
-NSString *const kDQUserEmail = @"email";
-
 
 @interface WDUser ()
-
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict;
-
 @end
-
 @implementation WDUser
 
-@synthesize detail = _detail;
-@synthesize password = _password;
-@synthesize internalBaseClassIdentifier = _internalBaseClassIdentifier;
-@synthesize lastname = _lastname;
-@synthesize company = _company;
-@synthesize firstname = _firstname;
-@synthesize email = _email;
 
 
-+ (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
-{
-    return [[self alloc] initWithDictionary:dict];
-}
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict
+/**
+ * Instantiate the instance using the passed dictionary values to set the properties values
+ */
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
-    
-    // This check serves to make sure that a non-NSDictionary object
-    // passed into the model class doesn't break the parsing.
-    if(self && [dict isKindOfClass:[NSDictionary class]]) {
-        self.detail = [WDDetail modelObjectWithDictionary:[dict objectForKey:kDQUserDetail]];
-        self.password = [self objectOrNilForKey:kDQUserPassword fromDictionary:dict];
-        self.internalBaseClassIdentifier = [[self objectOrNilForKey:kDQUserId fromDictionary:dict] doubleValue];
-        self.lastname = [self objectOrNilForKey:kDQUserLastname fromDictionary:dict];
-        self.company = [self objectOrNilForKey:kDQUserCompany fromDictionary:dict];
-        self.firstname = [self objectOrNilForKey:kDQUserFirstname fromDictionary:dict];
-        self.email = [self objectOrNilForKey:kDQUserEmail fromDictionary:dict];
-        
+    if(![dictionary[@"avatar_thumbnail_url"] isKindOfClass:[NSNull class]]){
+        self.avatarThumbnailUrl = dictionary[@"avatar_thumbnail_url"];
+    }
+    if(![dictionary[@"avatar_url"] isKindOfClass:[NSNull class]]){
+        self.avatarUrl = dictionary[@"avatar_url"];
+    }
+    if(![dictionary[@"email"] isKindOfClass:[NSNull class]]){
+        self.email = dictionary[@"email"];
+    }
+    if(![dictionary[@"first_name"] isKindOfClass:[NSNull class]]){
+        self.firstName = dictionary[@"first_name"];
+    }
+    if(![dictionary[@"id"] isKindOfClass:[NSNull class]]){
+        self.idField = [dictionary[@"id"] integerValue];
     }
     
-    return self;
+    if(![dictionary[@"last_name"] isKindOfClass:[NSNull class]]){
+        self.lastName = dictionary[@"last_name"];
+    }
+    if(![dictionary[@"products_count"] isKindOfClass:[NSNull class]]){
+        self.productsCount = [dictionary[@"products_count"] integerValue];
+    }
     
-}
-
-- (NSDictionary *)dictionaryRepresentation
-{
-    NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:[self.detail dictionaryRepresentation] forKey:kDQUserDetail];
-    [mutableDict setValue:self.password forKey:kDQUserPassword];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.internalBaseClassIdentifier] forKey:kDQUserId];
-    [mutableDict setValue:self.lastname forKey:kDQUserLastname];
-    [mutableDict setValue:self.company forKey:kDQUserCompany];
-    [mutableDict setValue:self.firstname forKey:kDQUserFirstname];
-    [mutableDict setValue:self.email forKey:kDQUserEmail];
-    
-    return [NSDictionary dictionaryWithDictionary:mutableDict];
-}
-
-- (NSString *)description
-{
-    return [NSString stringWithFormat:@"%@", [self dictionaryRepresentation]];
-}
-
-#pragma mark - Helper Method
-- (id)objectOrNilForKey:(id)aKey fromDictionary:(NSDictionary *)dict
-{
-    id object = [dict objectForKey:aKey];
-    return [object isEqual:[NSNull null]] ? nil : object;
-}
-
-
-#pragma mark - NSCoding Methods
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super init];
-    
-    self.detail = [aDecoder decodeObjectForKey:kDQUserDetail];
-    self.password = [aDecoder decodeObjectForKey:kDQUserPassword];
-    self.internalBaseClassIdentifier = [aDecoder decodeDoubleForKey:kDQUserId];
-    self.lastname = [aDecoder decodeObjectForKey:kDQUserLastname];
-    self.company = [aDecoder decodeObjectForKey:kDQUserCompany];
-    self.firstname = [aDecoder decodeObjectForKey:kDQUserFirstname];
-    self.email = [aDecoder decodeObjectForKey:kDQUserEmail];
+    if(![dictionary[@"username"] isKindOfClass:[NSNull class]]){
+        self.username = dictionary[@"username"];
+    }
     return self;
 }
 
+
+/**
+ * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
+ */
+-(NSDictionary *)toDictionary
+{
+    NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
+    if(self.avatarThumbnailUrl != nil){
+        dictionary[@"avatar_thumbnail_url"] = self.avatarThumbnailUrl;
+    }
+    if(self.avatarUrl != nil){
+        dictionary[@"avatar_url"] = self.avatarUrl;
+    }
+    if(self.email != nil){
+        dictionary[@"email"] = self.email;
+    }
+    if(self.firstName != nil){
+        dictionary[@"first_name"] = self.firstName;
+    }
+    dictionary[@"id"] = @(self.idField);
+    if(self.lastName != nil){
+        dictionary[@"last_name"] = self.lastName;
+    }
+    dictionary[@"products_count"] = @(self.productsCount);
+    if(self.username != nil){
+        dictionary[@"username"] = self.username;
+    }
+    return dictionary;
+    
+}
+
+/**
+ * Implementation of NSCoding encoding method
+ */
+/**
+ * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
+ */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    
-    [aCoder encodeObject:_detail forKey:kDQUserDetail];
-    [aCoder encodeObject:_password forKey:kDQUserPassword];
-    [aCoder encodeDouble:_internalBaseClassIdentifier forKey:kDQUserId];
-    [aCoder encodeObject:_lastname forKey:kDQUserLastname];
-    [aCoder encodeObject:_company forKey:kDQUserCompany];
-    [aCoder encodeObject:_firstname forKey:kDQUserFirstname];
-    [aCoder encodeObject:_email forKey:kDQUserEmail];
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    WDUser *copy = [[WDUser alloc] init];
-    
-    if (copy) {
-        
-        copy.detail = [self.detail copyWithZone:zone];
-        copy.password = [self.password copyWithZone:zone];
-        copy.internalBaseClassIdentifier = self.internalBaseClassIdentifier;
-        copy.lastname = [self.lastname copyWithZone:zone];
-        copy.company = [self.company copyWithZone:zone];
-        copy.firstname = [self.firstname copyWithZone:zone];
-        copy.email = [self.email copyWithZone:zone];
+    if(self.avatarThumbnailUrl != nil){
+        [aCoder encodeObject:self.avatarThumbnailUrl forKey:@"avatar_thumbnail_url"];
+    }
+    if(self.avatarUrl != nil){
+        [aCoder encodeObject:self.avatarUrl forKey:@"avatar_url"];
+    }
+    if(self.email != nil){
+        [aCoder encodeObject:self.email forKey:@"email"];
+    }
+    if(self.firstName != nil){
+        [aCoder encodeObject:self.firstName forKey:@"first_name"];
+    }
+    [aCoder encodeObject:@(self.idField) forKey:@"id"];	if(self.lastName != nil){
+        [aCoder encodeObject:self.lastName forKey:@"last_name"];
+    }
+    [aCoder encodeObject:@(self.productsCount) forKey:@"products_count"];	if(self.username != nil){
+        [aCoder encodeObject:self.username forKey:@"username"];
     }
     
-    return copy;
+}
+
+/**
+ * Implementation of NSCoding initWithCoder: method
+ */
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    self.avatarThumbnailUrl = [aDecoder decodeObjectForKey:@"avatar_thumbnail_url"];
+    self.avatarUrl = [aDecoder decodeObjectForKey:@"avatar_url"];
+    self.email = [aDecoder decodeObjectForKey:@"email"];
+    self.firstName = [aDecoder decodeObjectForKey:@"first_name"];
+    self.idField = [[aDecoder decodeObjectForKey:@"id"] integerValue];
+    self.lastName = [aDecoder decodeObjectForKey:@"last_name"];
+    self.productsCount = [[aDecoder decodeObjectForKey:@"products_count"] integerValue];
+    self.username = [aDecoder decodeObjectForKey:@"username"];
+    return self;    
+}
+
+
+#pragma mark - Custom
+
+-(NSURL*)urlAvatarThumbnail {
+    return [NSURL URLWithString:self.avatarThumbnailUrl];
+}
+
+-(NSURL*)urlAvatar {
+    return [NSURL URLWithString:self.avatarUrl];
+}
+
+- (NSString*)fullName {
+    if (self.firstName.length == 0 && self.lastName.length == 0) {
+        return self.username;
+    }
+    return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
+
+- (NSString*)sellingProducts {
+     return [NSString stringWithFormat:@"Selling Prdocuts %ld", self.productsCount];
 }
 
 

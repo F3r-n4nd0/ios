@@ -5,10 +5,25 @@
 //  Created by Fernando Luna on 12/22/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
-//@import AFOAuth2Manager;
+//#import <AFOAuth2Manager/AFOAuth2Manager.h>
+//#import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
+
+@import AFOAuth2Manager;
 
 #import "WDHTTPClient.h"
-#import <CoreLocation/CLLocation.h>
+
+#define URL_BASE_WALLADOG @"http://api.walladog.com/"
+#define CLIENT_ID_WALLADOG @"uEAoxVEYOVmpg4Z8IAyCCEItlXO8Cf4G7RSu647d"
+#define SECRET_WALLADOG @"Zc0JGu5pVUt7zNxrhQaCvit6ydr4WxMVI4nXluF9GBWgJV0rbUcR5y2uBZl3TgmLYryashJREp9AiIkbfRUVv5Cdd3n6ZX4Va3fI2cmvMwcgWRFYnrp7K8ZtwkopXrhV"
+#define KEY_SAVE_TOKEN @"KEY_SAVE_TOKEN"
+
+
+@interface WDHTTPClient ()
+
+@property(nonatomic) BOOL isAutentification;
+
+@end
+
 
 @implementation WDHTTPClient
 
@@ -18,8 +33,7 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedWeatherHTTPClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.walladog.com/"]];
-        
+        _sharedWeatherHTTPClient = [[self alloc] initWithBaseURL:[NSURL URLWithString:URL_BASE_WALLADOG]];
     });
     
     return _sharedWeatherHTTPClient;
@@ -27,28 +41,35 @@
 
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
-    self = [super initWithBaseURL:url];
-    
-    if (self) {
-//        AFOAuthCredential *credential = [[AFOAuthCredential alloc] initWithOAuthToken:@"TTRevzbqGiJsaXOHX5twNI8mBwEStT" tokenType:@"Bearer"];
-//        //        [AFOAuthCredential retrieveCredentialWithIdentifier:@"serviceProviderIdentifier"];
-//        if(credential != nil) {
-//            [self.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
-//        }
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
-        self.requestSerializer = [AFJSONRequestSerializer serializer];
+    if (self = [super initWithBaseURL:url]) {
+        _isAutentification = NO;
+        [self configureAFNetworking];
+        [self loadAuthentication];
     }
     
     return self;
 }
 
+- (void)configureAFNetworking {
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+}
+
+- (void)loadAuthentication {
+    AFOAuthCredential *credential = [AFOAuthCredential retrieveCredentialWithIdentifier:KEY_SAVE_TOKEN];
+    if(credential != nil) {
+        [self.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
+        self.isAutentification = YES;
+    }
+}
+
 -(NSURLSessionDataTask *) loadProductsWithLocationCoordinate:(CLLocationCoordinate2D) locationCoordinate
-                                               filterRaceId:(NSInteger) filterRaceId
-                                           filterCategoryId:(NSInteger) filterCategoryId
-                                              filterStateId:(NSInteger) filterStateId
-                                                 filterName:(NSString*) filterName
-                                                    success:(void (^)(id responseObject))success
-                                                    failure:(void (^)(NSString *errorDescripcion))failure {
+                                                filterRaceId:(NSInteger) filterRaceId
+                                            filterCategoryId:(NSInteger) filterCategoryId
+                                               filterStateId:(NSInteger) filterStateId
+                                                  filterName:(NSString*) filterName
+                                                     success:(void (^)(id responseObject))success
+                                                     failure:(void (^)(NSString *errorDescripcion))failure {
     
     NSMutableDictionary *parametersFilters = [NSMutableDictionary dictionary];
     
@@ -102,85 +123,74 @@
     }];
 }
 
-//- (void)updateWeatherAtLocation:(CLLocation *)location forNumberOfDays:(NSUInteger)number
-//{
-//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-//
-//    parameters[@"num_of_days"] = @(number);
-//    parameters[@"q"] = [NSString stringWithFormat:@"%f,%f",location.coordinate.latitude,location.coordinate.longitude];
-//    parameters[@"format"] = @"json";
-//    parameters[@"key"] = @"WorldWeatherOnlineAPIKey";
-//
-//    [self GET:@"weather.ashx" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-//
-//    } success:^(NSURLSessionDataTask *task, id responseObject) {
-//        if ([self.delegate respondsToSelector:@selector(weatherHTTPClient:didUpdateWithWeather:)]) {
-//            [self.delegate weatherHTTPClient:self didUpdateWithWeather:responseObject];
-//        }
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        if ([self.delegate respondsToSelector:@selector(weatherHTTPClient:didFailWithError:)]) {
-//            [self.delegate weatherHTTPClient:self didFailWithError:error];
-//        }
-//    }];
-//}
 
-//- (void)testAuterization {
-//    AFOAuth2Manager *OAuth2Manager =
-//    [[AFOAuth2Manager alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.walladog.com:8000/"]
-//                                    clientID:@"uEAoxVEYOVmpg4Z8IAyCCEItlXO8Cf4G7RSu647d"
-//                                      secret:@"Zc0JGu5pVUt7zNxrhQaCvit6ydr4WxMVI4nXluF9GBWgJV0rbUcR5y2uBZl3TgmLYryashJREp9AiIkbfRUVv5Cdd3n6ZX4Va3fI2cmvMwcgWRFYnrp7K8ZtwkopXrhV"];
-//
-//    [OAuth2Manager authenticateUsingOAuthWithURLString:@"/o/token/"
-//                                              username:@"fluna"
-//                                              password:@"2492357"
-//                                                 scope:@"read"
-//                                               success:^(AFOAuthCredential *credential) {
-//                                                   [AFOAuthCredential storeCredential:credential
-//                                                                       withIdentifier:@"serviceProviderIdentifier"];
-//                                                   NSLog(@"Token: %@", credential.accessToken);
-//                                               }
-//                                               failure:^(NSError *error) {
-//                                                   NSLog(@"Error: %@", error);
-//                                               }];
-//
-//}
+-(void) getCurrentUserSuccess:(void (^)(id responseObject))success
+                      failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    
+    [self GET:@"/api/1.0/logins/" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        failure(myStringError);
+    }];
+}
 
-//- (void)test {
-//    NSDictionary *parameters = @{
-//        @"name": @"name test",
-//        @"latitude" : @(-63.179393),
-//        @"longitude" : @(-17.782488),
-//        @"race": @(1),
-//        @"state": @(1),
-//        @"category": @(1)
-//    };
-//    [self POST:@"/api/1.0/products/" parameters:parameters  constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        UIImage *image = [UIImage imageNamed:@"ImageUserIcon"];
-//        [formData appendPartWithFileData:UIImagePNGRepresentation(image) name:@"upload_image" fileName:@"XXXXXXXXX.jpg" mimeType:@"image/jpeg"];
-//        [formData appendPartWithFileData:UIImagePNGRepresentation(image) name:@"upload_image" fileName:@"YYYYYYYYY.jpg" mimeType:@"image/jpeg"];
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
-//        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-//        NSLog(@"ERROR SERVER : %@", myStringError);
-//    }];
-//}
-//
-//-(NSString*) bv_jsonStringWithPrettyPrint:(BOOL) prettyPrint {
-//    NSError *error;
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self
-//                                                       options:(NSJSONWritingOptions) (prettyPrint ? NSJSONWritingPrettyPrinted : 0)
-//                                                         error:&error];
-//
-//    if (! jsonData) {
-//        NSLog(@"bv_jsonStringWithPrettyPrint: error: %@", error.localizedDescription);
-//        return @"[]";
-//    } else {
-//        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    }
-//}
+-(void) signUpWithUserName:(NSString*)userName
+                     email:(NSString*)email
+                  password:(NSString*)password
+                   success:(void (^)(id responseObject))success
+                   failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    NSDictionary *parameters = @{@"username":userName,
+                                 @"email":email,
+                                 @"password":password};
+    
+    [self POST:@"/api/1.0/users/" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        failure(myStringError);
+    }];
+}
+
+- (void)loginAndobtainAuthorizationTokenWithUserName:(NSString*)userName
+                                            password:(NSString*)password
+                                     complitionBLock:(void(^)())complitionBLock
+                                     complitionError:(void(^)(NSString* error))complitionError {
+    
+    AFOAuth2Manager *OAuth2Manager =
+    [[AFOAuth2Manager alloc] initWithBaseURL:[NSURL URLWithString:URL_BASE_WALLADOG]
+                                    clientID:CLIENT_ID_WALLADOG
+                                      secret:SECRET_WALLADOG];
+    
+    [OAuth2Manager authenticateUsingOAuthWithURLString:@"/o/token/"
+                                              username:userName
+                                              password:password
+                                                 scope:@"read write"
+                                               success:^(AFOAuthCredential *credential) {
+                                                   [AFOAuthCredential storeCredential:credential
+                                                                       withIdentifier:KEY_SAVE_TOKEN];
+                                                   [self.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
+                                                   self.isAutentification = YES;
+                                                   complitionBLock();
+                                               }
+                                               failure:^(NSError *error) {
+                                                   complitionError(error.localizedDescription);
+                                               }];
+    
+}
+
+
+- (void)removeAuthorization {
+    self.isAutentification = NO;
+    [AFOAuthCredential deleteCredentialWithIdentifier:KEY_SAVE_TOKEN];
+}
 
 @end

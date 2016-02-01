@@ -5,7 +5,8 @@
 //  Created by Fernando Luna on 12/6/15.
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
-#import <FZAccordionTableView/FZAccordionTableView.h>
+@import FZAccordionTableView;
+@import SDWebImage;
 
 #import "WDMainMenuLeftViewController.h"
 #import "WDAccordionHeaderView.h"
@@ -21,6 +22,8 @@ UITableViewDelegate,
 WDMainMenuLeftViewModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewUser;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitleAccount;
+@property (weak, nonatomic) IBOutlet UILabel *LabelSubTitleAccount;
 @property (weak, nonatomic) IBOutlet FZAccordionTableView *tableView;
 
 @property (nonatomic, strong) WDMainMenuLeftViewModel *mainMenuLeftViewModel;
@@ -41,6 +44,11 @@ WDMainMenuLeftViewModelDelegate>
     [super viewDidLoad];
     [self configureUserUIView];
     [self loadMenu];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateCurrentUser];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -114,9 +122,7 @@ WDMainMenuLeftViewModelDelegate>
 #pragma mark Delegate FZAccordionTableViewDelegate
 
 - (void)tableView:(FZAccordionTableView *)tableView willOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {
-    if([self.delegate respondsToSelector:@selector(selectMenuSection:)]) {
-        [self.delegate selectMenuSection:section];
-    }
+    [self.mainMenuLeftViewModel selectMenu:section];
 }
 
 - (void)tableView:(FZAccordionTableView *)tableView didOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {
@@ -133,19 +139,21 @@ WDMainMenuLeftViewModelDelegate>
 
 #pragma mark - Actions
 
-
 - (IBAction)selectAccountView:(id)sender {
-    if([self.delegate respondsToSelector:@selector(selectMenuSection:)]) {
-        [self.delegate selectMenuSection:-1];
-    }
+    [self.mainMenuLeftViewModel selectAccountUser];
 }
 
 #pragma mark - Delefate
 
 #pragma mark WDMainMenuLeftViewModelDelegate
 
--(void)updateMenuSection:(NSInteger) section {
+- (void)updateMenuSection:(NSInteger) section {
     [self.tableView reloadSections:[[NSIndexSet alloc] initWithIndex:section] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)updateCurrentUser {
+    [self.imageViewUser sd_setImageWithURL:self.mainMenuLeftViewModel.urlAvatarThumbnailUser placeholderImage:[UIImage imageNamed:@"ImageUserDefault"]];
+    [self.labelTitleAccount setText:self.mainMenuLeftViewModel.titleAccount];
+    [self.LabelSubTitleAccount setText:self.mainMenuLeftViewModel.SubTitleAccount];
+}
 @end

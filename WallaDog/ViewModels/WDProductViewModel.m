@@ -8,6 +8,7 @@
 
 #import "WDProductViewModel.h"
 #import "WDProduct.h"
+#import "WDHTTPClient.h"
 
 @interface WDProductViewModel()
 
@@ -89,5 +90,20 @@
     return [self.product.longitude doubleValue];
 }
 
+
+-(void)contactSellerComplitionBLock:(void(^)())complitionBLock
+                    complitionError:(void(^)(NSString* error))complitionError{
+    
+    if(![WDHTTPClient sharedWDHTTPClient].isAutentification) {
+        complitionError(@"Need sing in or dign up first");
+        return;
+    }
+    [[WDHTTPClient sharedWDHTTPClient] transactionProductId:self.product.idField success:^{
+        complitionBLock();
+    } failure:^(NSString *errorDescripcion) {
+        complitionError(errorDescripcion);
+    }];
+    
+}
 
 @end

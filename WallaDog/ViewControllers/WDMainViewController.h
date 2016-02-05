@@ -8,5 +8,6 @@
 
 @interface WDMainViewController : UIViewController 
 
+- (void)updateLocalization;
 
 @end

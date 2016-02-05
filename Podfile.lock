@@ -17,9 +17,13 @@ PODS:
   - AFOAuth2Manager (3.0.0):
     - AFNetworking/NSURLSession (~> 3.0)
   - CHTCollectionViewWaterfallLayout (0.9.2)
+  - DBCamera (2.4.1):
+    - GPUImage (~> 0.1)
   - FZAccordionTableView (0.1.2)
+  - GPUImage (0.1.7)
   - iCarousel (1.8.2)
   - iOS-Slide-Menu (1.5)
+  - RSKImageCropper (1.5.1)
   - SCLAlertView-Objective-C (0.8.2)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -31,9 +35,11 @@ DEPENDENCIES:
   - AFOAuth2Manager (from `https://github.com/AFNetworking/AFOAuth2Manager.git`, branch
     `3_0_0_branch`)
   - CHTCollectionViewWaterfallLayout
+  - DBCamera
   - FZAccordionTableView
   - iCarousel
   - iOS-Slide-Menu
+  - RSKImageCropper
   - SCLAlertView-Objective-C
   - SDWebImage
   - SVProgressHUD
@@ -52,9 +58,12 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AFOAuth2Manager: 0566da1be64883e339813d411229fdc9a84dab7c
   CHTCollectionViewWaterfallLayout: 43232febcb3e4d3985cd758718cbe499b21b822f
+  DBCamera: 7a4343a541e1264610f9f33176552b93170a843e
   FZAccordionTableView: 26b58f5634effce3d8b81e0b2701dbdfd79daf61
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   iOS-Slide-Menu: 40b0cbd8916c42afc755f0869793cd09e7a32102
+  RSKImageCropper: edd65fedb3734332818deb139906d6b7f54b8a44
   SCLAlertView-Objective-C: de137408b04f3587551fa98b876b3cbc612cee79
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1

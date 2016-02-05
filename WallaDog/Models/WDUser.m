@@ -148,7 +148,7 @@
 }
 
 - (NSString*)sellingProducts {
-     return [NSString stringWithFormat:@"Selling Prdocuts %ld", self.productsCount];
+     return [NSString stringWithFormat:@"Selling Products %ld", (long)self.productsCount];
 }
 
 

@@ -11,7 +11,10 @@
 
 @class WDProductViewModel;
 @class WDStartedViewModels;
+@class WDAccountViewModel;
+@class WDAddItemViewModel;
 @class WDUser;
+@class WDMainMenuRightViewModel;
 
 @protocol WDMainViewModelDelegate <NSObject>
 
@@ -21,14 +24,18 @@
 - (void)stopUploadProducts;
 - (void)showProductviewModel:(WDProductViewModel*) productViewModel;
 - (void)showStartAccount:(WDStartedViewModels*) startedViewModel;
+- (void)showAddItem:(WDAddItemViewModel*) addItemViewModel;
+- (void)showAccount:(WDAccountViewModel*) accountViewModel;
 - (void)showMainViewHideMenus;
 - (void)updateCurrentUser;
+- (void)changeDistanceText:(NSString*)text;
 
 @end
 
 @interface WDMainViewModel : NSObject
 
 @property (readonly) WDUser *currentUser;
+@property (nonatomic, strong) WDMainMenuRightViewModel *rightViewModel;
 
 @property (nonatomic, weak) id<WDMainViewModelDelegate> delegate;
 
@@ -42,10 +49,17 @@
 - (NSString*)textDescriptionPresentationFromIndexPath:(NSIndexPath*)indexPath;
 - (NSString*)textPricePresentationFromIndexPath:(NSIndexPath*)indexPath;
 - (void)changeFilterCategory:(NSInteger) categoryId;
+- (void)changeFilteDistance:(NSInteger) distance;
 - (void)selectProduct:(NSIndexPath*)indexPath;
+- (void)addNewItemWithImage:(UIImage*)image;
+- (void)addNewItem;
 - (void)showAccountUserOrCreateAccount;
 - (void)showMainView;
 - (void)updateUserAccountNew;
+- (void)updateUserAccountNewWithUser:(WDUser*)user;
 - (void)removeUserAccount;
+- (void)changeNameSearch:(NSString*)filterName;
+- (void)changeCalculateDistance:(NSIndexPath*)indexPath;
+- (void)updateCurrentLocation;
 
 @end

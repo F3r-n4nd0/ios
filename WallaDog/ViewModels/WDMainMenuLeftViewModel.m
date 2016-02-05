@@ -11,13 +11,13 @@
 #import "WDHTTPClient.h"
 #import "WDMainViewModel.h"
 #import "WDUser.h"
+#import "WDUIHelper.h"
 
 @interface WDMainMenuLeftViewModel()
 
 @property (nonatomic, strong) NSArray<NSString *> *arrayMenu;
 @property (nonatomic, strong) NSArray<UIImage *> *arrayMenuImage;
 @property (nonatomic, strong) NSArray<WDCategory *> *arrayCategory;
-
 
 @property (nonatomic, strong) WDMainViewModel *mainViewModel;
 
@@ -37,33 +37,11 @@
         _mainViewModel = mainViewModel;
         _delegate = delegate;
         [self loadMenuArray];
-        [self updateCategoryeList];
     }
     return self;
 }
 
 #pragma mark - public methods
-
-#pragma mark update data
-
-- (void)updateCategoryeList {
-    
-    [[WDHTTPClient sharedWDHTTPClient] getCategoriesSuccess:^(id responseObject)
-     {
-         NSMutableArray<WDCategory *> *arrayLoadCategories = [NSMutableArray<WDCategory *> array];
-         for (NSDictionary *each in responseObject) {
-             WDCategory *category = [[WDCategory alloc] initWithDictionary:each];
-             [arrayLoadCategories addObject:category];
-         }
-         self.arrayCategory = [arrayLoadCategories copy];
-         [arrayLoadCategories removeAllObjects];
-         if([self.delegate respondsToSelector:@selector(updateMenuSection:)])
-             [self.delegate updateMenuSection:[self.arrayMenu indexOfObject:@"Categories"]];
-     } failure:^(NSString *errorDescripcion) {
-         
-     }];
-}
-
 
 #pragma mark user data
 - (WDUser*)currentUser {
@@ -95,10 +73,6 @@
 }
 
 - (NSInteger)countSubMenuList:(NSInteger)section {
-    
-    if([[self.arrayMenu objectAtIndex:section] isEqualToString:@"Categories"]) {
-        return self.arrayCategory.count;
-    }
     return 0;
 }
 
@@ -111,9 +85,6 @@
 }
 
 - (NSString*)textSubMenuDescriptionFromIndexPath:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"]) {
-        return [self.arrayCategory objectAtIndex:indexPath.row].name;
-    }
     return @"";
 }
 
@@ -123,18 +94,25 @@
     if([[self.arrayMenu objectAtIndex:section] isEqualToString:@"Close Session"]) {
         if(!self.currentUser)
             return;
-        [self.mainViewModel removeUserAccount];
+        [WDUIHelper showConfirmationAlerTitle:@"Close Session" subTitle:@"You want to close your account" actionBlock:^{
+            [self.mainViewModel removeUserAccount];
+        }];
+    }
+    if([[self.arrayMenu objectAtIndex:section] isEqualToString:@"Add Item"]) {
+        if(!self.currentUser) {
+            [WDUIHelper showInfoAlertWithTitle:@"Add Item" subTitle:@"Need sing in or dign up first"];
+            return;
+        }
+        [self.mainViewModel addNewItem];
     }
 }
 
 - (void)selectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
-        [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
+
 }
 
 - (void)deselectSubMenu:(NSIndexPath*)indexPath {
-    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
-        [self.mainViewModel changeFilterCategory:0];
+
 }
 
 - (void)selectAccountUser {
@@ -150,18 +128,14 @@
 }
 
 - (NSArray*)getSectionsMenuText {
-    return @[@"List Item",
-             @"Messages",
-             @"Categories",
-             @"Help",
+    return @[@"Add Item",
+             @"List Item",
              @"Close Session"];
 }
 
 - (NSArray*)getSectionsMenuImages {
-    return @[[UIImage imageNamed:@"ImageCameraIcon"],
-             [UIImage imageNamed:@"ImageMessageIcon"],
-             [UIImage imageNamed:@"ImageMessageIcon"],
-             [UIImage imageNamed:@"ImageHelpIcon"],
+    return @[[UIImage imageNamed:@"ImageIconLabel"],
+             [UIImage imageNamed:@"ImageCameraIcon"],
              [UIImage imageNamed:@"ImageXIcon"]];
 }
 

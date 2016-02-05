@@ -51,14 +51,8 @@
                         <constraint firstItem="yo2-kX-YZi" firstAttribute="top" secondItem="9A9-QM-LNu" secondAttribute="top" constant="35" id="Wgw-tK-akr"/>
                         <constraint firstItem="Xz2-XH-FDS" firstAttribute="top" secondItem="LFt-Lc-TMy" secondAttribute="bottom" constant="2" id="dky-ne-4eF"/>
                         <constraint firstItem="Xz2-XH-FDS" firstAttribute="leading" secondItem="yo2-kX-YZi" secondAttribute="trailing" constant="15" id="f3R-HU-CVM"/>
-                        <constraint firstAttribute="height" constant="108" id="gwp-ML-ckF"/>
                         <constraint firstItem="yo2-kX-YZi" firstAttribute="leading" secondItem="9A9-QM-LNu" secondAttribute="leading" constant="15" id="m36-03-t7x"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="gwp-ML-ckF"/>
-                        </mask>
-                    </variation>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="GGo-zN-ST6" appends="YES" id="fCv-kp-uWj"/>
                     </connections>

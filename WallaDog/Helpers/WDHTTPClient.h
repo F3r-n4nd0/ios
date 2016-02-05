@@ -23,10 +23,13 @@
                                             filterCategoryId:(NSInteger) filterCategoryId
                                                filterStateId:(NSInteger) filterStateId
                                                   filterName:(NSString*) filterName
+                                                     distance:(NSInteger) distance
                                                      success:(void (^)(id responseObject))success
                                                      failure:(void (^)(NSString *errorDescripcion))failure;
 - (void)getCategoriesSuccess:(void (^)(id responseObject))success
                      failure:(void (^)(NSString *errorDescripcion))failure;
+-(void) getRacesSuccess:(void (^)(id responseObject))success
+                failure:(void (^)(NSString *errorDescripcion))failure;
 - (void)signUpWithUserName:(NSString*)userName
                      email:(NSString*)email
                   password:(NSString*)password
@@ -38,5 +41,30 @@
                                      complitionError:(void(^)(NSString* error))complitionError;
 - (void)getCurrentUserSuccess:(void (^)(id responseObject))success
                       failure:(void (^)(NSString *errorDescripcion))failure;
+- (void)updateUserWithUserId:(NSInteger)userId
+                   firstName:(NSString*)firstName
+                    lastName:(NSString*)lastName
+                       email:(NSString*)email
+                   imageData:(NSData*)imageData
+                   avatarUrl:(NSString*)avatarUrl
+                     success:(void (^)())success
+                     failure:(void (^)(NSString *errorDescripcion))failure;
+- (void)savenewItemWithTitle:(NSString*)title
+                 description:(NSString*)description
+                  categoryId:(NSInteger)categoryId
+                      raceId:(NSInteger)raceId
+                     stateId:(NSInteger)stateId
+                    latitude:(double)latitude
+                   longitude:(double)longitude
+                       price:(NSString*)price
+                      image1:(NSData*)image1
+                      image2:(NSData*)image2
+                      image3:(NSData*)image3
+                      image4:(NSData*)image4
+                     success:(void (^)())success
+                     failure:(void (^)(NSString *errorDescripcion))failure;
+- (void)transactionProductId:(NSInteger)productId
+                     success:(void (^)())success
+                     failure:(void (^)(NSString *errorDescripcion))failure;
 - (void)removeAuthorization;
 @end

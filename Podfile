@@ -15,6 +15,8 @@ target 'WallaDog' do
   pod 'AFOAuth2Manager', :git => 'https://github.com/AFNetworking/AFOAuth2Manager.git', :branch => '3_0_0_branch'
   pod 'iCarousel'
   pod 'SCLAlertView-Objective-C'
+  pod 'DBCamera'
+  pod 'RSKImageCropper'
 
 end
 

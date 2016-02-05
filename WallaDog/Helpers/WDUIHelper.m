@@ -38,8 +38,8 @@
 + (void)showConfirmationAlerTitle:(NSString *)title subTitle:(NSString *)subTitle actionBlock:(void (^)())actionBlock {
     SCLAlertView *alert = [[SCLAlertView alloc] initWithNewWindow];
     [alert addButton:@"Accept" actionBlock:actionBlock];
-    [alert showError:title
-            subTitle:subTitle
+    [alert showQuestion:title
+              subTitle:subTitle
     closeButtonTitle:@"Cancel"
             duration:0.0f];
 }

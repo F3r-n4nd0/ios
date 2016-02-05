@@ -17,8 +17,6 @@
 
 @end
 
-
-
 @implementation WDStartedViewModels
 
 - (instancetype)initWithMainViewModel:(WDMainViewModel*)mainViewModel {
@@ -27,7 +25,6 @@
     }
     return self;
 }
-
 
 - (void)signUpWithUserName:(NSString*)userName
                      email:(NSString*)email

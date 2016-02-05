@@ -22,6 +22,7 @@
 - (NSString*)textSellerDescripcion;
 - (double)doubleLatitude;
 - (double)doubleLongitude;
-
+- (void)contactSellerComplitionBLock:(void(^)())complitionBLock
+                    complitionError:(void(^)(NSString* error))complitionError;
 
 @end

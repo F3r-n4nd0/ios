@@ -5,12 +5,15 @@
 //  Created by Fernando Luna on 1/24/16.
 //  Copyright © 2016 Dancing Queen. All rights reserved.
 //
+@import SVProgressHUD;
+
 @import SDWebImage;
 @import iCarousel;
 
 #import "WDProductViewController.h"
 #import "WDProductViewModel.h"
 #import "WDImageProductView.h"
+#import "WDUIHelper.h"
 
 @interface WDProductViewController ()
 <iCarouselDataSource,
@@ -26,6 +29,7 @@ MKMapViewDelegate
 @property (weak, nonatomic) IBOutlet UILabel *labelPrice;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewUser;
 @property (weak, nonatomic) IBOutlet UILabel *labelUserDescription;
+@property (weak, nonatomic) IBOutlet UIButton *buttonContact;
 
 @property (nonatomic , strong) WDProductViewModel *productViewModel;
 
@@ -88,7 +92,7 @@ MKMapViewDelegate
     [self.labelTitle setText:[self.productViewModel textTitle]];
     [self.textViewDetail setText:[self.productViewModel textDetail]];
     [self.labelPrice setText:[self.productViewModel textPrice]];
-    [self.imageViewUser sd_setImageWithURL:[self.productViewModel urlAvatarSellerThumbnail] placeholderImage:[UIImage imageNamed:@"ImageUserDefault"]];
+    [self.imageViewUser sd_setImageWithURL:[self.productViewModel urlAvatarSellerThumbnail] placeholderImage:[UIImage imageNamed:@"ImageUserDefault"] options:SDWebImageRetryFailed];
     [self.labelUserDescription setText:[self.productViewModel textSellerDescripcion]];
     MKCoordinateRegion mapRegion;
     mapRegion.center.latitude = [self.productViewModel doubleLatitude];
@@ -106,6 +110,18 @@ MKMapViewDelegate
 - (IBAction)touchUpInsideCloseButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)touchInsideButtonContact:(id)sender {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [self.productViewModel contactSellerComplitionBLock:^{
+        [SVProgressHUD dismiss];
+        [self dismissViewControllerAnimated:YES completion:nil];        
+    } complitionError:^(NSString *error) {
+        [SVProgressHUD dismiss];
+        [WDUIHelper showErrorAlertWithSubTitle:error];
+    }];
+}
+
 
 #pragma mark - Delegate
 
@@ -126,7 +142,7 @@ MKMapViewDelegate
         [viewImage setFrame: CGRectMake(0, 0, self.viewCarousel.frame.size.width, self.viewCarousel.frame.size.height) ];
         viewImage.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [viewImage.imageView sd_setImageWithURL:urlImage
-                placeholderImage:[UIImage imageNamed:@"pawprints"] options:0
+                placeholderImage:[UIImage imageNamed:@"pawprints"] options:SDWebImageRetryFailed
                         progress:^(NSInteger receivedSize, NSInteger expectedSize)
          {
              if (expectedSize > 0)

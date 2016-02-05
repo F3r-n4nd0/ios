@@ -1,41 +1,41 @@
 //
-//  WDMainMenuLeftViewController.m
+//  WDMainMenuRightViewController.m
 //  WallaDog
 //
-//  Created by Fernando Luna on 12/6/15.
-//  Copyright © 2015 Dancing Queen. All rights reserved.
+//  Created by Fernando Luna on 2/3/16.
+//  Copyright © 2016 Dancing Queen. All rights reserved.
 //
-@import FZAccordionTableView;
-@import SDWebImage;
 
-#import "WDMainMenuLeftViewController.h"
-#import "WDAccordionHeaderView.h"
+#import "WDMainMenuRightViewController.h"
+#import "WDAccordionRightHeaderView.h"
 #import "WDMenuTableViewCell.h"
-#import "WDMainMenuLeftViewModel.h"
+#import "WDMainMenuRightViewModel.h"
 #import "WDMainViewModel.h"
 
 
-@interface WDMainMenuLeftViewController ()
+@interface WDMainMenuRightViewController ()
 <FZAccordionTableViewDelegate,
 UITableViewDataSource,
 UITableViewDelegate,
-WDMainMenuLeftViewModelDelegate>
+WDMainMenuRightViewModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewUser;
 @property (weak, nonatomic) IBOutlet UILabel *labelTitleAccount;
 @property (weak, nonatomic) IBOutlet UILabel *LabelSubTitleAccount;
 @property (weak, nonatomic) IBOutlet FZAccordionTableView *tableView;
 
-@property (nonatomic, strong) WDMainMenuLeftViewModel *mainMenuLeftViewModel;
+@property (nonatomic, strong) WDMainMenuRightViewModel *mainMenuRightViewModel;
 
 @end
 
-@implementation WDMainMenuLeftViewController
+@implementation WDMainMenuRightViewController
 
-- (instancetype)initWithMainViewModel:(WDMainViewModel*) mainViewModel {
+#pragma mark - Life Cycle
+
+- (instancetype)initWithRightViewModel:(WDMainMenuRightViewModel*) rightViewModel {
     if(self = [super init]) {
-        _mainMenuLeftViewModel = [[WDMainMenuLeftViewModel alloc] initWithDelgate:self
-                                                                    mainViewModel:mainViewModel];
+        rightViewModel.delegate = self;
+        _mainMenuRightViewModel = rightViewModel;
     }
     return self;
 }
@@ -48,12 +48,10 @@ WDMainMenuLeftViewModelDelegate>
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateCurrentUser];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Configure UI
@@ -67,8 +65,8 @@ WDMainMenuLeftViewModelDelegate>
 - (void)loadMenu {
     UINib *cellNIb = [UINib nibWithNibName:[WDMenuTableViewCell reuseIdentifier] bundle:nil];
     [self.tableView registerNib:cellNIb forCellReuseIdentifier:[WDMenuTableViewCell reuseIdentifier]];
-    UINib *headerNib = [UINib nibWithNibName:[WDAccordionHeaderView reuseIdentifier] bundle:nil];
-    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:[WDAccordionHeaderView reuseIdentifier]];
+    UINib *headerNib = [UINib nibWithNibName:[WDAccordionRightHeaderView reuseIdentifier] bundle:nil];
+    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:[WDAccordionRightHeaderView reuseIdentifier]];
 }
 
 
@@ -76,11 +74,11 @@ WDMainMenuLeftViewModelDelegate>
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.mainMenuLeftViewModel.countMenuList;
+    return self.mainMenuRightViewModel.countMenuList;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.mainMenuLeftViewModel countSubMenuList:section];
+    return [self.mainMenuRightViewModel countSubMenuList:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -101,28 +99,28 @@ WDMainMenuLeftViewModelDelegate>
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WDMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[WDMenuTableViewCell reuseIdentifier] forIndexPath:indexPath];
-    [cell.labelDescription  setText:[self.mainMenuLeftViewModel textSubMenuDescriptionFromIndexPath:indexPath]];
+    [cell.labelDescription  setText:[self.mainMenuRightViewModel textSubMenuDescriptionFromIndexPath:indexPath]];
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    WDAccordionHeaderView *headerView = (WDAccordionHeaderView*) [tableView dequeueReusableHeaderFooterViewWithIdentifier:[WDAccordionHeaderView reuseIdentifier]];
-    [headerView setImage:[self.mainMenuLeftViewModel imageMenu:section] text:[self.mainMenuLeftViewModel textMenuDescription:section]];
+    WDAccordionRightHeaderView *headerView = (WDAccordionRightHeaderView*) [tableView dequeueReusableHeaderFooterViewWithIdentifier:[WDAccordionRightHeaderView reuseIdentifier]];
+    [headerView setImage:[self.mainMenuRightViewModel imageMenu:section] text:[self.mainMenuRightViewModel textMenuDescription:section]];
     return headerView;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.mainMenuLeftViewModel  selectSubMenu:indexPath];
+    [self.mainMenuRightViewModel  selectSubMenu:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.mainMenuLeftViewModel  deselectSubMenu:indexPath];
+    [self.mainMenuRightViewModel  deselectSubMenu:indexPath];
 }
 
 #pragma mark Delegate FZAccordionTableViewDelegate
 
 - (void)tableView:(FZAccordionTableView *)tableView willOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {
-    [self.mainMenuLeftViewModel selectMenu:section];
+    [self.mainMenuRightViewModel selectMenu:section];
 }
 
 - (void)tableView:(FZAccordionTableView *)tableView didOpenSection:(NSInteger)section withHeader:(UITableViewHeaderFooterView *)header {
@@ -137,12 +135,6 @@ WDMainMenuLeftViewModelDelegate>
     
 }
 
-#pragma mark - Actions
-
-- (IBAction)selectAccountView:(id)sender {
-    [self.mainMenuLeftViewModel selectAccountUser];
-}
-
 #pragma mark - Delegate
 
 #pragma mark WDMainMenuLeftViewModelDelegate
@@ -151,9 +143,5 @@ WDMainMenuLeftViewModelDelegate>
     [self.tableView reloadSections:[[NSIndexSet alloc] initWithIndex:section] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
-- (void)updateCurrentUser {
-    [self.imageViewUser sd_setImageWithURL:self.mainMenuLeftViewModel.urlAvatarThumbnailUser placeholderImage:[UIImage imageNamed:@"ImageUserDefault"] options:SDWebImageRetryFailed];
-    [self.labelTitleAccount setText:self.mainMenuLeftViewModel.titleAccount];
-    [self.LabelSubTitleAccount setText:self.mainMenuLeftViewModel.SubTitleAccount];
-}
+
 @end

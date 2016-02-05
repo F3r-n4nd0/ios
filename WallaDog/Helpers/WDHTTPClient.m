@@ -68,12 +68,13 @@
                                             filterCategoryId:(NSInteger) filterCategoryId
                                                filterStateId:(NSInteger) filterStateId
                                                   filterName:(NSString*) filterName
+                                                    distance:(NSInteger) distance
                                                      success:(void (^)(id responseObject))success
                                                      failure:(void (^)(NSString *errorDescripcion))failure {
     
     NSMutableDictionary *parametersFilters = [NSMutableDictionary dictionary];
     
-    if (![filterName isEqualToString:@""])
+    if (filterName && ![filterName isEqualToString:@""])
         [parametersFilters setObject:filterName forKey:@"name"];
     
     if (CLLocationCoordinate2DIsValid(locationCoordinate)
@@ -90,6 +91,9 @@
     
     if (filterStateId != 0)
         [parametersFilters setObject:@(filterStateId) forKey:@"state"];
+    if (distance != 0)
+        [parametersFilters setObject:@(distance) forKey:@"distance"];
+    
     
     [parametersFilters setObject:@(20) forKey:@"limit"];
     [parametersFilters setObject:@(0) forKey:@"offset"];
@@ -101,7 +105,10 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
         NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        failure(myStringError);
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
     }];
 }
 
@@ -119,10 +126,33 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
         NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        failure(myStringError);
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
     }];
 }
 
+-(void) getRacesSuccess:(void (^)(id responseObject))success
+                     failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    NSMutableDictionary *parametersFilters = [NSMutableDictionary dictionary];
+    [parametersFilters setObject:@(20) forKey:@"limit"];
+    [parametersFilters setObject:@(0) forKey:@"offset"];
+    
+    [self GET:@"/api/1.0/races/" parameters:parametersFilters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success([responseObject objectForKey:@"results"]);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
+    }];
+}
 
 -(void) getCurrentUserSuccess:(void (^)(id responseObject))success
                       failure:(void (^)(NSString *errorDescripcion))failure {
@@ -135,7 +165,10 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
         NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        failure(myStringError);
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
     }];
 }
 
@@ -156,9 +189,33 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
         NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
-        failure(myStringError);
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
     }];
 }
+
+- (void)transactionProductId:(NSInteger)productId
+                   success:(void (^)())success
+                   failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    NSDictionary *parameters = @{@"product":@(productId)};
+    
+    [self POST:@"/api/1.0/transactions/" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
+    }];
+}
+
 
 - (void)loginAndobtainAuthorizationTokenWithUserName:(NSString*)userName
                                             password:(NSString*)password
@@ -182,9 +239,111 @@
                                                    complitionBLock();
                                                }
                                                failure:^(NSError *error) {
-                                                   complitionError(error.localizedDescription);
+                                                   id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+                                                   NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+                                                   complitionError(myStringError);
                                                }];
     
+}
+
+- (void)updateUserWithUserId:(NSInteger)userId
+                   firstName:(NSString*)firstName
+                    lastName:(NSString*)lastName
+                       email:(NSString*)email
+                   imageData:(NSData*)imageData
+                   avatarUrl:(NSString*)avatarUrl
+                     success:(void (^)())success
+                     failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    
+    NSMutableDictionary *parametersFilters = [NSMutableDictionary dictionary];
+    
+    if (firstName && ![firstName isEqualToString:@""])
+        [parametersFilters setObject:firstName forKey:@"first_name"];
+    if (lastName && ![lastName isEqualToString:@""])
+        [parametersFilters setObject:lastName forKey:@"last_name"];
+    if (email && ![email isEqualToString:@""])
+        [parametersFilters setObject:email forKey:@"email"];
+    if(imageData)
+        [parametersFilters setObject:avatarUrl forKey:@"avatar_url"];
+    NSString *url = [NSString stringWithFormat:@"/api/1.0/users/%ld/",userId];
+    
+
+    [self PUT:url parameters:parametersFilters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        if(imageData)
+           [formData appendPartWithFileData:imageData name:@"upload_image" fileName:@"XXXXXX.jpeg" mimeType:@"image/jpeg"];
+    } progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success();
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
+    }];
+}
+
+
+- (void)savenewItemWithTitle:(NSString*)title
+                 description:(NSString*)description
+                  categoryId:(NSInteger)categoryId
+                      raceId:(NSInteger)raceId
+                     stateId:(NSInteger)stateId
+                    latitude:(double)latitude
+                   longitude:(double)longitude
+                       price:(NSString*)price
+                      image1:(NSData*)image1
+                      image2:(NSData*)image2
+                      image3:(NSData*)image3
+                      image4:(NSData*)image4
+                     success:(void (^)())success
+                     failure:(void (^)(NSString *errorDescripcion))failure {
+    
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+    if (title && ![title isEqualToString:@""])
+        [parameters setObject:title forKey:@"name"];
+    if (description && ![description isEqualToString:@""])
+        [parameters setObject:description forKey:@"description"];
+    if (categoryId > 0)
+        [parameters setObject:[NSNumber numberWithInteger:categoryId] forKey:@"category"];
+    if (raceId > 0)
+        [parameters setObject:[NSNumber numberWithInteger:raceId] forKey:@"race"];
+    if (stateId > 0)
+        [parameters setObject:[NSNumber numberWithInteger:stateId] forKey:@"state"];
+    if (latitude != 0)
+        [parameters setObject:[NSNumber numberWithDouble:latitude] forKey:@"latitude"];
+    if (longitude != 0)
+        [parameters setObject:[NSNumber numberWithDouble:longitude] forKey:@"longitude"];
+    if (price != 0)
+        [parameters setObject:price forKey:@"price"];
+    
+    
+    [self POST:@"/api/1.0/products/" parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        if(image1)
+            [formData appendPartWithFileData:image1 name:@"upload_image" fileName:@"IMG_1XXXXXX.jpeg" mimeType:@"image/jpeg"];
+        if(image2)
+            [formData appendPartWithFileData:image2 name:@"upload_image" fileName:@"IMG_2XXXXXX.jpeg" mimeType:@"image/jpeg"];
+        if(image3)
+            [formData appendPartWithFileData:image3 name:@"upload_image" fileName:@"IMG_3XXXXXX.jpeg" mimeType:@"image/jpeg"];
+        if(image4)
+            [formData appendPartWithFileData:image4 name:@"upload_image" fileName:@"IMG_4XXXXXX.jpeg" mimeType:@"image/jpeg"];
+    } progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success();
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        id response = [error.userInfo objectForKey:AFNetworkingOperationFailingURLResponseDataErrorKey];
+        NSString *myStringError = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+        NSRange stringRange = {0, MIN([myStringError length], 20)};
+        stringRange = [myStringError rangeOfComposedCharacterSequencesForRange:stringRange];
+        NSString *shortString = [myStringError substringWithRange:stringRange];
+        failure(shortString);
+    }];
 }
 
 
@@ -192,5 +351,50 @@
     self.isAutentification = NO;
     [AFOAuthCredential deleteCredentialWithIdentifier:KEY_SAVE_TOKEN];
 }
+
+
+
+#pragma mark - add method to AFnetworking
+
+
+- (NSURLSessionDataTask *)PUT:(NSString *)URLString
+                    parameters:(id)parameters
+     constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                      progress:(nullable void (^)(NSProgress * _Nonnull))uploadProgress
+                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+{
+    NSError *serializationError = nil;
+    NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"PUT" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
+    if (serializationError) {
+        if (failure) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wgnu"
+            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
+                failure(nil, serializationError);
+            });
+#pragma clang diagnostic pop
+        }
+        
+        return nil;
+    }
+    
+    __block NSURLSessionDataTask *task = [self uploadTaskWithStreamedRequest:request progress:uploadProgress completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+        if (error) {
+            if (failure) {
+                failure(task, error);
+            }
+        } else {
+            if (success) {
+                success(task, responseObject);
+            }
+        }
+    }];
+    
+    [task resume];
+    
+    return task;
+}
+
 
 @end

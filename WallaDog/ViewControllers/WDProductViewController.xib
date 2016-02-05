@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WDProductViewController">
             <connections>
+                <outlet property="buttonContact" destination="xh6-pR-ZWS" id="6AI-RU-AQ5"/>
                 <outlet property="imageViewUser" destination="Euh-iq-85S" id="hxZ-R2-lp5"/>
                 <outlet property="labelPrice" destination="Ttc-1W-agT" id="eDH-In-oFH"/>
                 <outlet property="labelTitle" destination="SQj-3O-0gl" id="YJH-A1-2Jd"/>
@@ -53,13 +54,13 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-3O-0gl">
                                     <rect key="frame" x="8" y="8" width="37" height="21"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttc-1W-agT">
                                     <rect key="frame" x="8" y="37" width="59" height="24"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kxo-jm-oT4">
@@ -82,7 +83,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJM-1y-CEc">
                                     <rect key="frame" x="151" y="329" width="42" height="20"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Euh-iq-85S">
@@ -93,8 +94,23 @@
                                         <constraint firstAttribute="height" constant="75" id="kfu-QT-4hM"/>
                                     </constraints>
                                 </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh6-pR-ZWS">
+                                    <rect key="frame" x="267" y="8" width="70" height="45"/>
+                                    <color key="backgroundColor" red="0.31799998879432678" green="0.57999998331069946" blue="0.86299997568130493" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="PRC-tc-kQK"/>
+                                        <constraint firstAttribute="width" constant="70" id="ftI-nd-XIf"/>
+                                    </constraints>
+                                    <state key="normal" title="Contact">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="touchInsideButtonContact:" destination="-1" eventType="touchUpInside" id="u0A-LU-3iD"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="xh6-pR-ZWS" secondAttribute="trailing" constant="8" id="4CD-df-Rhb"/>
                                 <constraint firstItem="aJM-1y-CEc" firstAttribute="centerX" secondItem="saA-Od-65v" secondAttribute="centerX" id="7LV-FB-fHi"/>
                                 <constraint firstItem="Euh-iq-85S" firstAttribute="centerX" secondItem="saA-Od-65v" secondAttribute="centerX" id="BPw-hS-vHM"/>
                                 <constraint firstAttribute="trailing" secondItem="Ve6-LA-jiO" secondAttribute="trailing" id="CX2-pi-KSa"/>
@@ -111,6 +127,7 @@
                                 <constraint firstItem="Euh-iq-85S" firstAttribute="centerX" secondItem="Ve6-LA-jiO" secondAttribute="centerX" id="av7-wR-7hD"/>
                                 <constraint firstItem="Ve6-LA-jiO" firstAttribute="top" secondItem="Kxo-jm-oT4" secondAttribute="bottom" constant="8" id="bAu-AF-k8m"/>
                                 <constraint firstItem="Ve6-LA-jiO" firstAttribute="top" secondItem="Kxo-jm-oT4" secondAttribute="bottom" constant="8" id="esc-af-y3o"/>
+                                <constraint firstItem="xh6-pR-ZWS" firstAttribute="top" secondItem="saA-Od-65v" secondAttribute="top" constant="8" id="hIg-7r-bBX"/>
                                 <constraint firstItem="Ve6-LA-jiO" firstAttribute="width" secondItem="saA-Od-65v" secondAttribute="width" id="kaW-4Y-9t1"/>
                                 <constraint firstItem="SQj-3O-0gl" firstAttribute="top" secondItem="saA-Od-65v" secondAttribute="top" constant="8" id="kfq-1H-MNk"/>
                                 <constraint firstAttribute="bottom" secondItem="Ve6-LA-jiO" secondAttribute="bottom" constant="40" id="lBc-rS-Qx5"/>

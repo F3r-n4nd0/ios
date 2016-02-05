@@ -90,6 +90,15 @@
     return [self.product.longitude doubleValue];
 }
 
+- (BOOL)isEnableContact {
+    return [self.product.state isEqualToString:@"Publicado"];
+}
+
+- (NSString*)textState {
+    if(!self.product)
+        return @"";
+    return self.product.state;
+}
 
 -(void)contactSellerComplitionBLock:(void(^)())complitionBLock
                     complitionError:(void(^)(NSString* error))complitionError{

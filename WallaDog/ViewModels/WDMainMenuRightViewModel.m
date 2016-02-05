@@ -141,6 +141,8 @@
 - (void)selectSubMenu:(NSIndexPath*)indexPath {
     if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Categories"])
         [self.mainViewModel changeFilterCategory:[self.arrayCategory objectAtIndex:indexPath.row].internalBaseClassIdentifier];
+    if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Races"])
+        [self.mainViewModel changeFilterRaces:[self.arrayRace objectAtIndex:indexPath.row].idField];
     if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Distance"]) {
         NSString *title = [self.arrayDistance objectAtIndex:indexPath.row];
         if([title isEqualToString:[self.arrayDistance objectAtIndex:0]]){

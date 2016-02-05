@@ -24,5 +24,7 @@
 - (double)doubleLongitude;
 - (void)contactSellerComplitionBLock:(void(^)())complitionBLock
                     complitionError:(void(^)(NSString* error))complitionError;
+- (BOOL)isEnableContact;
+- (NSString*)textState;
 
 @end

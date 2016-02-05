@@ -26,6 +26,7 @@
 @property (nonatomic) CLLocationCoordinate2D currentLocation;
 @property (nonatomic, strong) NSArray<WDProduct *> *arrayProducts;
 @property (nonatomic) NSInteger filterCategoryId;
+@property (nonatomic) NSInteger filterRaceId;
 @property (nonatomic, strong) NSURLSessionDataTask *currentLoadProductTask;
 @property (nonatomic, strong) NSString *filterName;
 @property (nonatomic) NSInteger filterDistance;
@@ -91,6 +92,8 @@
 
 -(void)loadDefaultFlters {
     self.filterDistance = 10000;
+    self.filterCategoryId = 0;
+    self.filterRaceId = 0;
     self.rightViewModel = [[WDMainMenuRightViewModel alloc] initWithDelgate:nil mainViewModel:self];
 }
 
@@ -103,13 +106,12 @@
     if([self.delegate respondsToSelector:@selector(startUploadProducts:)])
         [self.delegate startUploadProducts:@"Load Products"];
     
-    NSInteger filterRaceId = 0;
     NSInteger filterStateId = 0;
 
     if(self.currentLoadProductTask)
         [self.currentLoadProductTask cancel];
     self.currentLoadProductTask = [[WDHTTPClient sharedWDHTTPClient] loadProductsWithLocationCoordinate:self.currentLocation
-                                                                                           filterRaceId:filterRaceId
+                                                                                           filterRaceId:self.filterRaceId
                                                                                        filterCategoryId:self.filterCategoryId
                                                                                           filterStateId:filterStateId
                                                                                              filterName:self.filterName
@@ -143,6 +145,13 @@
 
 -(void)changeFilterCategory:(NSInteger) categoryId {
     self.filterCategoryId = categoryId;
+    [self showMainView];
+    [self updateProductsList];
+}
+
+
+-(void)changeFilterRaces:(NSInteger) raceId {
+    self.filterRaceId = raceId;
     [self showMainView];
     [self updateProductsList];
 }

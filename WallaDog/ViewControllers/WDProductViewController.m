@@ -94,6 +94,13 @@ MKMapViewDelegate
     [self.labelPrice setText:[self.productViewModel textPrice]];
     [self.imageViewUser sd_setImageWithURL:[self.productViewModel urlAvatarSellerThumbnail] placeholderImage:[UIImage imageNamed:@"ImageUserDefault"] options:SDWebImageRetryFailed];
     [self.labelUserDescription setText:[self.productViewModel textSellerDescripcion]];
+    [self.buttonContact setEnabled:!self.productViewModel.isEnableContact];
+    if(self.productViewModel.isEnableContact)
+        [self.buttonContact setTitle:@"Contact" forState:UIControlStateNormal];
+    else
+        [self.buttonContact setTitle:self.productViewModel.textState forState:UIControlStateDisabled];
+    
+    
     MKCoordinateRegion mapRegion;
     mapRegion.center.latitude = [self.productViewModel doubleLatitude];
     mapRegion.center.longitude = [self.productViewModel doubleLongitude];
@@ -115,7 +122,7 @@ MKMapViewDelegate
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self.productViewModel contactSellerComplitionBLock:^{
         [SVProgressHUD dismiss];
-        [self dismissViewControllerAnimated:YES completion:nil];        
+        [self dismissViewControllerAnimated:YES completion:nil];
     } complitionError:^(NSString *error) {
         [SVProgressHUD dismiss];
         [WDUIHelper showErrorAlertWithSubTitle:error];

@@ -50,6 +50,7 @@
 - (NSString*)textPricePresentationFromIndexPath:(NSIndexPath*)indexPath;
 - (void)changeFilterCategory:(NSInteger) categoryId;
 - (void)changeFilteDistance:(NSInteger) distance;
+- (void)changeFilterRaces:(NSInteger) raceId;
 - (void)selectProduct:(NSIndexPath*)indexPath;
 - (void)addNewItemWithImage:(UIImage*)image;
 - (void)addNewItem;

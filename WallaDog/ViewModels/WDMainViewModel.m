@@ -65,21 +65,18 @@
                                                   otherButtonTitles:@"Settings", nil];
         [alertView show];
         return;
-    } else if (status == kCLAuthorizationStatusNotDetermined) {
-        [self.locationManager requestWhenInUseAuthorization];
     }
     [self updateCurrentLocation];
    
 }
 
 - (void)updateCurrentLocation {
-    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorizedWhenInUse) {
-        return;
-    }
+
     if (nil == self.locationManager) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+        [self.locationManager requestWhenInUseAuthorization];
     }
     [self.locationManager startUpdatingLocation];
 }
@@ -195,6 +192,8 @@
                                                                                        image:image
                                                                              arrayCategories:self.rightViewModel.arrayCategory
                                                                                   arrayRaces:self.rightViewModel.arrayRace];
+    addItemViewModel.latitude = self.currentLocation.latitude;
+    addItemViewModel.longitude = self.currentLocation.longitude;
     if([self.delegate respondsToSelector:@selector(showAddItem:)])
         [self.delegate showAddItem:addItemViewModel];
 }
@@ -203,6 +202,8 @@
     WDAddItemViewModel *addItemViewModel = [[WDAddItemViewModel alloc] initWithMainViewModel:self
                                                                              arrayCategories:self.rightViewModel.arrayCategory
                                                                                   arrayRaces:self.rightViewModel.arrayRace];
+    addItemViewModel.latitude = self.currentLocation.latitude;
+    addItemViewModel.longitude = self.currentLocation.longitude;
     if([self.delegate respondsToSelector:@selector(showAddItem:)])
         [self.delegate showAddItem:addItemViewModel];
 }

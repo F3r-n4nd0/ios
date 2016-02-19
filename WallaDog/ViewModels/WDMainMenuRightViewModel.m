@@ -146,7 +146,7 @@
     if([[self.arrayMenu objectAtIndex:indexPath.section] isEqualToString:@"Distance"]) {
         NSString *title = [self.arrayDistance objectAtIndex:indexPath.row];
         if([title isEqualToString:[self.arrayDistance objectAtIndex:0]]){
-            [self.mainViewModel changeFilteDistance:100000000];
+            [self.mainViewModel changeFilteDistance:NSIntegerMax];
         } else if ([title isEqualToString:[self.arrayDistance objectAtIndex:1]]) {
             [self.mainViewModel changeFilteDistance:10];
         }else if ([title isEqualToString:[self.arrayDistance objectAtIndex:2]]) {

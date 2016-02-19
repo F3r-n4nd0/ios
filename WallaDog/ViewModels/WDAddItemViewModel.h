@@ -14,6 +14,10 @@
 
 @interface WDAddItemViewModel : NSObject
 
+
+@property (nonatomic) double latitude;
+@property (nonatomic) double longitude;
+
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithMainViewModel:(WDMainViewModel*)mainViewModel
                       arrayCategories:(NSArray<WDCategory*>*)arrayCategories

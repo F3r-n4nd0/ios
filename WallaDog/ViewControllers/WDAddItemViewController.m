@@ -6,6 +6,7 @@
 //  Copyright © 2015 Dancing Queen. All rights reserved.
 //
 @import DBCamera;
+@import SVProgressHUD;
 
 #import "WDAddItemViewController.h"
 #import "WDAddItemViewModel.h"
@@ -141,7 +142,7 @@ WDPickerViewControllerDelegate>
 
 
 - (IBAction)touchUpInsideSell:(id)sender {
-    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     [self.addItemViewModel savenewItemWithTitle:self.textFieldTitle.text
                                     description:self.textViewDetail.text
                                           price:self.textFieldPrice.text
@@ -151,8 +152,10 @@ WDPickerViewControllerDelegate>
                                          image4:self.imageView4.image==self.imagePlaceHolder?nil:self.imageView4.image
                                         success:^
      {
-         
+         [SVProgressHUD dismiss];
+         [self dismissViewControllerAnimated:YES completion:nil];
      } failure:^(NSString *errorDescripcion) {
+         [SVProgressHUD dismiss];
          [WDUIHelper showErrorAlertWithSubTitle:errorDescripcion];
      }];
     

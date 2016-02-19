@@ -17,8 +17,6 @@
 @property (nonatomic, strong) UIImage *image2;
 @property (nonatomic, strong) UIImage *image3;
 @property (nonatomic, strong) UIImage *image4;
-@property (nonatomic) double latitude;
-@property (nonatomic) double longitude;
 @property (nonatomic) NSInteger categoryId;
 @property (nonatomic) NSInteger raceId;
 @property (nonatomic) NSInteger stateId;
